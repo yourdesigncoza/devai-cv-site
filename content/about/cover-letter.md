@@ -1,11 +1,10 @@
 ---
 title: Cover letter
+description: "Cover letter from John Montgomery — freelance developer available for quant research, LLM / agent, and custom WordPress projects. 22 years in, remote-first."
 tags: [about]
 draft: false
 date: 2026-04-22
 ---
-
-# Cover letter
 
 **John Montgomery** · YourDesign · Mossel Bay, South Africa
 support@yourdesign.co.za · +27 079 177 1970

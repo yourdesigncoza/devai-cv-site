@@ -1,10 +1,9 @@
 ---
 title: Open questions
+description: "Open questions — things I'm chewing on but haven't resolved into a decision yet. First-class content; some graduate, some stay here indefinitely."
 tags: [open-questions, index]
 draft: false
 ---
-
-# Open questions
 
 Things I'm chewing on but haven't resolved into a [[decisions/|decision]] yet. First-class content — worth capturing while the thinking is live, even when (especially when) I can't yet answer them.
 

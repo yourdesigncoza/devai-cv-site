@@ -1,11 +1,10 @@
 ---
 title: apes-signal
+description: "Python port of a TradingView Pine momentum indicator with an iterative ratchet optimiser. Archived negative-result research over 125,000 XAU/USD bars."
 tags: [project, quant, python]
 draft: false
 status: archived
 ---
-
-# apes-signal
 
 > A bar-by-bar Python port of a TradingView Pine v5 momentum indicator (AMS), wrapped in an iterative "ratchet" parameter-search loop. Published as a negative result.
 

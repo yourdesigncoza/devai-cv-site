@@ -23,7 +23,7 @@ ydcoza-cv/
 │   ├── decisions/          # positions I hold, with reasoning
 │   ├── notes/              # dated learning log, short-form
 │   ├── playbooks/          # repeatable how-to recipes
-│   ├── reading/            # books, papers, posts with traceable influence
+│   ├── influences/         # videos, podcasts, talks, and writing with traceable influence
 │   ├── open-questions/     # things I'm chewing on
 │   └── about/              # bio, contact, cover letter, profile photo
 ├── quartz/                 # Quartz 4 source (fork of jackyzha0/quartz)
@@ -100,7 +100,7 @@ Pick the folder by what the page does:
 | A position I hold with reasoning | `content/decisions/` |
 | A repeatable recipe | `content/playbooks/` |
 | A dated learning moment | `content/notes/` |
-| A reference with traceable influence | `content/reading/` |
+| A video / podcast / talk / piece with traceable influence | `content/influences/` |
 | A question I haven't resolved | `content/open-questions/` |
 | The current-week snapshot | Edit `content/now.md` |
 

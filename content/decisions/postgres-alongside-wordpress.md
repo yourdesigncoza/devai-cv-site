@@ -1,11 +1,10 @@
 ---
 title: Why Postgres alongside WordPress, not instead of it
+description: "Why Postgres alongside WordPress — invariants in plpgsql triggers, operational data that outlives the CMS. A pattern from WeCoza development."
 tags: [decision, wordpress, postgres]
 draft: false
 date: 2026-04-22
 ---
-
-# Why Postgres alongside WordPress, not instead of it
 
 ## The position
 

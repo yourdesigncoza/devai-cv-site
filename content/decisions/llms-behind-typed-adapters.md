@@ -1,11 +1,10 @@
 ---
 title: Why I keep LLMs behind typed adapters
+description: "LLM calls behind typed adapters — code-level information barriers, external prompts, provider-agnostic transport. An AI-engineering position."
 tags: [decision, ai, architecture]
 draft: false
 date: 2026-04-22
 ---
-
-# Why I keep LLMs behind typed adapters
 
 ## The position
 

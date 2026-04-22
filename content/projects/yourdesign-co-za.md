@@ -1,11 +1,10 @@
 ---
 title: yourdesign.co.za
+description: "20+ years of freelance WordPress and WooCommerce work. Custom themes, agency sub-contracts, and the original brand site for John Montgomery."
 tags: [project, wordpress, design, heritage]
 draft: false
 status: maintained
 ---
-
-# yourdesign.co.za
 
 > The original YourDesign site — 20+ years of freelance WordPress, WooCommerce, and custom PHP work for small-to-medium businesses and agency sub-contracts. Still the record of where I started.
 

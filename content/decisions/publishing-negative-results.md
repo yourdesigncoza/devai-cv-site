@@ -1,11 +1,10 @@
 ---
 title: Why I publish negative results
+description: "Why I publish negative results — postmortems as the deliverable when research doesn't pan out. Evaluation discipline across shelved research projects."
 tags: [decision, quant, research]
 draft: false
 date: 2026-04-22
 ---
-
-# Why I publish negative results
 
 ## The position
 

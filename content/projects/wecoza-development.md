@@ -1,11 +1,10 @@
 ---
-title: wecoza_development
+title: WeCoza 3.0
+description: "WordPress plugin with a 43-table Postgres schema and plpgsql triggers, built for a South African training provider. Long-running client engagement."
 tags: [project, wordpress, php, postgres]
 draft: false
 status: maintained
 ---
-
-# wecoza_development
 
 > A WordPress plugin for a South African adult-education training provider (WECOZA / Triple E Training), with most of the operational logic living in a 43-table Postgres schema alongside the WordPress install.
 

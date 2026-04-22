@@ -1,11 +1,10 @@
 ---
 title: edenfintech.com
+description: "Free weekly watchlist surfacing insider cluster buys from US SEC Form 4 filings. Rules-based, backtested — the product front end for the scanner."
 tags: [project, quant, product]
 draft: false
 status: active
 ---
-
-# edenfintech.com
 
 > The public face of [[projects/edenfintech-scanner-python|edenfintech-scanner-python]] — a free weekly research service surfacing 1–3 "insider cluster buy" setups drawn from US SEC Form 4 filings.
 

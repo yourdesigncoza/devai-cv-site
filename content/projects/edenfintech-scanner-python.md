@@ -1,11 +1,10 @@
 ---
-title: edenfintech-scanner-python
+title: Eden Fintech Scanner (Python)
+description: "Stdlib Python screener for US-listed equities with a typed three-role LLM review stage. John Montgomery's current primary quant project."
 tags: [project, quant, ai, python]
 draft: false
 status: active
 ---
-
-# edenfintech-scanner-python
 
 > Fundamental screener and scoring pipeline for a small US-listed equities watchlist, with a three-role LLM review stage behind a typed information barrier.
 

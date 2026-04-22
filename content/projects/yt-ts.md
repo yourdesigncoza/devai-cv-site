@@ -1,11 +1,10 @@
 ---
 title: yt-ts
+description: "Gradio tool converting trading transcripts to structured Google Sheets rows via regex pre-filter and provider-agnostic LLM. Archived personal tool."
 tags: [project, python, ai]
 draft: false
 status: archived
 ---
-
-# YouTube Trading Analysis
 
 > A single-page Gradio tool that converts pasted trading-session transcripts into structured trade rows appended to Google Sheets.
 

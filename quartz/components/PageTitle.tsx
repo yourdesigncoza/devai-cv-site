@@ -34,12 +34,14 @@ PageTitle.css = `
   margin: 0;
   font-family: var(--titleFont);
 }
-.page-title a {
+.page-title a,
+.page-title a:hover {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
   text-decoration: none;
-  color: var(--dark);
+  color: var(--dark) !important;
+  font-weight: 700 !important;
 }
 .page-title-icon {
   display: inline-flex;

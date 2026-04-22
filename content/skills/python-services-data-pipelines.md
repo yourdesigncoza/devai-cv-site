@@ -1,10 +1,9 @@
 ---
 title: Python Services & Data Pipelines
+description: "Python services and data pipelines — ingestion, snapshot hashing, CLI tools, structured logging. Engineering across quant and research work."
 tags: [skill, python, pipelines]
 draft: false
 ---
-
-# Python Services & Data Pipelines
 
 > "Linear data flow: data_fetch → zones → backtest → run.py / run_multi.py"
 >

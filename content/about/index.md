@@ -1,10 +1,9 @@
 ---
 title: About
+description: "About John Montgomery — 22 years of software, remote from South Africa. WordPress via YourDesign, plus quant research pipelines and AI / agent systems."
 tags: [about]
 draft: false
 ---
-
-# About
 
 ![John Montgomery](profile.jpg)
 
@@ -25,6 +24,14 @@ In parallel, I maintain [[projects/wecoza-development|WeCoza 3.0]] for an educat
 - Comfortable with long-running client relationships; current WeCoza engagement has a 14-month paper trail of meetings, PDFs, and PRDs.
 - Bias toward linear, reviewable code and fewer dependencies. Stdlib-only where it fits.
 - Research projects get honest postmortems when they don't pan out — see [[decisions/publishing-negative-results|Why I publish negative results]].
+
+## Trading
+
+I trade XAUUSD full-time; most of the quant and AI-review work here grows out of that practice. The fuller story is on the [[about/trading|Trading]] page.
+
+## Who I've worked with
+
+The [[about/clients|Clients & collaborators]] page lists named relationships and carries three real client testimonials lifted from yourdesign.co.za. References available on request.
 
 ## Contact
 

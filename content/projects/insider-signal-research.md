@@ -1,11 +1,10 @@
 ---
-title: InsiderSignalResearch
+title: Insider Signal Research
+description: "IS / OOS research programme over 4,143 SEC insider-buy signals. Shelved with a written postmortem; the research platform survives the conclusion."
 tags: [project, quant, python, research]
 draft: false
 status: archived
 ---
-
-# InsiderSignalResearch
 
 > A full IS/OOS research programme over SEC Form 3/4/5 insider-buy filings. Published as a shelved project with a written postmortem.
 

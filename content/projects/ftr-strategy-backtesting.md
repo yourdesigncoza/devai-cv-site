@@ -1,11 +1,10 @@
 ---
-title: ftr_strategy_backtesting
+title: FTR Strategy Backtester
+description: "Three systematic trading strategies on a shared Python metrics spine. Confidence-adjusted expectancy, walk-forward validation, MD5 data snapshots."
 tags: [project, quant, python]
 draft: false
 status: active
 ---
-
-# ftr_strategy_backtesting
 
 > A backtesting research platform for three systematic trading strategies sharing a common metrics spine: FTR (Failed To Return), OB-Pullback Trend, and ORB (Opening Range Breakout).
 

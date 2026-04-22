@@ -1,10 +1,9 @@
 ---
 title: Quant Engineering
+description: "Quant engineering — research platforms, screening, and backtesting with honest evaluation. Includes the Eden Fintech scanner and shelved insider-signal research."
 tags: [skill, quant, python]
 draft: false
 ---
-
-# Quant Engineering
 
 > "The strategy does not work and cannot be made to work by tuning parameters."
 >

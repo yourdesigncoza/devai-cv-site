@@ -1,10 +1,9 @@
 ---
 title: Knowledge Graphs & Wiki Systems
+description: "Knowledge graphs and wiki systems — Obsidian + Quartz research wikis, entity taxonomies, and case-study sites. Includes SignalTrace."
 tags: [skill, knowledge-graph, quartz, obsidian]
 draft: false
 ---
-
-# Knowledge Graphs & Wiki Systems
 
 > "Most research sells you an answer. Epistemic research sells you a better-formed question."
 >

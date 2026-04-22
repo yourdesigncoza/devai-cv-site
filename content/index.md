@@ -1,12 +1,13 @@
 ---
 title: John Montgomery — DevAi
+description: "Quant research pipelines, LLM and agent systems, and custom WordPress — by John Montgomery. 22 years in. Remote-first, available for new projects."
 tags: [home]
 draft: false
 ---
 
 # I'm John
 
-<img src="about/profile.jpg" alt="John Montgomery" width="180" style="float: right; margin: -2rem 0 1rem 1.5rem; border-radius: 8px;" />
+<img src="about/profile.jpg" alt="John Montgomery" width="180" style="float: right; margin: -3rem 0 1rem 1.5rem; border-radius: 8px;" />
 
 I work from Mossel Bay on the south coast of South Africa, under the **YourDesign** name. Most of my week goes into [Eden Fintech](https://edenfintech.com/) — a screening and AI-review pipeline for US-listed equities — and a long-running WordPress engagement for a training provider here at home.
 
@@ -38,6 +39,7 @@ Remote, UTC+2. Open to contract, retainer, or lead-developer roles. The [[about/
 
 - [[projects/edenfintech-scanner-python|edenfintech-scanner-python]] — a stdlib-only core plus a three-role LLM review stage behind a typed information barrier.
 - [[projects/edenfintech-com|edenfintech.com]] — the free weekly watchlist surfaced from the scanner's output.
+- [[projects/signaltrace-site|SignalTrace]] ([signaltrace.wiki](https://www.signaltrace.wiki/)) — a multi-wiki research site over five OSINT / financial-research case studies. Active.
 - [[projects/wecoza-development|WeCoza 3.0]] — long-running WordPress + Postgres client engagement for a South African adult-education training provider.
 
 See the [[now|Now page]] for the current week in more detail.
@@ -49,13 +51,15 @@ This site is also a working record of how I practice. New pages land in these fo
 - [[decisions/|Decisions]] — positions I hold, with the reasoning attached.
 - [[playbooks/|Playbooks]] — repeatable recipes I want to run the same way twice.
 - [[notes/|Notes]] — dated learning log, short-form thinking.
-- [[reading/|Reading]] — books, papers, and posts with traceable influence on the work.
+- [[influences/|Influences]] — videos, podcasts, talks, and writing that have shaped the work.
 - [[open-questions/|Open questions]] — things I'm chewing on but haven't resolved.
 
 ## Talk to me
 
 - [[about/index|About]]
+- [[about/trading|Trading]]
 - [[about/cover-letter|Cover letter]]
+- [[about/clients|Clients & collaborators]]
 - [[now|What I'm doing now]]
 - Email: support@yourdesign.co.za
 - Phone: +27 079 177 1970

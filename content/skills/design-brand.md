@@ -1,10 +1,9 @@
 ---
 title: Design & Brand
+description: "Design and brand work — custom themes, SCSS, hand-authored landing pages. 20 years of front-end plus visual identity on John Montgomery's own sites."
 tags: [skill, design, brand]
 draft: false
 ---
-
-# Design & Brand
 
 > "Sober, plainspoken, no hype — beat fear with information."
 >

@@ -1,10 +1,9 @@
 ---
 title: AI / Agentic Systems
+description: "AI and agent systems — LLM calls behind typed adapters, contract-governed review stages, reproducible pipelines. John Montgomery's AI-engineering approach."
 tags: [skill, ai, agents, llm]
 draft: false
 ---
-
-# AI / Agentic Systems
 
 > "This dataclass enforces the information barrier specified in the epistemic_review contract. It EXCLUDES: scores, decision_score, total_score; probabilities, base_probability_pct, effective_probability; valuations, target_price, floor_price, base_case, worst_case; numeric targets, cagr_pct, downside_pct."
 >

@@ -1,10 +1,9 @@
 ---
 title: WordPress & PHP Craft
+description: "Custom WordPress, WooCommerce, and PHP development. 20+ years of bespoke builds and Postgres-backed operational sites by John Montgomery / YourDesign."
 tags: [skill, wordpress, php, postgres]
 draft: false
 ---
-
-# WordPress & PHP Craft
 
 > "Freelance WordPress Wrangler @ yourdesign.co.za"
 >

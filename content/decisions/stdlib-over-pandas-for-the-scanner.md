@@ -1,11 +1,10 @@
 ---
 title: Why stdlib over pandas for the scanner core
+description: "Why I use stdlib over pandas in the scanner core — dependencies as a drift surface, stability over ergonomics in production Python pipelines."
 tags: [decision, python, architecture]
 draft: false
 date: 2026-04-22
 ---
-
-# Why stdlib over pandas for the scanner core
 
 ## The position
 
