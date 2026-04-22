@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+
+# Quartz build output + caches
+public/
+.quartz-cache/
+tsconfig.tsbuildinfo
+
+# Obsidian per-vault config (keep per-machine)
+.obsidian/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Local / private notes
+private/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Git worktrees (in case they're ever nested in the repo)
+.worktrees/

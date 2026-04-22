@@ -1,0 +1,128 @@
+@use "./base.scss";
+
+// ── Force light mode regardless of saved-theme ────────────────────────────────
+:root,
+:root[saved-theme="light"],
+:root[saved-theme="dark"] {
+  --light:         #ffffff;
+  --lightgray:     #dcdcde;
+  --gray:          #737278;
+  --darkgray:      #171321;
+  --dark:          #171321;
+  --secondary:     #fc6d26;
+  --tertiary:      #e24329;
+  --highlight:     rgba(252, 109, 38, 0.10);
+  --textHighlight: rgba(252, 109, 38, 0.22);
+}
+
+// ── Display headings ──────────────────────────────────────────────────────────
+article h1, article h2, article h3 {
+  font-weight: 800 !important;
+  letter-spacing: -0.02em;
+  color: #171321 !important;
+}
+
+// ── Link styling ──────────────────────────────────────────────────────────────
+a {
+  color: #74717a !important;
+  font-weight: 400 !important;
+}
+a:hover {
+  color: #171321 !important;
+}
+
+a.internal {
+  color: #fc6d26 !important;
+  background-color: transparent !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+}
+a.internal:hover {
+  color: #171321 !important;
+}
+
+// ── Sidebar / Explorer ────────────────────────────────────────────────────────
+.explorer-ul a,
+.explorer-ul .folder-title,
+.left.sidebar .explorer button {
+  font-size: 0.8rem !important;
+  line-height: 1.5 !important;
+}
+
+// ── Table of Contents ─────────────────────────────────────────────────────────
+.toc-content a, .toc-content li {
+  font-size: 0.8rem !important;
+}
+
+// ── Hide light/dark mode switch ───────────────────────────────────────────────
+button.darkmode {
+  display: none !important;
+}
+
+// ── Logo: ▲ SignalTrace ───────────────────────────────────────────────────────
+.page-title a {
+  font-size: 0 !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  text-decoration: none !important;
+  color: transparent !important;
+}
+.page-title a::before {
+  content: "\25B2";
+  font-size: 2.0rem;
+  color: #fc6d26;
+  font-weight: 700;
+}
+.page-title a::after {
+  content: "SignalTrace";
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #171321;
+  letter-spacing: -0.02em;
+  font-family: "Inter", sans-serif;
+}
+.page-title a:hover::after { color: #171321 !important; }
+
+// ── "index" page title → "Wiki Index" ────────────────────────────────────────
+body[data-slug="index"] h1.article-title {
+  font-size: 0 !important;
+}
+body[data-slug="index"] h1.article-title::before {
+  content: "Wiki Index";
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #171321;
+  font-family: "Inter", sans-serif;
+  display: block;
+}
+
+// ── Global graph container ────────────────────────────────────────────────────
+.graph > .global-graph-outer > .global-graph-container {
+  width: 95vw !important;
+  height: 95vh !important;
+}
+
+// ── Scrollbars ────────────────────────────────────────────────────────────────
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #dcdcde #ffffff;
+}
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #ffffff; }
+::-webkit-scrollbar-thumb { background: #dcdcde; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #737278; }
+
+// ── Hide Quartz footer ────────────────────────────────────────────────────────
+footer {
+  display: none !important;
+}
+
+// ── Inline code — GitLab red-on-pink ─────────────────────────────────────────
+code:not(pre > code) {
+  background: #fbe5e1 !important;
+  color: #c0341d !important;
+  padding: 1px 5px;
+  border-radius: 3px;
+}
