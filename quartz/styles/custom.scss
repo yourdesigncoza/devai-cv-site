@@ -59,45 +59,6 @@ button.darkmode {
   display: none !important;
 }
 
-// ── Logo: ▲ SignalTrace ───────────────────────────────────────────────────────
-.page-title a {
-  font-size: 0 !important;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3em;
-  text-decoration: none !important;
-  color: transparent !important;
-}
-.page-title a::before {
-  content: "\25B2";
-  font-size: 2.0rem;
-  color: #fc6d26;
-  font-weight: 700;
-}
-.page-title a::after {
-  content: "SignalTrace";
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: #171321;
-  letter-spacing: -0.02em;
-  font-family: "Inter", sans-serif;
-}
-.page-title a:hover::after { color: #171321 !important; }
-
-// ── "index" page title → "Wiki Index" ────────────────────────────────────────
-body[data-slug="index"] h1.article-title {
-  font-size: 0 !important;
-}
-body[data-slug="index"] h1.article-title::before {
-  content: "Wiki Index";
-  font-size: 2.5rem;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  color: #171321;
-  font-family: "Inter", sans-serif;
-  display: block;
-}
-
 // ── Global graph container ────────────────────────────────────────────────────
 .graph > .global-graph-outer > .global-graph-container {
   width: 95vw !important;

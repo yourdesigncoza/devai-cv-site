@@ -1,14 +1,14 @@
 ---
-title: John Montgomery — YourDesign
+title: John Montgomery — DevAi
 tags: [home]
 draft: false
 ---
 
-# John Montgomery
+# I'm John
 
-<img src="about/profile.jpg" alt="John Montgomery" width="180" style="float: right; margin: 0 0 1rem 1.5rem; border-radius: 8px;" />
+<img src="about/profile.jpg" alt="John Montgomery" width="180" style="float: right; margin: -2rem 0 1rem 1.5rem; border-radius: 8px;" />
 
-I'm John. I work from Mossel Bay on the south coast of South Africa, under the **YourDesign** name. Most of my week goes into [Eden Fintech](https://edenfintech.com/) — a screening and AI-review pipeline for US-listed equities — and a long-running WordPress engagement for a training provider here at home.
+I work from Mossel Bay on the south coast of South Africa, under the **YourDesign** name. Most of my week goes into [Eden Fintech](https://edenfintech.com/) — a screening and AI-review pipeline for US-listed equities — and a long-running WordPress engagement for a training provider here at home.
 
 ## The arc
 
