@@ -3,6 +3,7 @@ title: Building a knowledge-graph research vault
 description: "Start with a research brief, end with a navigable Obsidian vault published as a public wiki. The iterative loop between them, with a convergence criterion that knows when to stop."
 tags: [playbook, obsidian, quartz, knowledge-graph, research]
 draft: false
+date: 2026-04-22
 ---
 
 Every knowledge-graph wiki I've built — [[projects/signaltrace-site|SignalTrace]], the [[projects/insider-signal-research|insider-signal research programme]], this CV wiki — came out of the same loop. A research brief on one end, an Obsidian vault on the other, an iterative discovery pass in the middle that knows when to stop.

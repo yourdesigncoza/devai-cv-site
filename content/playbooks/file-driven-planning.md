@@ -3,6 +3,7 @@ title: A file-driven planning framework for AI-assisted coding
 description: "Five phases. Each phase reads a file and writes a file. If an AI session crashes mid-phase, you resume from the last file written. Mixed-model workflow, Gemini review, Sonnet execute."
 tags: [playbook, planning, ai-tooling, claude-code]
 draft: false
+date: 2026-04-22
 ---
 
 A year of building with AI coding assistants taught me one thing about planning: **the planning state has to live on disk, not in the session**. A dropped Claude Code session used to mean starting from scratch. Now it means reading the last file written.

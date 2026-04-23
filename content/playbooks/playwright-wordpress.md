@@ -3,6 +3,7 @@ title: Playwright E2E tests for a WordPress plugin
 description: "A Playwright setup that logs in once, never clicks the Wipe All button, and treats a shortcode map as the single source of truth for routes. The specific shape I run against WeCoza."
 tags: [playbook, wordpress, playwright, testing]
 draft: false
+date: 2026-04-22
 ---
 
 The short version: if you're going to drive a WordPress plugin with Playwright, the three things that will bite you are *session management*, *destructive action buttons*, and *ad-hoc URL lists that drift*. Everything below is structured to not get bitten by any of those again.

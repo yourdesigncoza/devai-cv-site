@@ -3,6 +3,7 @@ title: Adversarial review via a second AI model
 description: "Pipe your plan, code, or tests to a second AI from a different vendor for critical review. The findings you'd have missed come from a reader who isn't invested in the design choice."
 tags: [playbook, ai-tooling, code-review, gemini, claude]
 draft: false
+date: 2026-04-22
 ---
 
 The premise is simple: when I'm building with Claude, I have Claude. Claude is thorough, but Claude also agrees with itself more than it disagrees. For the last pre-execute step on any non-trivial work, I pipe the current state to **Gemini** for an adversarial pass. Different model family, different training data, different blindspots.

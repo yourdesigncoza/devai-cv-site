@@ -3,6 +3,7 @@ title: Translating technical fixes for non-technical clients
 description: "Every bug-fix update to a non-technical client is two paragraphs, zero jargon, a commit SHA, and a Trello tag. The template that keeps me from leaking 'nonce', 'capability', or '403' into client inboxes."
 tags: [playbook, wordpress, client-communication, writing]
 draft: false
+date: 2026-04-22
 ---
 
 Every WordPress fix I ship to a non-technical client goes through the same translation pass. The client doesn't need to know about nonces, AJAX handlers, or capability checks. They need to know three things: what was broken (in their terms), what I did, that it's fixed.

@@ -13,4 +13,4 @@ Inspired by the [[projects/signaltrace-site|signaltrace]] convention of keeping 
 
 ## Current questions
 
-*First questions land here as they surface.*
+- [[open-questions/harness-vs-prompt-engineering|Is prompt engineering more leveraged than the harness, long-term?]] — as base models get better at following loose prompts, does the compounding return shift back to prompt-craft or stay with typed adapters, file-driven planning, and review loops? Current lean: harness. Resolution signal: experienced practitioners publicly landing the other way.
