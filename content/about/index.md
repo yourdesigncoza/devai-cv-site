@@ -39,3 +39,4 @@ The [[about/clients|Clients & collaborators]] page lists named relationships and
 - **Phone:** +27 079 177 1970
 - **Long-form pitch:** [[about/cover-letter|the current cover letter]]
 - **Current focus:** [[projects/edenfintech-scanner-python|edenfintech-scanner-python]] and [[projects/edenfintech-com|edenfintech.com]]
+- **About this site:** [[about/how-this-site-works|how this site works]]

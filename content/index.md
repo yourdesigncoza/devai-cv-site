@@ -54,6 +54,8 @@ This site is also a working record of how I practice. New pages land in these fo
 - [[influences/|Influences]] — videos, podcasts, talks, and writing that have shaped the work.
 - [[open-questions/|Open questions]] — things I'm chewing on but haven't resolved.
 
+More on [[about/how-this-site-works|how the site is put together]].
+
 ## Talk to me
 
 - [[about/index|About]]
