@@ -27,6 +27,10 @@ I keep building the same pattern: an Obsidian vault that turns a collection of s
 
 *More decision pages planned — this hub will pick up backlinks as they land.*
 
+## Playbooks I use here
+
+- [[playbooks/knowledge-graph-vault|Building a knowledge-graph research vault]] — iterative Obsidian-to-Quartz workflow with a convergence criterion; the shape behind signaltrace and this CV site.
+
 ## What I'm usually asked to do
 
 - Set up an Obsidian vault for a research topic and publish it as a navigable public wiki

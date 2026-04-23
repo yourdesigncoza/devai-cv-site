@@ -28,6 +28,15 @@ Other pieces of the same instinct show up in smaller projects. [[projects/yt-ts|
 
 - [[decisions/llms-behind-typed-adapters|Why I keep LLMs behind typed adapters]] — code-level contracts over prompt discipline; transport injection; external prompts.
 
+## Playbooks I use here
+
+- [[playbooks/file-driven-planning|A file-driven planning framework for AI-assisted coding]] — each phase reads and writes a file; mixed-model workflow (Opus → Gemini → Sonnet); crash-resumable.
+- [[playbooks/adversarial-ai-review|Adversarial review via a second AI model]] — piping work to a different-vendor model for a critical pass; the findings I'd have missed come from a reader who isn't invested in the design choice.
+
+## Open questions I'm holding
+
+- [[open-questions/harness-vs-prompt-engineering|Is prompt engineering more leveraged than the harness, long-term?]] — as base models get better at following loose prompts, does the compounding return shift back to prompt-craft or stay with typed adapters, file-driven planning, and review loops?
+
 ## What I'm usually asked to do
 
 - Design an agent workflow that won't quietly drift when the model changes
