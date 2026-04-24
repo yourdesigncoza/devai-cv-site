@@ -7,7 +7,7 @@ date: 2026-04-22
 ---
 
 **John Montgomery** · YourDesign · Mossel Bay, South Africa
-support@yourdesign.co.za · +27 079 177 1970
+support@edenfintech.com · +27 079 177 1970
 
 ---
 

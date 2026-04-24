@@ -35,7 +35,7 @@ The [[about/clients|Clients & collaborators]] page lists named relationships and
 
 ## Contact
 
-- **Email:** support@yourdesign.co.za
+- **Email:** support@edenfintech.com
 - **Phone:** +27 079 177 1970
 - **Long-form pitch:** [[about/cover-letter|the current cover letter]]
 - **Current focus:** [[projects/edenfintech-scanner-python|edenfintech-scanner-python]] and [[projects/edenfintech-com|edenfintech.com]]

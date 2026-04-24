@@ -23,6 +23,8 @@ import Breadcrumbs from "./Breadcrumbs"
 import Comments from "./Comments"
 import Flex from "./Flex"
 import ConditionalRender from "./ConditionalRender"
+import ViewGraphLink from "./ViewGraphLink"
+import HamburgerNav from "./HamburgerNav"
 
 export {
   ArticleTitle,
@@ -50,4 +52,6 @@ export {
   Comments,
   Flex,
   ConditionalRender,
+  ViewGraphLink,
+  HamburgerNav,
 }

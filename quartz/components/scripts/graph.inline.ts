@@ -378,7 +378,10 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
       interactive: false,
       eventMode: "none",
       text: n.text,
-      alpha: 0,
+      // Initial alpha mirrors the zoom handler's formula at transform.k=1
+      // so labels respect opacityScale on load, not only after the first
+      // zoom/pan event fires the opacity recalc.
+      alpha: Math.max((opacityScale - 1) / 3.75, 0),
       anchor: { x: 0.5, y: 1.2 },
       style: {
         fontSize: fontSize * 15,

@@ -1,5 +1,9 @@
 Session : fandom-wiki-visual-overhaul
 https://codepen.io/brutforcekenobi/pen/oNoLbBG
+
+> **Status: SUPERSEDED on 2026-04-24 by the graphify-direction overhaul.**
+> John chose a calmer, light-palette direction (graphify.net as reference) over this fandom/dark-atmospheric plan. Kept here for the decision trail — notably the SiteHeader idea, search-icon-in-header reuse, and the "drop Graph from right rail, revisit /graph route" line that evolved into the header-link-opens-modal approach in the successor plan.
+
 # Fandom-wiki visual overhaul
 
 ## Context
@@ -16,12 +20,14 @@ Current Quartz v4 site (`devai.co.za`) uses the stock three-panel layout: left s
 ## Files to change
 
 **Edit**
+
 - `quartz.layout.ts` — rewire header (add `SiteHeader`), empty `left` array, replace `right` with `ConditionalRender(InfoBox)`, move `TableOfContents` into `beforeBody` as boxed inline card, keep `defaultListPageLayout` mostly as-is.
 - `quartz/styles/custom.scss` — full rewrite: remove forced light-mode block (lines 5–16), set dark palette on `:root`, add body bg texture, style cards (`.toc`, `.infobox`), top-bar, tighten typography.
 - `quartz.config.ts` — tune `darkMode` theme colors (keep `#fc6d26` accent, darker panel/bg tones).
 - `content/projects/*.md` — add infobox frontmatter (`hero`, `status`, `stack`, `role`, `year`, `links`) to each project page. ~8 files.
 
 **Create**
+
 - `quartz/components/SiteHeader.tsx` — top-bar: logo (λ + "DevAi") + primary nav links + search-icon trigger (reuses existing `Search` component's modal). Follows `ArticleTitle.tsx` pattern (export default `QuartzComponentConstructor`, attach `.css`, `.afterDOMLoaded`).
 - `quartz/components/InfoBox.tsx` — right-rail card: hero image + title banner + key/value table rendered from `fileData.frontmatter`. Returns `null` when frontmatter has no `infobox: true` marker (or when on a non-project page), so it composes with `ConditionalRender`.
 - `quartz/components/styles/siteHeader.scss`, `infoBox.scss` — co-located styles imported by each component (Quartz convention — see `pageTitle.scss`, `breadcrumbs.scss`).

@@ -46,7 +46,7 @@ PageTitle.css = `
 .page-title-icon {
   display: inline-flex;
   align-items: center;
-  color: #fc6d26;
+  color: #2d5bff;
   width: 1.5em;
   height: 1.5em;
   flex-shrink: 0;

@@ -7,7 +7,22 @@ draft: false
 
 # I'm John
 
-<img src="about/profile.jpg" alt="John Montgomery" width="180" style="float: right; margin: -3rem 0 1rem 1.5rem; border-radius: 8px;" />
+<aside class="profile-card">
+  <div class="profile-card-header">John Montgomery</div>
+  <div class="profile-card-image"><img src="about/profile.jpg" alt="John Montgomery" /></div>
+  <dl class="profile-card-info">
+    <dt>Based</dt>
+    <dd>Mossel Bay, South Africa <small>(UTC+2)</small></dd>
+    <dt>Focus</dt>
+    <dd>Adversarial AI for deep-value quant</dd>
+    <dt>Founder</dt>
+    <dd><a href="https://edenfintech.com/">EdenFinTech</a></dd>
+    <dt>Years</dt>
+    <dd>22+ coding</dd>
+    <dt>Contact</dt>
+    <dd><a href="mailto:support@edenfintech.com">support@edenfintech.com</a></dd>
+  </dl>
+</aside>
 
 I work from Mossel Bay on the south coast of South Africa, under the **YourDesign** name. Most of my week goes into [Eden Fintech](https://edenfintech.com/) — a screening and AI-review pipeline for US-listed equities — and a long-running WordPress engagement for a training provider here at home.
 
@@ -25,7 +40,7 @@ I started in the early 2000s writing trading "bots" for a trading company. By 20
 > - Long-running WordPress engagements where the schema needs to move beyond `$wpdb`.
 > - Obsidian / Quartz knowledge-graph projects for research, OSINT, or case-study work.
 >
-> Remote, UTC+2. Open to contract, retainer, or lead-developer roles. The [[about/cover-letter|cover letter]] has more, or reach me at support@yourdesign.co.za.
+> Remote, UTC+2. Open to contract, retainer, or lead-developer roles. The [[about/cover-letter|cover letter]] has more, or reach me at support@edenfintech.com.
 
 ## What I do
 
@@ -64,5 +79,5 @@ More on [[about/how-this-site-works|how the site is put together]].
 - [[about/cover-letter|Cover letter]]
 - [[about/clients|Clients & collaborators]]
 - [[now|What I'm doing now]]
-- Email: support@yourdesign.co.za
+- Email: support@edenfintech.com
 - Phone: +27 079 177 1970

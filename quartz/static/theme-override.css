@@ -16,10 +16,10 @@
   --gray:           #737278;   /* gl neutral-500 */
   --darkgray:       #171321;   /* gl brand-charcoal */
   --dark:           #171321;
-  --secondary:      #fc6d26;   /* gl brand-orange-02p (tanuki) */
-  --tertiary:       #e24329;   /* gl brand-orange-03p */
-  --highlight:      rgba(252, 109, 38, 0.10);
-  --textHighlight:  rgba(252, 109, 38, 0.22);
+  --secondary:      #2d5bff;   /* gl brand-orange-02p (tanuki) */
+  --tertiary:       #1d45d4;   /* gl brand-orange-03p */
+  --highlight:      rgba(45, 91, 255, 0.10);
+  --textHighlight:  rgba(45, 91, 255, 0.22);
   --titleFont:      "Inter", "Helvetica Neue", Arial, sans-serif;
   --headerFont:     "Inter", "Helvetica Neue", Arial, sans-serif;
   --bodyFont:       "Inter", "Helvetica Neue", Arial, sans-serif;
@@ -46,7 +46,7 @@ a:hover {
 
 /* Internal wiki links (cross-references) — orange to signal navigability */
 a.internal {
-  color: #fc6d26 !important;
+  color: #2d5bff !important;
   background-color: transparent !important;
   padding: 0 !important;
   border-radius: 0 !important;
@@ -88,7 +88,7 @@ code:not(pre > code) {
   display: block;
   margin-top: 8px;
   font-size: 0.8rem;
-  color: #fc6d26 !important;
+  color: #2d5bff !important;
   text-decoration: none !important;
   text-align: right;
 }

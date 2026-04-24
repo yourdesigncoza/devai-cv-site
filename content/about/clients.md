@@ -5,7 +5,7 @@ tags: [about, clients]
 draft: false
 ---
 
-People and businesses I've worked with over the years. Quotes are lifted verbatim from testimonials already published on [yourdesign.co.za](https://yourdesign.co.za/). I'm happy to put you in touch with any of the people below as a reference — reach me at support@yourdesign.co.za.
+People and businesses I've worked with over the years. Quotes are lifted verbatim from testimonials already published on [yourdesign.co.za](https://yourdesign.co.za/). I'm happy to put you in touch with any of the people below as a reference — reach me at support@edenfintech.com.
 
 ## In their own words
 
@@ -34,4 +34,4 @@ Named relationships, no invented quotes. References available on request.
 
 ## Becoming one
 
-The [[now|current availability]] page shows what I'm looking for next. The [[about/cover-letter|cover letter]] has the longer pitch. Direct: support@yourdesign.co.za · +27 079 177 1970.
+The [[now|current availability]] page shows what I'm looking for next. The [[about/cover-letter|cover letter]] has the longer pitch. Direct: support@edenfintech.com · +27 079 177 1970.
