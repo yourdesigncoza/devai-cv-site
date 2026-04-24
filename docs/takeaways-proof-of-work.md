@@ -69,3 +69,9 @@ Proof-of-thinking must be **inseparable from the work**, or it becomes spammable
 ## What to ignore
 
 The "talent board" pitch at the start and end is a product plug. The principles stand on their own; the product is not relevant here — this wiki is the self-hosted version of the same idea.
+
+## Future — promote the frame to a public playbook?
+
+Not yet. Once the four-question frame has been tested on 3–5 more project pages and the pattern holds, consider promoting it to `content/playbooks/proving-worth-in-the-ai-era.md`. Self-demonstrating: the wiki would then prove its own thesis in public. Premature as of 2026-04-24 — one validated page is not enough signal, and locking a convention early tends to calcify it.
+
+Revisit when the frame has been applied to: `edenfintech-scanner-python`, `insider-signal-research`, `ftr-strategy-backtesting`, `apes-signal`. If the frame still earns its keep across all four, make it a playbook.

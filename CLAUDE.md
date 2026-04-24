@@ -45,6 +45,22 @@ Node 22+ / npm 10.9.2+. Vercel build command is `npx quartz build`, output `publ
 - `quartz.layout.ts` — page layouts (left sidebar Explorer + Search, right sidebar Graph + ToC + Backlinks).
 - `quartz/` — vendored Quartz framework source. Don't edit unless intentionally patching upstream.
 
+## Project page convention
+
+Substantive pages in `content/projects/` follow a four-question frame:
+
+1. `## What it is` — plain English, what the thing does and doesn't do.
+2. `## Why this approach` — trade-offs, alternatives. Link to relevant `content/decisions/` pages inline.
+3. `## What will break` — fragile points, known issues, blast radius.
+4. `## What I learned` — genuine reflection. **Must be in John's voice.** Never draft this section without his input — leave a flagged placeholder.
+
+Followed by `## Proof points` (bullets) and `## What this proves` (skill links).
+
+Rules:
+- Short entries (under ~30 lines, e.g. `yourdesign-co-za.md`) stay as narrative — don't force the frame on thin pages.
+- Apply voice rules on any rewrite: cut "far", "really", "surprisingly", "very", "huge", "simply", "The takeaway:", "Used correctly" and similar intensifiers/aphorisms.
+- See `content/projects/wecoza-development.md` for the canonical shape and `docs/takeaways-proof-of-work.md` for rationale.
+
 ## Git workflow
 
 Git operations are user-triggered only. Never run git commands unless explicitly asked. No AI attribution in commit messages or anywhere in the repo.
