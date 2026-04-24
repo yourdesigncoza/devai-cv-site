@@ -24,7 +24,7 @@ Mapping:
 |---|---|
 | Raw source folder (untouched) | `raw/` — defuddled captures, evidence dives, PDF extracts |
 | Wiki (AI-curated synthesis) | `content/` — hand-written Quartz vault |
-| Obsidian as the browsable head | Quartz build → `cv.yourdesign.co.za` |
+| Obsidian as the browsable head | Quartz build → `devai.co.za` |
 | AI as maintainer, not oracle | AI helps curate/synthesise but voice stays John's |
 | File over app / own your artifact | Plain markdown in git, no SaaS middleman |
 | Idea file as publishing format | CV *is* the publishing format — readable by humans and agents |

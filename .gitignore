@@ -31,3 +31,6 @@ Thumbs.db
 
 # Git worktrees (in case they're ever nested in the repo)
 .worktrees/
+
+# Playwright MCP transient snapshots/logs
+.playwright-mcp/

@@ -2,7 +2,7 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-Personal CV wiki / evolving knowledge graph for **John Montgomery** (brand: **YourDesign**, site title **DevAi**). Built on Quartz v4 (forked upstream `@jackyzha0/quartz`), deployed to Vercel at `cv.yourdesign.co.za`.
+Personal CV wiki / evolving knowledge graph for **John Montgomery** (brand: **YourDesign**, site title **DevAi**). Built on Quartz v4 (forked upstream `@jackyzha0/quartz`), deployed to Vercel at `devai.co.za`. (Previously at `cv.yourdesign.co.za`; that domain is deprecated.)
 
 ## Identity rule
 

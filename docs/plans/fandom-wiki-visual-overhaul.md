@@ -4,7 +4,7 @@ https://codepen.io/brutforcekenobi/pen/oNoLbBG
 
 ## Context
 
-Current Quartz v4 site (`cv.yourdesign.co.za`) uses the stock three-panel layout: left sidebar (Explorer + Search + Darkmode), centered content, right sidebar (Graph + ToC + Backlinks), forced light mode via `custom.scss`. The user wants to adopt the feel of the referenced CodePen (`brutforcekenobi/oNoLbBG`) — a fandom/wiki aesthetic: dark atmospheric theme, top-bar nav instead of left sidebar, right-side **infobox** card driven by frontmatter, boxed in-flow ToC. Goal is a distinctive first impression while keeping Quartz's content pipeline untouched. No upstream Quartz patches required — entirely layout rewire + styles + one new component.
+Current Quartz v4 site (`devai.co.za`) uses the stock three-panel layout: left sidebar (Explorer + Search + Darkmode), centered content, right sidebar (Graph + ToC + Backlinks), forced light mode via `custom.scss`. The user wants to adopt the feel of the referenced CodePen (`brutforcekenobi/oNoLbBG`) — a fandom/wiki aesthetic: dark atmospheric theme, top-bar nav instead of left sidebar, right-side **infobox** card driven by frontmatter, boxed in-flow ToC. Goal is a distinctive first impression while keeping Quartz's content pipeline untouched. No upstream Quartz patches required — entirely layout rewire + styles + one new component.
 
 ## Decisions confirmed
 
