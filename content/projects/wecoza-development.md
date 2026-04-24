@@ -14,9 +14,7 @@ status: maintained
 
 ## What it is
 
-From the WordPress dashboard this looks like any other custom plugin: admin menus, front-end shortcodes, AJAX endpoints, a settings page. What matters runs outside WordPress — a 43-table Postgres schema modelling a training provider's operations (agents, learners, classes, clients, sites with a parent-child hierarchy, exams, placements, progressions, attendance, deliveries, collections, QA visits) plus a dedicated `wecoza_events` sub-schema for a two-phase notification engine.
-
-WordPress is the surface. Postgres is the system.
+From the WordPress dashboard this looks like any other custom plugin: admin menus, front-end shortcodes, AJAX endpoints, a settings page. Most of what matters runs outside WordPress though — a 43-table Postgres schema modelling a training provider's operations (agents, learners, classes, clients, sites with a parent-child hierarchy, exams, placements, progressions, attendance, deliveries, collections, QA visits) plus a dedicated `wecoza_events` sub-schema for a two-phase notification engine.
 
 ## Why this approach
 
@@ -32,9 +30,9 @@ Known and documented, not hidden:
 
 - AJAX endpoints are capability-gated but not CSRF-nonced.
 - Prod DB credentials are hard-coded in `includes/db.php`.
-- The Settings UI registers `wecoza_db_host/user/password` but `db.php` never consults them — the UI is a trap.
+- The Settings UI registers `wecoza_db_host/user/password` but `db.php` never reads them, so changing values there has no effect.
 - The repo isn't git-versioned; versioning is dated folders plus zipped backups.
-- A legacy `agents-seperate-dev/` PHP + MySQLi portal (31k LOC, 148 files) lives in-tree as a porting reference. Deleting it is a feature-parity exercise, not a cleanup.
+- A legacy `agents-seperate-dev/` PHP + MySQLi portal (31k LOC, 148 files) lives in-tree as a porting reference. Removing it means porting everything it still does.
 
 These are on a list. The plugin is in a real production environment and correctness of the business logic has been the priority.
 
@@ -42,11 +40,11 @@ These are on a list. The plugin is in a real production environment and correctn
 
 Integrating Postgres with WordPress reinforced something I'd seen before: Postgres is better suited for complex, large-scale data operations, especially when the application logic extends beyond what a CMS handles on its own.
 
-WordPress integrates cleanly with external databases. Moving data outside WordPress removes the usual constraints and makes the same dataset reusable across CRMs, web apps, mobile apps, or anything else that needs access — the data is decoupled from the CMS and becomes a shared resource.
+WordPress integrates well with external databases. Moving data outside WordPress removes the usual constraints and makes the same dataset reusable across CRMs, web apps, mobile apps, or anything else that needs access — the data is decoupled from the CMS and becomes a shared resource.
 
 The other reinforcement: WordPress is a collection of PHP abstractions. People still think of it as a blogging platform, but architecturally it's a rapid application framework — a lot of boilerplate is already solved, which often makes it faster to build with than a lighter PHP framework.
 
-WordPress isn't limited to content sites. It can power fairly sophisticated applications, and it integrates cleanly with AI-driven, data-heavy workflows.
+WordPress isn't limited to content sites. It can power fairly sophisticated applications, and it holds up well inside AI-driven, data-heavy workflows.
 
 ## Proof points
 
