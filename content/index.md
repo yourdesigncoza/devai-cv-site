@@ -17,14 +17,15 @@ I started in the early 2000s writing trading "bots" for a trading company. By 20
 
 ## Current availability
 
-I'm actively looking for interesting Quant and Development opportunities. The shapes of work that fit best:
-
-- Building or rescuing a quant research platform — ingestion, backtesting discipline, honest evaluation.
-- Retrofitting LLM and agent pipelines with typed contracts, logging, and proper review stages.
-- Long-running WordPress engagements where the schema needs to move beyond `$wpdb`.
-- Obsidian / Quartz knowledge-graph projects for research, OSINT, or case-study work.
-
-Remote, UTC+2. Open to contract, retainer, or lead-developer roles. The [[about/cover-letter|cover letter]] has more, or reach me at support@yourdesign.co.za.
+> [!tip]
+> I'm actively looking for interesting Quant and Development opportunities. The shapes of work that fit best:
+>
+> - Building or rescuing a quant research platform — ingestion, backtesting discipline, honest evaluation.
+> - Retrofitting LLM and agent pipelines with typed contracts, logging, and proper review stages.
+> - Long-running WordPress engagements where the schema needs to move beyond `$wpdb`.
+> - Obsidian / Quartz knowledge-graph projects for research, OSINT, or case-study work.
+>
+> Remote, UTC+2. Open to contract, retainer, or lead-developer roles. The [[about/cover-letter|cover letter]] has more, or reach me at support@yourdesign.co.za.
 
 ## What I do
 
