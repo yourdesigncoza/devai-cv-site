@@ -170,6 +170,15 @@ Drafted but not yet queued. (Populated as more samples land.)
 - [ ] Impressions / reactions lift from the reply engagement (LinkedIn boosts reply-active posts)
 - [ ] Note any new profile views / connection requests attributable to this thread
 
+## Comments left
+
+Tracked separately from posts. Comments are a discovery lever — LinkedIn surfaces commenters in the original post's reply tree to viewers who haven't connected yet. Patterns matter more than single comments; review monthly alongside the Stats snapshot.
+
+Populated by the `ydcoza-linkedin-engagement` skill (Mode C) after John posts manually. See `docs/linkedin-topics.md` for the topics config and `~/.claude/skills/ydcoza-linkedin-engagement/SKILL.md` for the workflow.
+
+| Date | Post URL | Poster | Topic | Variant | Corpus page | Follow-up |
+| ---- | -------- | ------ | ----- | ------- | ----------- | --------- |
+
 ## Shelved
 
 Drafts that didn't hold up (failed the no-dilution rule, voice audit, or lost relevance). Keep them here briefly so the same weak idea doesn't get re-drafted; delete after a month.
