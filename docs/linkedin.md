@@ -93,6 +93,29 @@ Research platform: devai.co.za/projects/ftr-strategy-backtesting
 
 ---
 
+### 4. Quant trader vs quant investor (epistemic asymmetry)
+
+- **Source:** `content/notes/quant-trader-vs-investor.md`
+- **Type:** Contrarian / framing
+- **Approved:** 2026-04-26
+- **Status:** Next up
+
+---
+
+Short-term trading looks reckless. Long-term investing looks prudent. The trader can prove the strategy works in months. The investor often can't, and never could.
+
+A trader's bet is that someone on the other side made a mistake, and the trader gets there first when the mistake corrects. Frequent bets, microstructure noise, edge detectable in months. An investor's bet is different. The market is paying them to hold something other people would rather not hold. Sparse bets, regime-shift noise, an edge that can take decades to verify.
+
+That's the asymmetry. Trader edges are knowable but evaporate. Investor edges are durable but resist falsification within a working career. The deflated Sharpe, the factor-zoo's t > 3.0 threshold, and a 65% replication failure across 452 published anomalies all pin down the same point. A trader can clear those bars in a few years of live trading. An investor often cannot.
+
+The deliverable on either side isn't a single quality score. It's an audit trail. Pre-register the hypothesis class. Report the search-space size so deflation can be applied honestly. Make the conditioning explicit. Stress-test the assumption rather than the P&L. The scaffolding outlives the strategies.
+
+Read: devai.co.za/notes/quant-trader-vs-investor
+
+#QuantitativeFinance #SystematicTrading #QuantResearch
+
+---
+
 ## Backlog
 
 Drafted but not yet queued. (Populated as more samples land.)
