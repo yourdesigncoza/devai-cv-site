@@ -37,9 +37,9 @@ That stress-testing move is where this connects to the discipline of [[decisions
 
 ## Sources
 
-- Bailey, D. H., & López de Prado, M. (2014). The Deflated Sharpe Ratio. *Journal of Portfolio Management* 40(5).
-- Cochrane, J. H. (2011). Presidential Address: Discount Rates. *Journal of Finance* 66(4).
+- Bailey, D. H., & López de Prado, M. (2014). [The Deflated Sharpe Ratio](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2460551). *Journal of Portfolio Management* 40(5).
+- Cochrane, J. H. (2011). [Presidential Address: Discount Rates](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1540-6261.2011.01671.x). *Journal of Finance* 66(4).
 - Grinold, R. C., & Kahn, R. N. (1999). *Active Portfolio Management*. McGraw-Hill.
-- Harvey, C. R., Liu, Y., & Zhu, H. (2016). ... and the Cross-Section of Expected Returns. *Review of Financial Studies* 29(1).
-- Hou, K., Xue, C., & Zhang, L. (2020). Replicating Anomalies. *Review of Financial Studies* 33(5).
-- Knight, F. H. (1921). *Risk, Uncertainty, and Profit*. Houghton Mifflin.
+- Harvey, C. R., Liu, Y., & Zhu, H. (2016). [... and the Cross-Section of Expected Returns](https://academic.oup.com/rfs/article/29/1/5/1843824). *Review of Financial Studies* 29(1).
+- Hou, K., Xue, C., & Zhang, L. (2020). [Replicating Anomalies](https://academic.oup.com/rfs/article-abstract/33/5/2019/5236964). *Review of Financial Studies* 33(5).
+- Knight, F. H. (1921). [*Risk, Uncertainty, and Profit*](https://archive.org/details/riskuncertaintyp00knigrich). Houghton Mifflin.
