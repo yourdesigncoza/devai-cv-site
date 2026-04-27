@@ -1,8 +1,45 @@
 # ydcoza-cv-wiki
 
-Personal knowledge wiki for **John Montgomery**, published under the **YourDesign** name. The public surface reads as a CV; the real purpose is a long-term capture of what I do, learn, and decide, a working record of 22 years of practice that I've never sat down to write up.
+Personal knowledge wiki for **John Montgomery**, founder of [**EdenFintech**](https://edenfintech.com/). The site at `devai.co.za` (title: **DevAi**) is the working knowledge wiki where the thinking behind EdenFintech is captured: notes, decisions, playbooks, projects, skill hubs. The CV-shaped surface is one face of the wiki; the real product is the long-term capture of 22 years of practice that I've never sat down to write up.
 
 Built as an Obsidian vault, rendered by Quartz 4, deployed to Vercel.
+
+(**YourDesign** is the legacy brand for prior WordPress freelance work and is referenced only in past-engagement context.)
+
+---
+
+## Project model
+
+The wiki sits in four layers, each doing different work.
+
+### 1. Substrate
+
+`content/notes/`, `content/decisions/`, `content/playbooks/`. What I've actually thought through. Dated reasoning, positions held with the trade-offs attached, repeatable recipes. This is the durable asset; everything else either renders it or projects it outward.
+
+### 2. Surface
+
+`content/projects/`, `content/skills/`, `content/about/`, `content/index.md`. The polished CV-shaped face of the substrate. Project pages follow a four-question frame (What it is / Why this approach / What will break / What I learned). Skill hubs (the spine) anchor projects to capabilities.
+
+### 3. Amplifier
+
+`docs/linkedin*`. The LinkedIn engagement workflow turns the substrate into discovery. A skill drives discovery against interest topics, drafts comments grounded in a specific corpus page, and logs what gets posted. The topics config, term-testing ledger, and audit log live alongside `content/`.
+
+### 4. Guardrails
+
+`CLAUDE.md`, voice rules, project-page convention, decision-page convention, the memory system, the git workflow. Prevents drift. The voice rules in particular are strict enough that they're the single biggest determinant of whether the work reads as authentic or as AI-shaped boilerplate.
+
+How they feed each other:
+
+```
+substrate -> wiki surface         (decisions and notes get rendered into pages)
+substrate -> LinkedIn comments    (every comment grounds in a specific corpus page)
+LinkedIn engagement -> substrate  (comments reveal what audience cares about,
+                                   surfacing new note/decision topics)
+voice rules -> all output         (single quality gate)
+memory -> all sessions            (continuity, no re-explaining preferences)
+```
+
+Wiki = proof. LinkedIn = discovery. Substrate = asset. Guardrails = stability.
 
 ---
 
@@ -40,7 +77,7 @@ ydcoza-cv/
 
 **`raw/`** is the input layer. When a new piece of evidence needs to come into the wiki (a defuddled page, an evidence dive over a new codebase, a PDF extract), it lands here first. Re-runnable, if the source changes, regenerate the raw file from it.
 
-**`content/`** is the editorial layer. Every page in `content/` is written by hand. No auto-stitching from raw/, no template-fill. Voice is first-person plain-spoken, the reference for it is whatever already exists in `content/skills/` and the notes on `yourdesign.co.za`.
+**`content/`** is the editorial layer. Every page in `content/` is written by hand. No auto-stitching from raw/, no template-fill. Voice is first-person plain-spoken; the reference for it is whatever already exists in `content/skills/` and `content/decisions/`. Reflective sections (the "What I learned" of project pages, the position/judgment of decision pages) are written by John, never auto-drafted.
 
 Keeping the two separate means the wiki stays clean, the evidence stays traceable, and I can rewrite a page without losing the source material behind it.
 
@@ -114,9 +151,10 @@ Images go in the same folder as the page that uses them (see `content/about/prof
 
 First-person, plain-spoken, dialled back. Concretely:
 
-- **Avoid** self-declarative taglines ("I build X that does Y"), aphorisms meant to sound quotable, anti-positioning ("what I'm not is…"), commercial hooks, intensifiers ("pride and joy", "the asset").
+- **Em-dashes: hard ban (locked 2026-04-27).** Zero, anywhere, anytime. Replace with period, comma, colon, or parentheses; if none fit, restructure the sentence. The em-dash is the single strongest "this was AI-drafted" tell on the public web in 2026.
+- **Avoid** self-declarative taglines ("I build X that does Y"), aphorisms meant to sound quotable, anti-positioning ("what I'm not is…"), commercial hooks, filler intensifiers ("essentially", "fundamentally", "simply").
 - **Prefer** observations grounded in specific evidence from `raw/` or from the project itself. If a sentence feels like it's performing, rewrite it as plain description of what happened.
-- The 2023 cover letter in `raw/docs/cover-letter-2023.md` is the voice anchor, bracketed asides, self-deprecating register, lowercase ease.
+- The 2023 cover letter in `raw/docs/cover-letter-2023.md` is the voice anchor: bracketed asides, self-deprecating register, lowercase ease.
 
 New pages should inherit the voice already present in `content/skills/` and `content/decisions/` without new calibration.
 
