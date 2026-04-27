@@ -102,6 +102,9 @@ const hamburgerNavCss = `
 .hamburger-drawer-content .explorer {
   padding: 0;
 }
+.hamburger-drawer-content .mobile-explorer {
+  display: none;
+}
 `
 
 export default (() => {
