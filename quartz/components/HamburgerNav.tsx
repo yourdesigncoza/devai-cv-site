@@ -126,7 +126,7 @@ const hamburgerNavCss = `
 `
 
 export default (() => {
-  const ExplorerComponent = Explorer()
+  const ExplorerComponent = Explorer({ useSavedState: false, folderDefaultState: "collapsed" })
 
   const HamburgerNav: QuartzComponent = (props: QuartzComponentProps) => {
     return (
