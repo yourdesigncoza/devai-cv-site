@@ -102,8 +102,26 @@ const hamburgerNavCss = `
 .hamburger-drawer-content .explorer {
   padding: 0;
 }
-.hamburger-drawer-content .mobile-explorer {
-  display: none;
+.hamburger-drawer-content button.mobile-explorer {
+  display: none !important;
+}
+.hamburger-drawer-content button.desktop-explorer {
+  display: flex !important;
+}
+.hamburger-drawer-content .explorer-content {
+  position: static !important;
+  transform: none !important;
+  visibility: visible !important;
+  width: auto !important;
+  max-width: none !important;
+  height: auto !important;
+  max-height: none !important;
+  padding: 0.5rem 0 0 0 !important;
+  background-color: transparent !important;
+  overflow-y: visible !important;
+}
+.hamburger-drawer-content .explorer-ul li {
+  padding: 0.15rem 0;
 }
 `
 
