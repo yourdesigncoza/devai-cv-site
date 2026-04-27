@@ -14,13 +14,13 @@ status: maintained
 
 ## What it is
 
-From the WordPress dashboard this looks like any other custom plugin: admin menus, front-end shortcodes, AJAX endpoints, a settings page. Most of what matters runs outside WordPress though — a 43-table Postgres schema modelling a training provider's operations (agents, learners, classes, clients, sites with a parent-child hierarchy, exams, placements, progressions, attendance, deliveries, collections, QA visits) plus a dedicated `wecoza_events` sub-schema for a two-phase notification engine.
+From the WordPress dashboard this looks like any other custom plugin: admin menus, front-end shortcodes, AJAX endpoints, a settings page. Most of what matters runs outside WordPress though, a 43-table Postgres schema modelling a training provider's operations (agents, learners, classes, clients, sites with a parent-child hierarchy, exams, placements, progressions, attendance, deliveries, collections, QA visits) plus a dedicated `wecoza_events` sub-schema for a two-phase notification engine.
 
 ## Why this approach
 
 The plugin talks to Postgres through a PDO connection, not `$wpdb`. The rationale is operational: the business data has to be valid independently of WordPress, and the invariants are strict enough that enforcing them in PHP would mean re-implementing things Postgres already does well. Trigger functions handle cross-table invariants and audit logging in plpgsql. The PHP layer is mostly presentation, integration, and CRUD rails.
 
-The schema is maintained as a hand-written DBML file so the client can read it without SQL. The repo also carries a 14-month paper trail in `mario/` and `sheets/` — meeting notes, PDFs, ODS spreadsheets, hand-written markdown requirements, PRDs in ordinary business language. The pacing of the codebase matches the pacing of the business: not ticket-driven, but meeting-driven.
+The schema is maintained as a hand-written DBML file so the client can read it without SQL. The repo also carries a 14-month paper trail in `mario/` and `sheets/`, meeting notes, PDFs, ODS spreadsheets, hand-written markdown requirements, PRDs in ordinary business language. The pacing of the codebase matches the pacing of the business: not ticket-driven, but meeting-driven.
 
 See [[decisions/postgres-alongside-wordpress|Why Postgres alongside WordPress, not instead of it]] for the longer version.
 
@@ -40,9 +40,9 @@ These are on a list. The plugin is in a real production environment and correctn
 
 Integrating Postgres with WordPress reinforced something I'd seen before: Postgres is better suited for complex, large-scale data operations, especially when the application logic extends beyond what a CMS handles on its own.
 
-WordPress integrates well with external databases. Moving data outside WordPress removes the usual constraints and makes the same dataset reusable across CRMs, web apps, mobile apps, or anything else that needs access — the data is decoupled from the CMS and becomes a shared resource.
+WordPress integrates well with external databases. Moving data outside WordPress removes the usual constraints and makes the same dataset reusable across CRMs, web apps, mobile apps, or anything else that needs access, the data is decoupled from the CMS and becomes a shared resource.
 
-The other reinforcement: WordPress is a collection of PHP abstractions. People still think of it as a blogging platform, but architecturally it's a rapid application framework — a lot of boilerplate is already solved, which often makes it faster to build with than a lighter PHP framework.
+The other reinforcement: WordPress is a collection of PHP abstractions. People still think of it as a blogging platform, but architecturally it's a rapid application framework, a lot of boilerplate is already solved, which often makes it faster to build with than a lighter PHP framework.
 
 WordPress isn't limited to content sites. It can power fairly sophisticated applications, and it holds up well inside AI-driven, data-heavy workflows.
 
@@ -57,5 +57,5 @@ WordPress isn't limited to content sites. It can power fairly sophisticated appl
 
 ## What this proves
 
-- [[skills/wordpress-php-craft|WordPress & PHP Craft]] — custom plugin with WordPress Settings API, custom admin menus, AJAX round-trips, namespaced error logger, shortcode output.
-- [[skills/python-services-data-pipelines|Python Services & Data Pipelines]] — (tangentially) the Postgres-first schema design, plpgsql trigger invariants, and hand-maintained DBML are the same habits as the research pipelines.
+- [[skills/wordpress-php-craft|WordPress & PHP Craft]], custom plugin with WordPress Settings API, custom admin menus, AJAX round-trips, namespaced error logger, shortcode output.
+- [[skills/python-services-data-pipelines|Python Services & Data Pipelines]], (tangentially) the Postgres-first schema design, plpgsql trigger invariants, and hand-maintained DBML are the same habits as the research pipelines.

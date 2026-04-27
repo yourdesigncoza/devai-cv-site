@@ -25,7 +25,7 @@ tests/
 
 ## 1. Log in once, not every run
 
-`auth.setup.ts` reads a `.auth/storageState.json`. If the file exists and has cookies, the session is re-used — skip login entirely. If it doesn't exist, fall back to a one-time credentialed login driven from `WECOZA_TEST_PASSWORD` and write the resulting session to disk.
+`auth.setup.ts` reads a `.auth/storageState.json`. If the file exists and has cookies, the session is re-used, skip login entirely. If it doesn't exist, fall back to a one-time credentialed login driven from `WECOZA_TEST_PASSWORD` and write the resulting session to disk.
 
 This matters because WordPress login is slow, and running a suite that hits `wp-login.php` on every spec means 22 tests become 22 login round-trips. One login per working day (or per session invalidation) is enough.
 
@@ -40,14 +40,14 @@ projects: [
 ]
 ```
 
-## 2. Never click destructive buttons — defend at two layers
+## 2. Never click destructive buttons, defend at two layers
 
 The "Wipe All Demo Data" button in the WeCoza admin does what it says. The worst case is a Playwright run that's accidentally been pointed at a staging DB with real data, and the random button-click reflex of a broad `page.click('button')` takes the whole thing down.
 
 Two layers of defence in `test.beforeEach`:
 
 ```typescript
-// Layer 1 — network-level block
+// Layer 1, network-level block
 await page.route('**/admin-ajax.php*', (route) => {
   const url = route.request().url();
   if (url.includes('wecoza_wipe_all') || url.includes('wipe_all')) {
@@ -57,7 +57,7 @@ await page.route('**/admin-ajax.php*', (route) => {
   route.continue();
 });
 
-// Layer 2 — DOM-level removal
+// Layer 2, DOM-level removal
 page.on('load', async () => {
   await page.evaluate(() => {
     document.querySelectorAll('[data-action="wipe-all"]').forEach(el => el.remove());
@@ -90,9 +90,9 @@ The smoke test is a loop over `SHORTCODE_MAP.pages`. Adding a new page is a one-
 
 One config, three personalities:
 
-- **smoke** — headless, default timeouts. Read-only pass over every page. Minutes, not hours.
-- **crud** — `headless: false`, `slowMo: 800`, expanded viewport, 60s timeouts. Creates a record, edits it, deletes it, confirms dependency counts. You watch it happen.
-- **deep** — `slowMo: 1000`, 90s timeouts. Full entity lifecycle plus audit-log verification. Runs rarely, like before a release.
+- **smoke**: headless, default timeouts. Read-only pass over every page. Minutes, not hours.
+- **crud**: `headless: false`, `slowMo: 800`, expanded viewport, 60s timeouts. Creates a record, edits it, deletes it, confirms dependency counts. You watch it happen.
+- **deep**: `slowMo: 1000`, 90s timeouts. Full entity lifecycle plus audit-log verification. Runs rarely, like before a release.
 
 The `slowMo` on crud/deep is a gift to your future self when a test breaks and you need to see it happen rather than parse screenshots at 2x speed.
 
@@ -116,10 +116,10 @@ Before every test run, tail the last 50 lines of `wp-content/debug.log` and note
 
 - Migrate the shortcode map to a TypeScript file so the shape is type-checked against the spec code.
 - Add a CI-specific project that skips `slowMo` and uses `headless: true` across the board.
-- Parallelise once the suite clears 50 specs — worth setting up when the pain materialises.
+- Parallelise once the suite clears 50 specs, worth setting up when the pain materialises.
 
 ## See also
 
 - [[notes/index|Notes]] entries from 2026-04-02 on why a conditional existence check in a Playwright spec was lying by omission, and why a missing Google Maps API key made the static form fields the right selector target.
-- [[playbooks/adversarial-ai-review|Adversarial AI review]] — the second-opinion pass that caught the lying guard.
-- [[projects/wecoza-development|WeCoza 3.0]] — the plugin this suite drives.
+- [[playbooks/adversarial-ai-review|Adversarial AI review]], the second-opinion pass that caught the lying guard.
+- [[projects/wecoza-development|WeCoza 3.0]], the plugin this suite drives.

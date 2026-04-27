@@ -14,7 +14,7 @@ status: active
 
 ## The story
 
-SignalTrace is a set of long-form research wikis on topics where the useful output is a well-shaped question rather than a prepackaged answer. Five case studies so far: sa-corruption, alfaromeo, strait-of-hormuz, paypal, attbid. Each one has its own folder under `content/`, its own `index.md`, and the same entity taxonomy — People, Organisations, Events, Concepts, Vehicles, Symbols, Races — linked with wikilinks so the graph does real navigational work.
+SignalTrace is a set of long-form research wikis on topics where the useful output is a well-shaped question rather than a prepackaged answer. Five case studies so far: sa-corruption, alfaromeo, strait-of-hormuz, paypal, attbid. Each one has its own folder under `content/`, its own `index.md`, and the same entity taxonomy, People, Organisations, Events, Concepts, Vehicles, Symbols, Races, linked with wikilinks so the graph does real navigational work.
 
 The build is unusual. Quartz out of the box builds one site from one `content/`; signaltrace runs Quartz multiple times from one repo. `scripts/build-all.mjs` (43 lines) iterates a `cases` array, invokes `npx quartz build` per case with `QUARTZ_BASE_URL=www.signaltrace.wiki/<slug>`, and copies a hand-authored `index.html` into `public/`. Adding a wiki means adding one entry to that array and one card to the landing page. That's the custom delta over Quartz.
 
@@ -38,8 +38,8 @@ One repo → `content/<case>/` per wiki → `scripts/build-all.mjs` orchestrator
 
 ## What this proves
 
-- [[skills/knowledge-graphs-wiki-systems|Knowledge Graphs & Wiki Systems]] — entity-folder taxonomy, multi-wiki registry pattern, open-questions convention repeated across all five vaults.
-- [[skills/design-brand|Design & Brand]] — hand-authored 29 KB landing page; locked palette and typography; custom overrides of Quartz internals.
+- [[skills/knowledge-graphs-wiki-systems|Knowledge Graphs & Wiki Systems]], entity-folder taxonomy, multi-wiki registry pattern, open-questions convention repeated across all five vaults.
+- [[skills/design-brand|Design & Brand]], hand-authored 29 KB landing page; locked palette and typography; custom overrides of Quartz internals.
 
 ## Decisions worth a deeper read
 

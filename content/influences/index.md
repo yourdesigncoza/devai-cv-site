@@ -1,11 +1,11 @@
 ---
 title: Influences
-description: "Influences — videos, podcasts, talks, and writing that have shaped my work. Medium-neutral; captured as I go."
+description: "Influences, videos, podcasts, talks, and writing that have shaped my work. Medium-neutral; captured as I go."
 tags: [influences, index]
 draft: false
 ---
 
-References that have shaped how I work — YouTube videos, podcasts, talks, and the occasional written piece. Not everything I've watched or read, only the ones with traceable influence on a [[decisions/|decision]] or a [[projects/|project]] on this site.
+References that have shaped how I work, YouTube videos, podcasts, talks, and the occasional written piece. Not everything I've watched or read, only the ones with traceable influence on a [[decisions/|decision]] or a [[projects/|project]] on this site.
 
 Each entry is a short note on what I took from it and where it shows up in the rest of the wiki.
 
@@ -30,8 +30,8 @@ When adding a new influence, use this shape:
 <1–3 sentences on the specific idea, pattern, or tool that stuck>
 
 **Where it shows up:**
-- [[projects/...|<project>]] — <one line on how>
-- [[decisions/...|<decision>]] — <one line on how>
+- [[projects/...|<project>]], <one line on how>
+- [[decisions/...|<decision>]], <one line on how>
 ```
 
-No pressure to fill every field — skip what doesn't apply. The point is to capture the source + what stuck + where it landed.
+No pressure to fill every field, skip what doesn't apply. The point is to capture the source + what stuck + where it landed.

@@ -52,7 +52,7 @@ Seven were pedestrian: `waitForTimeout()` instead of proper waits, `networkidle`
 
 The eighth I don't think I'd have caught on my own:
 
-> A conditional existence check: `if (searchExists) { assertSearchWorks() }`. Looks defensive. Reads like good testing practice. It isn't a guard — it's a way for the test to pretend nothing was wrong when the search bar had disappeared. The test would pass silently in exactly the failure case it was meant to catch.
+> A conditional existence check: `if (searchExists) { assertSearchWorks() }`. Looks defensive. Reads like good testing practice. It isn't a guard, it's a way for the test to pretend nothing was wrong when the search bar had disappeared. The test would pass silently in exactly the failure case it was meant to catch.
 
 I wrote it as a guard. It was really permission to lie. That finding needed a reader who wasn't invested in the design choice.
 
@@ -72,11 +72,11 @@ subagent({
 
 ## When the reviewers disagree
 
-Sometimes Gemini challenges a choice and Claude pushes back. I resolve that in the session — not by picking a winner, but by running a short back-and-forth until one of three things happens:
+Sometimes Gemini challenges a choice and Claude pushes back. I resolve that in the session, not by picking a winner, but by running a short back-and-forth until one of three things happens:
 
 1. Gemini concedes (the original choice was fine, context just wasn't in the prompt)
 2. Claude concedes (the finding is real, revise)
-3. Both agree the decision is a tradeoff, not a bug — document it in the plan and move on
+3. Both agree the decision is a tradeoff, not a bug, document it in the plan and move on
 
 The third outcome is the most common and the most useful. A documented tradeoff is lower-entropy than a disagreement between two models and a human.
 
@@ -88,6 +88,6 @@ The third outcome is the most common and the most useful. A documented tradeoff 
 
 ## See also
 
-- [[playbooks/file-driven-planning|File-driven planning]] — review is Phase 4 of the flow.
-- [[decisions/llms-behind-typed-adapters|Why I keep LLMs behind typed adapters]] — the same instinct, applied to production LLM code: contracts and review stages rather than trusting model behaviour.
-- [[notes/index|Notes]] — the dated log of specific AI-review findings.
+- [[playbooks/file-driven-planning|File-driven planning]], review is Phase 4 of the flow.
+- [[decisions/llms-behind-typed-adapters|Why I keep LLMs behind typed adapters]], the same instinct, applied to production LLM code: contracts and review stages rather than trusting model behaviour.
+- [[notes/index|Notes]], the dated log of specific AI-review findings.

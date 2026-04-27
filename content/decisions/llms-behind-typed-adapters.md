@@ -1,6 +1,6 @@
 ---
 title: Why I keep LLMs behind typed adapters
-description: "LLM calls behind typed adapters — code-level information barriers, external prompts, provider-agnostic transport. An AI-engineering position."
+description: "LLM calls behind typed adapters, code-level information barriers, external prompts, provider-agnostic transport. An AI-engineering position."
 tags: [decision, ai, architecture]
 draft: false
 date: 2026-04-22
@@ -12,7 +12,7 @@ LLM calls live behind an adapter layer with a typed contract. The core pipeline 
 
 ## How I got here
 
-The working example is [[projects/edenfintech-scanner-python|edenfintech-scanner-python]]. The core pipeline is stdlib-only — `requirements.txt` is a single-line comment saying so. LLM providers are reached through a `Callable[[dict], dict]` transport passed in at the edge. Swapping providers or going offline for testing changes one wiring point; it doesn't ripple through the code.
+The working example is [[projects/edenfintech-scanner-python|edenfintech-scanner-python]]. The core pipeline is stdlib-only, `requirements.txt` is a single-line comment saying so. LLM providers are reached through a `Callable[[dict], dict]` transport passed in at the edge. Swapping providers or going offline for testing changes one wiring point; it doesn't ripple through the code.
 
 The second layer is the typing. The epistemic reviewer in that pipeline receives its input through a frozen dataclass, `EpistemicReviewInput`, that explicitly excludes scores, probabilities, valuations, and numeric targets. The reviewer cannot see the scorecard because the type system won't let it. The information barrier is enforced at the code level, not by asking the model politely in the system prompt. Prompts drift over time; dataclasses don't.
 
@@ -22,7 +22,7 @@ The practical reason I work this way is that LLMs change. Models get deprecated;
 
 ## Where this shows up
 
-- [[projects/edenfintech-scanner-python|edenfintech-scanner-python]] — stdlib-only core, transport abstraction, typed `EpistemicReviewInput` information barrier.
-- [[projects/yt-ts|yt-ts]] — provider-agnostic SDK usage, external YAML system prompt, pipe-table I/O contract.
-- [[projects/insider-signal-research|InsiderSignalResearch]] — research-sprint framework with each agent role's data-discipline rules declared in its prompt file.
-- [[skills/ai-agentic-systems|AI / Agentic Systems]] — the general skill this decision falls out of.
+- [[projects/edenfintech-scanner-python|edenfintech-scanner-python]], stdlib-only core, transport abstraction, typed `EpistemicReviewInput` information barrier.
+- [[projects/yt-ts|yt-ts]], provider-agnostic SDK usage, external YAML system prompt, pipe-table I/O contract.
+- [[projects/insider-signal-research|InsiderSignalResearch]], research-sprint framework with each agent role's data-discipline rules declared in its prompt file.
+- [[skills/ai-agentic-systems|AI / Agentic Systems]], the general skill this decision falls out of.

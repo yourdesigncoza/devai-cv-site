@@ -6,7 +6,7 @@ draft: false
 date: 2026-04-22
 ---
 
-Every knowledge-graph wiki I've built — [[projects/signaltrace-site|SignalTrace]], the [[projects/insider-signal-research|insider-signal research programme]], this CV wiki — came out of the same loop. A research brief on one end, an Obsidian vault on the other, an iterative discovery pass in the middle that knows when to stop.
+Every knowledge-graph wiki I've built, [[projects/signaltrace-site|SignalTrace]], the [[projects/insider-signal-research|insider-signal research programme]], this CV wiki, came out of the same loop. A research brief on one end, an Obsidian vault on the other, an iterative discovery pass in the middle that knows when to stop.
 
 ## The shape
 
@@ -55,17 +55,17 @@ publishable wiki
 
 Plain markdown. No schema. States:
 
-- **Goal** — what the investigation is trying to answer
-- **Seed entities** — named people, companies, events, or concepts to start from
-- **Source constraints** — any stated source preferences (only public filings, only news after date X, etc.)
+- **Goal**: what the investigation is trying to answer
+- **Seed entities**: named people, companies, events, or concepts to start from
+- **Source constraints**: any stated source preferences (only public filings, only news after date X, etc.)
 
 The brief is the contract. Drift from the brief shows up in the convergence check and prompts a re-read of the goal, not a vault rewrite.
 
-## Entity taxonomy — 5–7 folders, fixed up front
+## Entity taxonomy, 5–7 folders, fixed up front
 
 The decision that matters most early is the folder taxonomy. Once you commit to `People / Organisations / Events / Concepts / Vehicles / Symbols`, every wikilink in the vault references one of those categories. Changing the taxonomy two weeks in is a major refactor.
 
-For financial / OSINT topics the [[projects/signaltrace-site|SignalTrace]] taxonomy has held up well. For technical research — this CV wiki itself — the taxonomy shifts to `Skills / Projects / Decisions / Notes / Playbooks / Influences / Open Questions`. Different domains, same principle: fixed categories, consistent folder per entity type.
+For financial / OSINT topics the [[projects/signaltrace-site|SignalTrace]] taxonomy has held up well. For technical research, this CV wiki itself, the taxonomy shifts to `Skills / Projects / Decisions / Notes / Playbooks / Influences / Open Questions`. Different domains, same principle: fixed categories, consistent folder per entity type.
 
 ## The iteration loop
 
@@ -87,7 +87,7 @@ Knowing when to stop is the non-obvious part. A vault that keeps growing forever
 
 ## Publishing through Quartz
 
-Once the vault converges, Quartz 4 renders it as a static site. Wikilinks resolve natively. The graph view becomes the reader's actual navigation surface — graph first, prose second.
+Once the vault converges, Quartz 4 renders it as a static site. Wikilinks resolve natively. The graph view becomes the reader's actual navigation surface, graph first, prose second.
 
 `scripts/build-all.mjs`-style orchestration lets one repo serve many vaults if you end up with a series of case studies. On [[projects/signaltrace-site|SignalTrace]] there are five case studies (sa-corruption, alfaromeo, strait-of-hormuz, paypal, attbid) built from one shared Quartz config, 308 markdown files in total.
 
@@ -103,10 +103,10 @@ The autonomous runs where the brief was too thin have a characteristic failure m
 
 ## What this is good for
 
-- **OSINT / financial research** — the [[projects/signaltrace-site|SignalTrace]] shape.
-- **Internal company knowledge** — team wikis where the ontology is "people, projects, decisions, incidents".
-- **Case study sites** — multiple vaults from one Quartz config.
-- **Personal knowledge graphs** — this CV wiki started as exactly this pattern.
+- **OSINT / financial research**: the [[projects/signaltrace-site|SignalTrace]] shape.
+- **Internal company knowledge**: team wikis where the ontology is "people, projects, decisions, incidents".
+- **Case study sites**: multiple vaults from one Quartz config.
+- **Personal knowledge graphs**: this CV wiki started as exactly this pattern.
 
 ## What it isn't
 
@@ -116,6 +116,6 @@ The autonomous runs where the brief was too thin have a characteristic failure m
 
 ## See also
 
-- [[projects/signaltrace-site|SignalTrace]] — the fullest version of this pattern in production.
-- [[projects/insider-signal-research|InsiderSignalResearch]] — the same pattern applied to quant research, with an explicit "this is shelved" outcome instead of a publishable wiki.
-- [[skills/knowledge-graphs-wiki-systems|Knowledge Graphs & Wiki Systems]] — the speciality hub this playbook belongs to.
+- [[projects/signaltrace-site|SignalTrace]], the fullest version of this pattern in production.
+- [[projects/insider-signal-research|InsiderSignalResearch]], the same pattern applied to quant research, with an explicit "this is shelved" outcome instead of a publishable wiki.
+- [[skills/knowledge-graphs-wiki-systems|Knowledge Graphs & Wiki Systems]], the speciality hub this playbook belongs to.

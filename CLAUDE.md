@@ -2,11 +2,15 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-Personal CV wiki / evolving knowledge graph for **John Montgomery** (brand: **YourDesign**, site title **DevAi**). Built on Quartz v4 (forked upstream `@jackyzha0/quartz`), deployed to Vercel at `devai.co.za`. (Previously at `cv.yourdesign.co.za`; that domain is deprecated.)
+Personal knowledge wiki for **John Montgomery**, founder of **EdenFintech** ([edenfintech.com](https://edenfintech.com)). The site at `devai.co.za` (title: **DevAi**) is the working surface where the thinking behind EdenFintech is captured: notes, decisions, playbooks, projects. Built on Quartz v4 (forked from `@jackyzha0/quartz`), deployed to Vercel. **YourDesign** is the legacy brand from 20+ years of WordPress freelance work, referenced only in past-engagement context. (`cv.yourdesign.co.za` is deprecated.)
 
 ## Identity rule
 
-When writing or editing anything user-facing (page titles, about/bio, cover letter, frontmatter, commit messages, deploy configs), use **John Montgomery** / **YourDesign** / **DevAi**. The directory name `ydcoza`, the shell user `laudes`, and the email alias are NOT the public identity. Do not conflate.
+**John Montgomery** is the person. **EdenFintech** (edenfintech.com) is the business and current focus; lead positioning material foregrounds it. **DevAi** (devai.co.za) is the working knowledge wiki where the thinking behind EdenFintech is captured. **YourDesign** is the legacy brand from 20+ years of WordPress freelance work; reference it only when describing past engagements, never as current positioning.
+
+Brand spelling (canonical): domain form `edenfintech.com`, prose form `EdenFintech` (capital E only; not "EdenFinTech" or "Eden Fintech").
+
+The directory name `ydcoza`, the shell user `laudes`, and the email alias are NOT the public identity. Do not conflate.
 
 ## Voice discipline (hard rules)
 

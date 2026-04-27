@@ -1,15 +1,15 @@
-# CV Wiki — Design
+# CV Wiki, Design
 
 **Date:** 2026-04-22
 **Goal:** Build a personal CV site as an Obsidian/Quartz wiki, mirroring the `signaltrace-site` pattern. Skills are the spine; projects are the evidence; the graph is the portfolio.
 
 ## Decisions
 
-- **Audience:** Dual — prospective clients + technical hiring managers/collaborators. Skill hubs serve the pitch read; project + decision pages serve the engineering-proof read.
+- **Audience:** Dual, prospective clients + technical hiring managers/collaborators. Skill hubs serve the pitch read; project + decision pages serve the engineering-proof read.
 - **Curation depth:** Evidence dive on every source project (read code, extract architecture/decisions/metrics), not cover-page summaries.
 - **Voice:** First-person, plain-spoken. "I built X because Y."
 - **Live URLs:** Fetch with the defuddle skill into `raw/web/`.
-- **Structure:** Skills-as-hub, projects-as-evidence (Approach A — closest to the signaltrace pattern).
+- **Structure:** Skills-as-hub, projects-as-evidence (Approach A, closest to the signaltrace pattern).
 
 ## Repo layout
 
@@ -38,12 +38,12 @@ Two-stage on purpose: `raw/` is a re-runnable evidence dump, `content/` is the e
 
 Six specialities, each with at least two projects backing it and commercially distinct enough to sell on its own:
 
-1. **Quant Engineering** — edenfintech-scanner-python, ftr_strategy_backtesting, apes-signal, InsiderSignalResearch.
-2. **AI / Agentic Systems** — devai.co.za, yt_ts, AI scaffolding inside the scanner, the Claude-Code-as-tool meta-skill.
-3. **WordPress & PHP Craft** — wecoza_development, yourdesign.co.za-era client sites.
-4. **Knowledge Graphs & Wiki Systems** — signaltrace-site, InsiderSignalResearch reporting, this CV site, the graphify workflow.
-5. **Python Services & Data Pipelines** — connective tissue under the scanner, backtester, yt_ts, signal research ingestion.
-6. **Design & Brand** — yourdesign.co.za heritage, the 2023 cover-letter PDF, visual hand on every site shipped.
+1. **Quant Engineering**, edenfintech-scanner-python, ftr_strategy_backtesting, apes-signal, InsiderSignalResearch.
+2. **AI / Agentic Systems**, devai.co.za, yt_ts, AI scaffolding inside the scanner, the Claude-Code-as-tool meta-skill.
+3. **WordPress & PHP Craft**, wecoza_development, yourdesign.co.za-era client sites.
+4. **Knowledge Graphs & Wiki Systems**, signaltrace-site, InsiderSignalResearch reporting, this CV site, the graphify workflow.
+5. **Python Services & Data Pipelines**, connective tissue under the scanner, backtester, yt_ts, signal research ingestion.
+6. **Design & Brand**, yourdesign.co.za heritage, the 2023 cover-letter PDF, visual hand on every site shipped.
 
 **Narrative arc** for the index page: *designer → developer → quant/AI engineer.*
 
@@ -55,19 +55,19 @@ Six specialities, each with at least two projects backing it and commercially di
 
 **Cover-letter PDF** → `raw/docs/cover-letter-2023.md` (extract + notes on which voice/biographical bits are still load-bearing).
 
-**Execution model:** dispatch one Explore subagent per project in parallel — keeps the main context clean. Web URLs handled separately by defuddle. `raw/INDEX.md` auto-generated last.
+**Execution model:** dispatch one Explore subagent per project in parallel, keeps the main context clean. Web URLs handled separately by defuddle. `raw/INDEX.md` auto-generated last.
 
 ## Vault generation
 
-**Hard rule:** content/ pages are written by hand using raw/ as source. No template-fill — voice has to be authentic.
+**Hard rule:** content/ pages are written by hand using raw/ as source. No template-fill, voice has to be authentic.
 
 **Page templates** (loose):
 
-- **`index.md`** — hook + designer→developer→quant/AI arc + 6 speciality cards + "Currently building" footer.
-- **`skills/<slug>.md`** — first-person opening, projects (wikilinked), decisions (wikilinked), one pull quote, "Talk to me about…" CTA.
-- **`projects/<slug>.md`** — pitch, stack, story (problem→approach→outcome), proof, skills (wikilinked back), source/live links, screenshot if obvious.
-- **`decisions/<slug>.md`** — emerge from dives. Expect 3–5 to start (e.g. *Why I keep rewriting my cover letter*, *Why Postgres for the scanner*, *Why Quartz over Astro/Next*, *Why I left WordPress as my default stack*).
-- **`about/index.md`** + **`about/cover-letter.md`** — bio, contact, current first-person cover letter descended from the 2023 PDF.
+- **`index.md`**: hook + designer→developer→quant/AI arc + 6 speciality cards + "Currently building" footer.
+- **`skills/<slug>.md`**: first-person opening, projects (wikilinked), decisions (wikilinked), one pull quote, "Talk to me about…" CTA.
+- **`projects/<slug>.md`**: pitch, stack, story (problem→approach→outcome), proof, skills (wikilinked back), source/live links, screenshot if obvious.
+- **`decisions/<slug>.md`**: emerge from dives. Expect 3–5 to start (e.g. *Why I keep rewriting my cover letter*, *Why Postgres for the scanner*, *Why Quartz over Astro/Next*, *Why I left WordPress as my default stack*).
+- **`about/index.md`** + **`about/cover-letter.md`**, bio, contact, current first-person cover letter descended from the 2023 PDF.
 
 **Frontmatter** (Quartz-compatible):
 ```yaml
@@ -93,7 +93,7 @@ Mirror `signaltrace-site`:
 - Local preview: `npx quartz build --serve`.
 - `.gitignore` copied from signaltrace.
 
-No custom plugins or theme work in v1 — defer until content lands.
+No custom plugins or theme work in v1, defer until content lands.
 
 ## Out of scope (v1)
 

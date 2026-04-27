@@ -20,12 +20,12 @@ a locked door, a wrong key, a missing permission slip.>
 <describe the fix in the same plain language. Confirm it's resolved.
 Keep it reassuring.>
 
-_(Fix: <short git SHA> — <commit message in plain terms>)_
+_(Fix: <short git SHA>, <commit message in plain terms>)_
 
 @<client handle>
 ```
 
-Four elements, fixed order. No bulleted lists. No headers beyond the two bolded leads. No "technical deep-dive" appendix — they didn't ask for one.
+Four elements, fixed order. No bulleted lists. No headers beyond the two bolded leads. No "technical deep-dive" appendix, they didn't ask for one.
 
 ## The jargon ban list
 
@@ -41,7 +41,7 @@ Never appears in the client-facing text:
 | middleware | implementation detail | "a step before the request reached the form" |
 | validation / sanitisation | technical register | "checking the data was in the right shape" |
 
-If a technical term is genuinely unavoidable — e.g. you have to say "the database" — wrap it in plain language: *"a security rule (called a permission check)"*. The parenthetical pays the jargon tax up front so it doesn't recur.
+If a technical term is genuinely unavoidable, e.g. you have to say "the database", wrap it in plain language: *"a security rule (called a permission check)"*. The parenthetical pays the jargon tax up front so it doesn't recur.
 
 ## Tone rules
 
@@ -61,7 +61,7 @@ If a technical term is genuinely unavoidable — e.g. you have to say "the datab
 >
 > **What was fixed:** I relaxed the check so that anyone with edit-level access on the page can now add or edit class types. The admin page is working normally again.
 >
-> _(Fix: a3f21d9 — align Class Types permission check with the page's access level)_
+> _(Fix: a3f21d9, align Class Types permission check with the page's access level)_
 >
 > @mariomaree
 
@@ -71,10 +71,10 @@ Three minutes of translation work. The client replies with a thumbs-up instead o
 
 Non-technical clients who receive technical updates develop two bad habits: they either **stop reading** (because it's noise) or they **over-trust** (because "nonce" sounds authoritative). Either outcome leaks goodwill.
 
-A two-paragraph plain translation lets them stay engaged with their own project. It's also the honest form of the message — "the system checked for admin access where it shouldn't have, and it doesn't anymore" is what actually happened. The jargon was scaffolding, not substance.
+A two-paragraph plain translation lets them stay engaged with their own project. It's also the honest form of the message, "the system checked for admin access where it shouldn't have, and it doesn't anymore" is what actually happened. The jargon was scaffolding, not substance.
 
 ## See also
 
-- [[projects/wecoza-development|WeCoza 3.0]] — the 14-month client engagement where this template earned its keep.
-- [[decisions/postgres-alongside-wordpress|Why Postgres alongside WordPress]] — the schema decisions this client reads, also in plain language (via a hand-maintained DBML file).
-- [[about/clients|Clients & collaborators]] — the through-line: every long client relationship on this page ran on clear, jargon-free updates.
+- [[projects/wecoza-development|WeCoza 3.0]], the 14-month client engagement where this template earned its keep.
+- [[decisions/postgres-alongside-wordpress|Why Postgres alongside WordPress]], the schema decisions this client reads, also in plain language (via a hand-maintained DBML file).
+- [[about/clients|Clients & collaborators]], the through-line: every long client relationship on this page ran on clear, jargon-free updates.

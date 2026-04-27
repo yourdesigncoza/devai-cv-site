@@ -4,16 +4,16 @@ Working file for LinkedIn posts. Not published on the wiki.
 
 - Voice rules: `~/.claude/projects/-home-laudes-zoot-projects-ydcoza-cv/memory/feedback_voice_linkedin.md`
 - Lead angle: adversarial AI for deep-value turnarounds (angle C)
-- Cadence target: 3–5 posts/week, ceiling not floor. No-dilution rule applies — post less rather than pad a schedule.
-- Headline: "Adversarial AI for deep-value turnarounds | Founder at EdenFinTech"
+- Cadence target: 3–5 posts/week, ceiling not floor. No-dilution rule applies, post less rather than pad a schedule.
+- Headline: "Adversarial AI for deep-value turnarounds | Founder at EdenFintech"
 
 ## Stats snapshot
 
-Update periodically — monthly, or when a number moves meaningfully. Growth over time matters more than absolute values at this stage.
+Update periodically, monthly, or when a number moves meaningfully. Growth over time matters more than absolute values at this stage.
 
 | Date       | Connections | Followers | Post impressions (last 7d) | Profile views (last 7d) | Notes                 |
 | ---------- | ----------- | --------- | -------------------------- | ----------------------- | --------------------- |
-| 2026-04-22 | ?           | ?         | —                          | —                       | Started posting       |
+| 2026-04-22 | ?           | ?         | n/a | n/a                      | Started posting       |
 | 2026-04-24 | 34          | ?         | ?                          | ?                       | Calibration session   |
 
 ## Next up
@@ -35,7 +35,7 @@ Most "adversarial AI" in research pipelines is a prompt.
 
 That's not adversarial. The reviewer is still sitting inside the same context as the analyst.
 
-In my scanner, the epistemic reviewer gets its input through a frozen dataclass that strips out scores, probabilities, valuations, and numeric targets. The filter is at the type level, not the instruction level. The reviewer can't see the scorecard, so it can't grade it — it can only attack the thesis on its own terms.
+In my scanner, the epistemic reviewer gets its input through a frozen dataclass that strips out scores, probabilities, valuations, and numeric targets. The filter is at the type level, not the instruction level. The reviewer can't see the scorecard, so it can't grade it, it can only attack the thesis on its own terms.
 
 Systems that think before they act need more than prompt hygiene. They need information barriers the LLM can't route around.
 
@@ -83,7 +83,7 @@ The problem: it lies on thin samples.
 
 20 trades with a 60% hit rate looks like an edge. It isn't. The standard error is wide enough to drive a truck through.
 
-My primary metric is confidence-adjusted expectancy — raw expectancy minus 2σ/√n. A promising-looking result on a thin sample doesn't get to pretend it's robust. If the adjusted number is still positive, the edge might be real. If not, the sample hasn't earned the claim.
+My primary metric is confidence-adjusted expectancy, raw expectancy minus 2σ/√n. A promising-looking result on a thin sample doesn't get to pretend it's robust. If the adjusted number is still positive, the edge might be real. If not, the sample hasn't earned the claim.
 
 On top of that: an R:R-scaled minimum-trade gate, walk-forward as a hard gate rather than a chart, and every run's data is MD5-hashed so a result can be traced back to the bars that produced it.
 
@@ -122,14 +122,14 @@ Drafted but not yet queued. (Populated as more samples land.)
 
 ## Posted
 
-48h after a post goes live, pull impressions, reactions, comments, reshares from LinkedIn analytics and log here. Patterns matter more than single-post numbers — look for what's consistent.
+48h after a post goes live, pull impressions, reactions, comments, reshares from LinkedIn analytics and log here. Patterns matter more than single-post numbers, look for what's consistent.
 
 | Date posted | Title / hook                     | Wiki link                                      | Post URL                                                                                  | Impressions | Reactions | Comments | Reshares | Saves | Notes                                                         |
 | ----------- | -------------------------------- | ---------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------- | --------- | -------- | -------- | ----- | ------------------------------------------------------------- |
 | 2026-04-22  | "The answer was no" (shelving)   | decisions/publishing-negative-results          | https://www.linkedin.com/feed/update/urn:li:activity:7452680331884752896/                 | ?           | 5         | 2        | ?        | ?     | Retroactively on-voice; Davi + Daniel replies drafted          |
 | 2026-04-24  | "Position count isn't edge"      | projects/insider-signal-research               | *(paste post URL when available)*                                                         | ?           | ?         | ?        | ?        | ?     | First post with calibrated voice; image: text-card (20→10, 5×) |
 
-### 2026-04-22 — "The answer was no"
+### 2026-04-22, "The answer was no"
 
 **Short link in post:** lnkd.in/djcnMFum (assumed destination: `devai.co.za/decisions/publishing-negative-results`)
 
@@ -137,31 +137,31 @@ Drafted but not yet queued. (Populated as more samples land.)
 
 > The answer was no. I ran 125,000 bars of XAUUSD through a parameter-search loop for two days. The answer was no. The strategy a TradingView Pine momentum setup I'd been running live had a mathematical ceiling below real trading costs. I wrote the postmortem, archived the repo, and moved on. I publish the shelved projects. Not because it's noble. Because the pipeline that produced the answer is worth more than the answer itself and it's only trustworthy if you can see it work on something that didn't pan out. A separate project on SEC insider-buy signals ended the same way. 4,143 signals, 12 strategy variants, three research sprints, a written conclusion that the data doesn't support the thesis. Both repos are live. Both READMEs are the postmortem. The work that pays is the work that teaches you to evaluate the next one. If you only publish the wins, there's no way to tell the research from the lottery tickets.
 
-**Voice read:** written before formal calibration but already close to the rules. Uses the natural brand phrase *"tell the research from the lottery tickets"* — worth keeping in rotation alongside the codified anchors. "Not because it's noble" / "Both repos are live. Both READMEs are the postmortem." — punchy fragment pattern that fits the calibrated voice. Retroactively compliant.
+**Voice read:** written before formal calibration but already close to the rules. Uses the natural brand phrase *"tell the research from the lottery tickets"*, worth keeping in rotation alongside the codified anchors. "Not because it's noble" / "Both repos are live. Both READMEs are the postmortem.", punchy fragment pattern that fits the calibrated voice. Retroactively compliant.
 
-#### Replies (to post after approval — both approved 2026-04-24)
+#### Replies (to post after approval, both approved 2026-04-24)
 
-**To Davi Samora** (Globo, 11K followers — 16h, commented before calibration):
+**To Davi Samora** (Globo, 11K followers, 16h, commented before calibration):
 
 > *Comment:* "Have You tried to use 30min bars, are you using only OHCLV data? Or L1 data (best bid and best ask)? You will not find a direcional signals from the XAUUSD, the edge is not to find direcional alpha, but from the microstructure and from the volatility forecasting. That's the will you need more than one model, at least 3 our 4 models for XAUUSD. Maybe with a more simple strategy you will find alpha with altcoins in the crypto market, they are more inefficient market, it is 'easier' to find alpha there."
 
 > *Reply (approved):*
 >
-> Yeah — 1h bars, OHLCV only. Your directional-alpha read lines up with where the postmortem ended: the Pine setup was directional momentum on an instrument where that class of edge doesn't survive trading costs. The ceiling wasn't a parameter-search failure, it was a structural one.
+> Yeah, 1h bars, OHLCV only. Your directional-alpha read lines up with where the postmortem ended: the Pine setup was directional momentum on an instrument where that class of edge doesn't survive trading costs. The ceiling wasn't a parameter-search failure, it was a structural one.
 >
-> Microstructure and vol forecasting are interesting but need an L1 feed and infra I don't have in place. The pipeline is being redeployed against US equity fundamentals instead — different instrument, different edge class, cleaner fit for my engineering background. Crypto/altcoins I've kept at arm's length for now; regulatory and exchange-quality tail is more risk than I want to price in.
+> Microstructure and vol forecasting are interesting but need an L1 feed and infra I don't have in place. The pipeline is being redeployed against US equity fundamentals instead, different instrument, different edge class, cleaner fit for my engineering background. Crypto/altcoins I've kept at arm's length for now; regulatory and exchange-quality tail is more risk than I want to price in.
 
-**To Daniel V.** (A.R. Suisse Financial, 602 followers — 19h):
+**To Daniel V.** (A.R. Suisse Financial, 602 followers, 19h):
 
 > *Comment:* "Nice work. What if some of the millions of combinations would have produced strategies that passed the WF? How do you validate that these survivors are not solely the product of chance? Running a massive data mining search could produce some 'robust' strategies just by luck."
 
 > *Reply (approved):*
 >
-> Fair concern — data-snooping is what separates research from lottery tickets.
+> Fair concern, data-snooping is what separates research from lottery tickets.
 >
-> Two things in the specific case: the search space was modest (125-iteration ratchet on a single strategy class, not a brute-force combinatorial sweep), and the primary metric is confidence-adjusted expectancy — raw minus 2σ/√n — so a promising result on a thin sample doesn't get to pretend it's robust. Walk-forward is a hard pass/fail gate rather than a chart, with overfit flags attached to the run's ledger entry. MD5-tagged data snapshots mean a survivor has to hold on a slice the search never saw.
+> Two things in the specific case: the search space was modest (125-iteration ratchet on a single strategy class, not a brute-force combinatorial sweep), and the primary metric is confidence-adjusted expectancy, raw minus 2σ/√n, so a promising result on a thin sample doesn't get to pretend it's robust. Walk-forward is a hard pass/fail gate rather than a chart, with overfit flags attached to the run's ledger entry. MD5-tagged data snapshots mean a survivor has to hold on a slice the search never saw.
 >
-> For wider searches I'd add deflated-Sharpe / reality-check style corrections. Haven't built those in because my searches stay narrow on principle — if a strategy needs millions of combinations to surface an edge, I'd rather find a different strategy.
+> For wider searches I'd add deflated-Sharpe / reality-check style corrections. Haven't built those in because my searches stay narrow on principle, if a strategy needs millions of combinations to surface an edge, I'd rather find a different strategy.
 
 #### To update after replies land
 
@@ -172,14 +172,14 @@ Drafted but not yet queued. (Populated as more samples land.)
 
 ## Comments left
 
-Tracked separately from posts. Comments are a discovery lever — LinkedIn surfaces commenters in the original post's reply tree to viewers who haven't connected yet. Patterns matter more than single comments; review monthly alongside the Stats snapshot.
+Tracked separately from posts. Comments are a discovery lever, LinkedIn surfaces commenters in the original post's reply tree to viewers who haven't connected yet. Patterns matter more than single comments; review monthly alongside the Stats snapshot.
 
 Populated by the `ydcoza-linkedin-engagement` skill (Mode C) after John posts manually. See `docs/linkedin-topics.md` for the topics config and `~/.claude/skills/ydcoza-linkedin-engagement/SKILL.md` for the workflow.
 
 | Date | Post URL | Poster | Topic | Variant | Corpus page | Follow-up |
 | ---- | -------- | ------ | ----- | ------- | ----------- | --------- |
-| 2026-04-27 | https://www.linkedin.com/feed/update/urn:li:activity:7454118045469294592/ | Monica Colangelo (AWS Hero, Head of Hyperscaler Ops @ ReeVo) | Information barriers in LLM systems | Concrete add — type-system layer inside the process | decisions/llms-behind-typed-adapters | N |
-| 2026-04-27 | https://www.linkedin.com/posts/saleem-motlekar-41258a1_artificialintelligence-southafrica-aipolicy-share-7452221729625563136-_i_z/ | Saleem Motlekar (Senior Programme Leader) | SA National AI Policy / due diligence | Citizen-affected, just-the-facts (John-edited from draft) | — (not corpus-anchored; live news reaction) | N |
+| 2026-04-27 | https://www.linkedin.com/feed/update/urn:li:activity:7454118045469294592/ | Monica Colangelo (AWS Hero, Head of Hyperscaler Ops @ ReeVo) | Information barriers in LLM systems | Concrete add, type-system layer inside the process | decisions/llms-behind-typed-adapters | N |
+| 2026-04-27 | https://www.linkedin.com/posts/saleem-motlekar-41258a1_artificialintelligence-southafrica-aipolicy-share-7452221729625563136-_i_z/ | Saleem Motlekar (Senior Programme Leader) | SA National AI Policy / due diligence | Citizen-affected, just-the-facts (John-edited from draft) |, (not corpus-anchored; live news reaction) | N |
 
 ## Shelved
 
