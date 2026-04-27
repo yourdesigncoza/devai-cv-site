@@ -178,6 +178,8 @@ Populated by the `ydcoza-linkedin-engagement` skill (Mode C) after John posts ma
 
 | Date | Post URL | Poster | Topic | Variant | Corpus page | Follow-up |
 | ---- | -------- | ------ | ----- | ------- | ----------- | --------- |
+| 2026-04-27 | https://www.linkedin.com/feed/update/urn:li:activity:7454118045469294592/ | Monica Colangelo (AWS Hero, Head of Hyperscaler Ops @ ReeVo) | Information barriers in LLM systems | Concrete add — type-system layer inside the process | decisions/llms-behind-typed-adapters | N |
+| 2026-04-27 | https://www.linkedin.com/posts/saleem-motlekar-41258a1_artificialintelligence-southafrica-aipolicy-share-7452221729625563136-_i_z/ | Saleem Motlekar (Senior Programme Leader) | SA National AI Policy / due diligence | Citizen-affected, just-the-facts (John-edited from draft) | — (not corpus-anchored; live news reaction) | N |
 
 ## Shelved
 
