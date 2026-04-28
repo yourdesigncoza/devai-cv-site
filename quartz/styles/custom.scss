@@ -209,6 +209,16 @@ code:not(pre > code) {
   margin-top: 0 !important;
 }
 
+// On mobile, the fixed navbar is ~60px tall. The base.scss mobile rule uses a
+// higher-specificity selector that zeroes out the grid-header spacer row, so
+// the content column starts too high. Push the inner content header down to
+// clear the fixed bar (~60px) plus a small gap.
+@media all and (max-width: 800px) {
+  #quartz-body > .center > .page-header {
+    margin-top: 4.5rem !important;
+  }
+}
+
 // Narrow reading measure for article body + airier paragraphs (graphify feel).
 // Targets both content pages (.center > article) and folder/list pages where
 // the body is wrapped in .center > .popover-hint instead.
