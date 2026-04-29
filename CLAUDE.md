@@ -45,16 +45,38 @@ npx quartz build --serve         # local preview with hot reload
 npx quartz build                  # production build into public/  (this is what Vercel runs)
 npm run check                     # tsc --noEmit + prettier --check
 npm run format                    # prettier --write
-npm test                          # tsx --test  (Quartz framework tests)
+npm test                          # tsx --test  (all Quartz framework tests)
+tsx --test quartz/util/path.test.ts   # run a single test file
 ```
 
 Node 22+ / npm 10.9.2+. Vercel build command is `npx quartz build`, output `public/` (see `vercel.json`).
 
 ## Quartz configuration
 
-- `quartz.config.ts`: site config (theme, plugins, baseUrl). Theme uses Inter / JetBrains Mono with orange `#fc6d26` accents.
-- `quartz.layout.ts`: page layouts (left sidebar Explorer + Search, right sidebar Graph + ToC + Backlinks).
+- `quartz.config.ts`: site config (theme, plugins, baseUrl). Theme uses Inter / JetBrains Mono with blue `#2d5bff` accents.
+- `quartz.layout.ts`: page layouts. Left sidebar is hidden (CSS); navigation lives in the HamburgerNav drawer. Right sidebar: ToC + Backlinks. Global graph is always in the DOM (modal, triggered by header icon).
 - `quartz/`: vendored Quartz framework source. Don't edit unless intentionally patching upstream.
+
+### Baked-in design decisions
+
+- **Light-mode only**: `custom.scss` forces CSS vars for both `saved-theme="light"` and `saved-theme="dark"`. The dark-mode toggle is hidden via CSS.
+- **SPA disabled**: `enableSPA: false` in `quartz.config.ts`. Pages do full reloads; no client-side navigation.
+- **Left sidebar hidden**: `.sidebar.left { display: none }` in `custom.scss`. Explorer is surfaced via the HamburgerNav drawer instead.
+- **Fixed sticky header**: implemented entirely in `custom.scss` (not a Quartz upstream feature).
+
+### Custom Quartz patches (not in upstream)
+
+Files added or patched beyond the upstream fork:
+
+- `quartz/components/HamburgerNav.tsx` + `scripts/hamburgerNav.inline.ts`: mobile/desktop nav drawer wrapping Explorer.
+- `quartz/components/ViewGraphLink.tsx`: header icon that opens the global-graph modal.
+- `quartz/components/ConditionalRender.tsx`: utility wrapper to conditionally render a component (used for breadcrumbs on non-index pages).
+- `quartz/components/PageTitle.tsx`: patched to support an icon alongside the title.
+- `quartz/components/scripts/graph.inline.ts`: patched `opacityScale` behavior so labels are visible at initial zoom.
+- `quartz/components/scripts/toc.inline.ts`: patched in-view tracking for the ToC active-item highlight.
+- `quartz/styles/custom.scss`: all site-specific visual overrides (layout, colors, sticky header, profile card, etc.).
+
+`quartz/static/theme-override.css` is a stale artifact from a separate project (SignalTrace). It is not imported by the active build. Do not edit or rely on it.
 
 ## Project page convention
 
