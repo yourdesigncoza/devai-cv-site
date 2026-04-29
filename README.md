@@ -1,4 +1,4 @@
-# ydcoza-cv-wiki
+# devai-cv-site
 
 Personal knowledge wiki for **John Montgomery**, founder of [**EdenFintech**](https://edenfintech.com/). The site at `devai.co.za` (title: **DevAi**) is the working knowledge wiki where the thinking behind EdenFintech is captured: notes, decisions, playbooks, projects, skill hubs. The CV-shaped surface is one face of the wiki; the real product is the long-term capture of 22 years of practice that I've never sat down to write up.
 
@@ -46,7 +46,7 @@ Wiki = proof. LinkedIn = discovery. Substrate = asset. Guardrails = stability.
 ## Repository layout
 
 ```
-ydcoza-cv/
+devai-cv-site/
 ├── raw/                    # evidence layer, source material, re-runnable
 │   ├── web/                # defuddled live URLs
 │   ├── projects/           # per-project evidence dives (extracted from codebases)
