@@ -25,7 +25,8 @@ Approved drafts ready to post. Pull in order, mark as posted in the log below, u
 - **Source:** `content/projects/edenfintech-scanner-python.md`
 - **Type:** Contrarian / technical observation
 - **Approved:** 2026-04-24
-- **Status:** Next up
+- **Status:** Posted
+- **Post:** https://www.linkedin.com/feed/update/urn:li:share:7457730641372037122/
 
 ---
 
@@ -48,13 +49,14 @@ Architecture: devai.co.za/projects/edenfintech-scanner-python
 - **Source:** `content/decisions/publishing-negative-results.md`
 - **Type:** Discipline / positioning
 - **Approved:** 2026-04-24
-- **Status:** Next up
+- **Status:** Posted
+- **Post:** https://www.linkedin.com/feed/update/urn:li:activity:7452680331884752896/
 
 ---
 
 Two of my research projects ended in "no edge here".
 
-One was 125,000 hourly bars of XAU/USD, a bar-by-bar port of a momentum indicator, and a 125-iteration parameter ratchet. The ceiling came in at a profit factor of 1.019. The strategy doesn't work and can't be made to work by tuning parameters.
+One was 125,000 hourly bars of XAUUSD, a bar-by-bar port of a momentum indicator, and a 125-iteration parameter ratchet. The ceiling came in at a profit factor of 1.019. The strategy doesn't work and can't be made to work by tuning parameters.
 
 The other: 4,143 enriched SEC Form 3/4/5 signals, 12+ strategy variants, 27 logged experiments. Insufficient edge.
 
@@ -128,6 +130,7 @@ Drafted but not yet queued. (Populated as more samples land.)
 | ----------- | -------------------------------- | ---------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------- | --------- | -------- | -------- | ----- | ------------------------------------------------------------- |
 | 2026-04-22  | "The answer was no" (shelving)   | decisions/publishing-negative-results          | https://www.linkedin.com/feed/update/urn:li:activity:7452680331884752896/                 | ?           | 5         | 2        | ?        | ?     | Retroactively on-voice; Davi + Daniel replies drafted          |
 | 2026-04-24  | "Position count isn't edge"      | projects/insider-signal-research               | *(paste post URL when available)*                                                         | ?           | ?         | ?        | ?        | ?     | First post with calibrated voice; image: text-card (20→10, 5×) |
+| 2026-05-06  | "Typed information barrier"      | projects/edenfintech-scanner-python            | https://www.linkedin.com/feed/update/urn:li:share:7457730641372037122/                    | ?           | ?         | ?        | ?        | ?     | Image: redaction card (EpistemicReviewInput, mocked ACME)      |
 
 ### 2026-04-22, "The answer was no"
 
@@ -180,6 +183,9 @@ Populated by the `ydcoza-linkedin-engagement` skill (Mode C) after John posts ma
 | ---- | -------- | ------ | ----- | ------- | ----------- | --------- |
 | 2026-04-27 | https://www.linkedin.com/feed/update/urn:li:activity:7454118045469294592/ | Monica Colangelo (AWS Hero, Head of Hyperscaler Ops @ ReeVo) | Information barriers in LLM systems | Concrete add, type-system layer inside the process | decisions/llms-behind-typed-adapters | N |
 | 2026-04-27 | https://www.linkedin.com/posts/saleem-motlekar-41258a1_artificialintelligence-southafrica-aipolicy-share-7452221729625563136-_i_z/ | Saleem Motlekar (Senior Programme Leader) | SA National AI Policy / due diligence | Citizen-affected, just-the-facts (John-edited from draft) |, (not corpus-anchored; live news reaction) | N |
+| 2026-04-30 | https://www.linkedin.com/feed/update/urn:li:activity:7454900770572914688/ | Petr Podhajsky (CrackingMarkets.com) | LLM structured workflows / information structure over prompts | Elaborated Variant 1: build data constraints into code not prompts; scanner EpistemicReviewInput as example | decisions/llms-behind-typed-adapters | N |
+| 2026-04-30 | https://www.linkedin.com/feed/update/urn:li:activity:7454900770572914688/ | Petr Podhajsky (CrackingMarkets.com) | RAG retrieval / epistemic separation in research workflow | RAG layer comment: journals capture reasoning not metrics; recovering thinking vs anchoring to old numbers | decisions/llms-behind-typed-adapters | N |
+| 2026-05-06 | https://www.linkedin.com/feed/update/urn:li:activity:7456008326238285824/ | Michael Fox-Rabinovitz (Investment & Risk Executive, CFA/FRM/CAIA) | Insider cluster buy / deep-value distressed quality | Variant 2: concrete add via negative-result receipt (4,143 Form 3/4/5 signals, 12 variants, 27 experiments, below trading-cost threshold once size+timing applied) | projects/insider-signal-research | N |
 
 ## Shelved
 

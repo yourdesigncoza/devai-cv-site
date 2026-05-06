@@ -19,9 +19,9 @@ Lead positioning. Most posts here, most comment energy here.
 
 | Topic                                         | Search terms                                                       | Last searched | Notes                                                            |
 | --------------------------------------------- | ------------------------------------------------------------------ | ------------- | ---------------------------------------------------------------- |
-| Adversarial AI in research pipelines          | adversarial AI research, AI agent self-critique, epistemic review  | 2026-04-26    | Unique angle. Closest match for John's scanner work.             |
-| Information barriers in LLM systems           | typed information barrier, LLM context isolation, dataclass filter | 2026-04-26    | Specific to scanner architecture. Often surfaces ML-engineer posts. |
-| Deep-value / distressed quality investing     | deep value investing, quality at distressed prices, turnaround     | 2026-04-26    | Investor side of the angle. Watch for value-investor crowd. **UNDER TEST**: see `docs/linkedin-topic-tests.md` for candidate variants. |
+| Adversarial AI in research pipelines          | adversarial AI research, AI agent self-critique, epistemic review  | 2026-05-06    | Unique angle. Closest match for John's scanner work. 2026-05-06 run on `adversarial AI research`: 0 viable past-week (AI-slop synthetic-research, voter-data privacy, OT/CPS agentic defence, AI-integrations listicle). |
+| Information barriers in LLM systems           | typed information barrier, LLM context isolation, dataclass filter | 2026-05-06    | Specific to scanner architecture. Often surfaces ML-engineer posts. 2026-05-06 run on `typed information barrier`: 0 viable; LinkedIn matched on partial words (Telegram AI agent build ×2, Google Translate language-barrier reflection). Term too specific; future runs should rotate to `LLM context isolation` or `dataclass filter`. |
+| Deep-value / distressed quality investing     | deep value investing, quality at distressed prices, turnaround     | 2026-05-06    | Investor side of the angle. Watch for value-investor crowd. **UNDER TEST**: see `docs/linkedin-topic-tests.md` for candidate variants. |
 
 ## Priority B: quant methodology
 
