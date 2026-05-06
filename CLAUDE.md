@@ -72,6 +72,7 @@ Files added or patched beyond the upstream fork:
 - `quartz/components/ViewGraphLink.tsx`: header icon that opens the global-graph modal.
 - `quartz/components/ConditionalRender.tsx`: utility wrapper to conditionally render a component (used for breadcrumbs on non-index pages).
 - `quartz/components/PageTitle.tsx`: patched to support an icon alongside the title.
+- `quartz/components/Head.tsx`: patched to inject the Vercel Web Analytics script (`/_vercel/insights/script.js`).
 - `quartz/components/scripts/graph.inline.ts`: patched `opacityScale` behavior so labels are visible at initial zoom.
 - `quartz/components/scripts/toc.inline.ts`: patched in-view tracking for the ToC active-item highlight.
 - `quartz/styles/custom.scss`: all site-specific visual overrides (layout, colors, sticky header, profile card, etc.).

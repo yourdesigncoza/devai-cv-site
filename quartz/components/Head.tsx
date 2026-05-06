@@ -87,6 +87,7 @@ export default (() => {
         <meta name="generator" content="Quartz" />
 
         {css.map((resource) => CSSResourceToStyleElement(resource, true))}
+        <script defer src="/_vercel/insights/script.js"></script>
         {js
           .filter((resource) => resource.loadTime === "beforeDOMReady")
           .map((res) => JSResourceToScriptElement(res, true))}
