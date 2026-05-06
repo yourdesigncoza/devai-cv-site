@@ -8,6 +8,8 @@ status: active
 
 > Fundamental screener and scoring pipeline for a small US-listed equities watchlist, with a three-role LLM review stage behind a typed information barrier.
 
+![Force-directed graph of the scanner's call graph and module dependencies](edenfintech-scanner-hero.png)
+
 **Stack:** Python (stdlib-only core), LLM provider adapters isolated behind a transport abstraction, YAML config, pytest.
 **Status:** Active. The live surface is [[projects/edenfintech-com|edenfintech.com]].
 **Source:** private.

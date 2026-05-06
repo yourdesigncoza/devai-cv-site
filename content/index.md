@@ -26,7 +26,7 @@ draft: false
 
 I work from Mossel Bay on the south coast of South Africa, founder of [EdenFintech](https://edenfintech.com/). Most of my week goes into the EdenFintech screening and AI-review pipeline for US-listed equities, plus a long-running WordPress engagement for a training provider here at home (continuing client work under the legacy YourDesign name).
 
-## The arc
+## How I got here
 
 I started in the early 2000s writing trading "bots" for a trading company. By 2004 I was building CRUD PHP / MySQL web applications before the open-source CMS world had meaningful share. That became [yourdesign.co.za](https://yourdesign.co.za/), 20+ years of freelance WordPress work, custom themes over page builders, and agency sub-contracts on brand projects. The current work, [EdenFintech](https://edenfintech.com/) and the scanner behind it, is a loop back to where the career started, with 22 years of programming discipline now wrapped around it.
 
@@ -53,12 +53,64 @@ I started in the early 2000s writing trading "bots" for a trading company. By 20
 
 ## Currently building
 
-- [[projects/edenfintech-scanner-python|edenfintech-scanner-python]]: a stdlib-only core plus a three-role LLM review stage behind a typed information barrier.
-- [[projects/edenfintech-com|edenfintech.com]]: the free weekly watchlist surfaced from the scanner's output.
-- [[projects/signaltrace-site|SignalTrace]] ([signaltrace.wiki](https://www.signaltrace.wiki/)): a multi-wiki research site over five OSINT / financial-research case studies. Active.
-- [[projects/wecoza-development|WeCoza 3.0]]: long-running WordPress + Postgres client engagement for a South African adult-education training provider.
+<div class="project-cards">
 
-See the [[now|Now page]] for the current week in more detail.
+<div class="project-card">
+<a class="project-card-link" href="projects/edenfintech-scanner-python">
+<span class="project-card-thumb"><img src="projects/edenfintech-scanner-hero.png" alt="" loading="lazy" /></span>
+<span class="project-card-body">
+<span class="project-card-title">edenfintech-scanner-python</span>
+<span class="project-card-desc">A stdlib-only core plus a three-role LLM review stage behind a typed information barrier.</span>
+<span class="project-card-cta">Read more →</span>
+</span>
+</a>
+</div>
+
+<div class="project-card">
+<a class="project-card-link" href="projects/edenfintech-com">
+<span class="project-card-thumb"><img src="projects/edenfintech-hero.png" alt="" loading="lazy" /></span>
+<span class="project-card-body">
+<span class="project-card-title">edenfintech.com</span>
+<span class="project-card-desc">The free weekly watchlist surfaced from the scanner's output.</span>
+<span class="project-card-cta">Read more →</span>
+</span>
+</a>
+</div>
+
+<div class="project-card">
+<a class="project-card-link" href="projects/jobabroad-co-za">
+<span class="project-card-thumb"><img src="projects/jobabroad-hero.png" alt="" loading="lazy" /></span>
+<span class="project-card-body">
+<span class="project-card-title">jobabroad.co.za</span>
+<span class="project-card-desc">Next.js 16 + Supabase. Manual WhatsApp sales, token-gated pathway guides, CV upload, semantic search.</span>
+<span class="project-card-cta">Read more →</span>
+</span>
+</a>
+</div>
+
+<div class="project-card">
+<a class="project-card-link" href="projects/signaltrace-site">
+<span class="project-card-thumb"><img src="projects/signaltrace-hero.png" alt="" loading="lazy" /></span>
+<span class="project-card-body">
+<span class="project-card-title">SignalTrace</span>
+<span class="project-card-desc">A multi-wiki research site over five OSINT and financial-research case studies. Active at signaltrace.wiki.</span>
+<span class="project-card-cta">Read more →</span>
+</span>
+</a>
+</div>
+
+<div class="project-card">
+<a class="project-card-link" href="projects/wecoza-development">
+<span class="project-card-thumb"><img src="projects/wecoza-hero.png" alt="" loading="lazy" /></span>
+<span class="project-card-body">
+<span class="project-card-title">WeCoza 3.0</span>
+<span class="project-card-desc">Long-running WordPress and Postgres client engagement for a South African adult-education training provider.</span>
+<span class="project-card-cta">Read more →</span>
+</span>
+</a>
+</div>
+
+</div>
 
 ## Wiki sections
 
@@ -78,6 +130,5 @@ More on [[about/how-this-site-works|how the site is put together]].
 - [[about/trading|Trading]]
 - [[about/cover-letter|Cover letter]]
 - [[about/clients|Clients & collaborators]]
-- [[now|What I'm doing now]]
 - Email: support@edenfintech.com
 - Phone: +27 079 177 1970

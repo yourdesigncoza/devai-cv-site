@@ -8,6 +8,8 @@ status: active
 
 > A multi-wiki Quartz 4 site hosting five OSINT / financial-research case studies, each with its own entity taxonomy and open-questions convention.
 
+![SignalTrace landing hero: "Find the signal. Trace the network."](signaltrace-hero.png)
+
 **Stack:** Quartz 4 (fork of `jackyzha0/quartz`), Preact, TypeScript, Node 22+, Vercel static hosting, custom `scripts/build-all.mjs` orchestrator.
 **Status:** Active.
 **Live:** [www.signaltrace.wiki](https://www.signaltrace.wiki/)

@@ -25,4 +25,4 @@ I trade **XAUUSD** (gold / US dollar) full-time. Most of the quant and AI work o
 
 ## What I'll take on
 
-Systematic strategy research, signal pipelines, execution tooling, or a sanity-check on an existing backtest. The fuller picture is on [[skills/quant-engineering|Quant Engineering]]; the [[about/cover-letter|cover letter]] has the longer pitch; [[now|what I'm working on right now]] is where to look for current focus.
+Systematic strategy research, signal pipelines, execution tooling, or a sanity-check on an existing backtest. The fuller picture is on [[skills/quant-engineering|Quant Engineering]]; the [[about/cover-letter|cover letter]] has the longer pitch.

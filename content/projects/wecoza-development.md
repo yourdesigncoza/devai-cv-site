@@ -8,6 +8,8 @@ status: maintained
 
 > A WordPress plugin for a South African adult-education training provider (WECOZA / Triple E Training), with most of the operational logic living in a 43-table Postgres schema alongside the WordPress install.
 
+![WeCoza CRM dashboard: pipeline, smart alerts, BEE reminders](wecoza-hero.png)
+
 **Stack:** WordPress + PHP plugin, PDO connection to managed cloud Postgres (bypassing `$wpdb`), plpgsql trigger functions, jQuery + `admin-ajax.php`.
 **Status:** Maintained for the client. 14+ months of active development.
 **Source:** private.

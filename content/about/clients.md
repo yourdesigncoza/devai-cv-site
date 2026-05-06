@@ -34,4 +34,4 @@ Named relationships, no invented quotes. References available on request.
 
 ## Becoming one
 
-The [[now|current availability]] page shows what I'm looking for next. The [[about/cover-letter|cover letter]] has the longer pitch. Direct: support@edenfintech.com · +27 079 177 1970.
+The [[index|home page]] has my current availability. The [[about/cover-letter|cover letter]] has the longer pitch. Direct: support@edenfintech.com · +27 079 177 1970.

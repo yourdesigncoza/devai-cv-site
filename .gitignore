@@ -34,3 +34,4 @@ Thumbs.db
 
 # Playwright MCP transient snapshots/logs
 .playwright-mcp/
+cards-*.png

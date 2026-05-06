@@ -8,6 +8,8 @@ status: active
 
 > The public face of [[projects/edenfintech-scanner-python|edenfintech-scanner-python]], a free weekly research service surfacing 1–3 "insider cluster buy" setups drawn from US SEC Form 4 filings.
 
+![edenfintech.com landing hero: "People running the company just bought their own stock. Are you paying attention?"](edenfintech-hero.png)
+
 **Stack:** Static / SSG marketing site, copy-heavy narrative layout.
 **Status:** Live, visible "Still Under Development, content is placeholder/demo only" notice on the current build.
 **Live:** [edenfintech.com](https://edenfintech.com/)

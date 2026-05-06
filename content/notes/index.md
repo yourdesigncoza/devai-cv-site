@@ -11,6 +11,30 @@ If you're reading this from outside: entries here are the first pass of thinking
 
 ## Entries
 
+### 2026-05-06, HTML comments in markdown silently leaked unresolved-research debt to paying readers
+
+The build-pathway pipeline kept emitting `<!-- UNRESOLVED: x -->` and `<!-- TODO: y -->` blocks in section markdown when a primary source could not be resolved. The blocks were invisible to readers, which is exactly the problem: a paying member loaded the seasonal guide and the missing fact was just gone. No "we could not confirm this", no flag to check the official register. Promoted the rule to `CLAUDE.md`: any unresolved item is written as visible prose ("We could not get a definitive answer on X. Check [official source] before acting."). Comments are for the codebase, not the published page. Cheaper to admit a gap honestly than to ship a guide that pretends the gap is not there.
+
+*source: jobabroad.co.za, CLAUDE.md (Unresolved Claims Rule)*
+
+### 2026-05-06, The regulatory trigger for immigration content is individual tailoring, not the price
+
+Spent a research vault (22 notes, 6 jurisdictions: UK, Australia, NZ, Canada, SA, Ireland) on whether a R199 paid information product crosses into regulated immigration-advice territory. The hinge across all six jurisdictions turned out to be the same phrase: whether the content "relates to a particular individual". General information distributed publicly is outside scope everywhere I checked, including the strictest two (NZ and Canada, both with extraterritorial reach). Paid does not change the answer. Tailored does. SA itself has been unregulated since s.46 of the Immigration Act was repealed in 2014; the DHA 2025/2026 White Paper might walk that back, worth a Q4 2026 re-check. The standard disclaimer at point of sale, plus the regulator's register URL on every destination-specific page, was the one operational consequence.
+
+*source: jobabroad.co.za, wa-shared-legal-boundary vault + ADR-001/ADR-002*
+
+### 2026-05-06, Split the embeddings stack: local indexer, Edge-Function queries
+
+Pathway search runs on Supabase pgvector with `gte-small` (384-dim, free, 512-token window). Two places need the model: the indexer that chunks and embeds the guide and wiki corpus, and the query path that embeds the user's search string. Initially I had both running through `@xenova/transformers` server-side in Next, which meant cold starts on every search. Moved the query embedder into a Supabase Edge Function (`search-pathway`) and kept the indexer local. Indexing stays free and runs whenever I `npm run reindex`, the query path stays warm and close to the database, and the Next app no longer needs to ship the model. The split also made it easy to drop the chunk size to 1,800 chars (~450 tokens, well inside the model's 512-token limit) without a re-deploy.
+
+*source: jobabroad.co.za, scripts/reindex.ts + supabase/functions/search-pathway*
+
+### 2026-05-06, A `shared` category in pgvector let one wiki corpus apply to every paid pathway
+
+Each paid category (healthcare, teaching, seasonal so far) has its own published guide and its own research vault. There is a parallel set of `wa-shared-*` vaults: legal-boundary research, the universal SA documents chain (SAPS PCC, DIRCO Apostille, SAQA), things every category needs to reference. Storing them under `category='shared'` in `pathway_chunks`, and writing the SQL filter as `category = filter_category OR category = 'shared'`, means a healthcare buyer searches against healthcare + shared; a seasonal buyer searches against seasonal + shared; nothing has to be duplicated per category. Adding a new shared vault is a `npm run reindex` away. The pattern is small but it scales linearly in vaults rather than in (categories × shared topics).
+
+*source: jobabroad.co.za, scripts/reindex.ts + supabase migration 20260505_pathway_search.sql*
+
 ### 2026-04-20, Rebrands kept poisoning Gemini's research context
 
 Rolled the Gemini research prompt to v2: seven hardcoded directives (credit ratings, debt schedules, revenue concentration, regulatory cadence, insider transactions, executive compensation, competitive landscape), each mapping to a specific evidence array in the raw bundle schema. What prompted the rewrite was that rebrands like OMI → ACH were returning ambiguous search results, Gemini would pull in old-ticker filings alongside new-ticker coverage. Threaded FMP-sourced company name, sector, and industry into the prompt as `context_entities` to disambiguate. Cache key now includes `GEMINI_PROMPT_VERSION`, so prompt upgrades auto-invalidate stale bundles. Validated against OMI (Healthcare) and PYPL (Financial Services) to check no sector cross-contamination.
