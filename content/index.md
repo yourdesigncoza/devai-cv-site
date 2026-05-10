@@ -112,6 +112,23 @@ I started in the early 2000s writing trading "bots" for a trading company. By 20
 
 </div>
 
+## Legacy work
+
+<div class="project-cards">
+
+<div class="project-card">
+<a class="project-card-link" href="projects/yourdesign-co-za">
+<span class="project-card-thumb"><img src="projects/yourdesign-hero.png" alt="" loading="lazy" /></span>
+<span class="project-card-body">
+<span class="project-card-title">yourdesign.co.za</span>
+<span class="project-card-desc">20+ years of freelance WordPress and WooCommerce. The original brand site, kept as a portfolio surface.</span>
+<span class="project-card-cta">Read more →</span>
+</span>
+</a>
+</div>
+
+</div>
+
 ## Wiki sections
 
 This site is also a working record of how I practice. New pages land in these folders over time:
