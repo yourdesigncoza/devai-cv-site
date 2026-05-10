@@ -57,6 +57,8 @@ The homepage today is the team explaining things: what's in a maintenance contra
 
 I've been building AI-assisted knowledge portals that take that kind of expert content and turn it into guided self-service. A working example: jobabroad.co.za. South Africans wanting to work overseas land on a structured page, answer a few eligibility questions, get a custom pathway, and either pay for the detailed guide or message via WhatsApp.
 
+To make this concrete, I built a small demo on the Riello product range so you can see the pattern running rather than imagine it: **https://www.signaltrace.wiki/riello-ups/Search**. Try a question like *"I need 5 kW backup for 30 minutes for medical equipment, what should I look at?"* or *"I have a small bank branch with point-of-sale terminals, what do I need?"* The answers cite the underlying product notes. The version for Standby would be on your domain with your branding and your full catalogue.
+
 Three versions of that pattern that could fit Standby:
 
 1. **UPS sizing assistant.** Load, runtime, redundancy, environment in. Riello range recommendation and rough kVA target out. The site engineer sees a qualified spec instead of starting from "tell me about your setup."
@@ -74,19 +76,35 @@ John
 
 Decision (2026-05-10): build a public demo wiki populated with public Riello product content + AI-assisted search before sending the email. The email then includes a live URL Greg can click instead of describing the pattern abstractly.
 
-Decisions made:
+Final state (2026-05-10):
 
-- **Branding**: Generic Riello framing for v1. No Standby logo. Demo positioned as "the pattern running on UPS data your team will recognize." White-label to full Standby branding once Greg agrees on the call.
-- **Hosting**: Standalone Vercel preview URL (e.g. `ups-portal-demo.vercel.app`). Separate from devai.co.za, signaltrace.wiki, jobabroad.co.za.
-- **Stack**: Fork `work-abroad-web` (Next.js 16 + Supabase + pgvector + OpenAI). Reuse `lib/rag/`, `components/PathwaySearch.tsx`, `components/AnswerCard.tsx`, `components/AssessmentWizard.tsx`, `scripts/reindex.ts`. Content swap + cosmetic re-skin, not a rebuild.
+- **Live URL**: https://www.signaltrace.wiki/riello-ups/ (search at https://www.signaltrace.wiki/riello-ups/Search)
+- **Branding**: Generic Riello framing. No Standby logo. White-label to full Standby branding once Greg agrees.
+- **Hosting**: Sub-path on signaltrace.wiki rather than a standalone Vercel preview. Sub-path silos it cleanly enough not to muddy the SignalTrace OSINT framing.
+- **Stack**: 47+ atomic notes across Products, Ranges, Industries, Features, Reference. FAQ split per question for RAG retrieval.
+
+### Smoke test (2026-05-10, 5/5 strong)
+
+Ran the 5 sample queries from `demo-wiki-research-brief.md` through the live `/Search` chat:
+
+| # | Query | Result |
+|---|---|---|
+| 1 | Medical 5kW / 30 min | Names Sentinel Dual SDU (4-10 kVA) + Master MPS, with topology reasoning |
+| 2 | Line-interactive vs online | Explains both topologies with operational mechanism |
+| 3 | Battery replacement frequency | 3-5 / 10 / 15 yr ranges + Eurobatt + ambient temp impact |
+| 4 | Network monitoring | NetMan 204 + SNMP/web/Modbus + PowerShield |
+| 5 | Small bank branch + PoS | Pure Line LI (Buck/Boost AVR, ATM/PoS-class) + Sentinel Pro |
+
+All five answers are grounded, name actual Riello products with capacity brackets, and cite 6 wiki notes each. The auto-validation table that flagged Q4 and Q5 as gaps produced false negatives.
 
 See `demo-wiki-asset.md` for the reusable-shell build plan, content shopping list, and reskin checklist for future prospects.
 
 ## Send status
 
 - [x] Confirm primary contact (Greg Bennett, 2026-05-10)
-- [ ] Build demo wiki (see `demo-wiki-asset.md`)
-- [ ] Add demo URL to email body before send
+- [x] Build demo wiki (live at signaltrace.wiki/riello-ups, 47+ notes, 2026-05-10)
+- [x] Smoke-test demo against 5 sample queries (5/5 strong, 2026-05-10)
+- [x] Add demo URL to email body
 - [ ] John reviews final email
 - [ ] Send to greg@standbysystems.co.za
 - [ ] Log reply
