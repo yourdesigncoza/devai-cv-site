@@ -1,10 +1,10 @@
 ---
 target: Standby Systems
 domain: standbysystems.co.za
-status: drafted
+status: sent
 relationship: 6-year WordPress engagement, last contact June 2022
 contact: Greg Bennett <greg@standbysystems.co.za>
-last_updated: 2026-05-10
+last_updated: 2026-05-11
 ---
 
 # Standby Systems outreach
@@ -105,9 +105,38 @@ See `demo-wiki-asset.md` for the reusable-shell build plan, content shopping lis
 - [x] Build demo wiki (live at signaltrace.wiki/riello-ups, 47+ notes, 2026-05-10)
 - [x] Smoke-test demo against 5 sample queries (5/5 strong, 2026-05-10)
 - [x] Add demo URL to email body
-- [ ] John reviews final email
-- [ ] Send to greg@standbysystems.co.za
+- [x] John reviews final email
+- [x] Sent to greg@standbysystems.co.za (2026-05-11, chattier `greg-initial-mail.md` variant)
 - [ ] Log reply
+
+## Sent version
+
+The version that went out is the casual reactivation draft at `greg-initial-mail.md`, not the structured 3-options draft above. It leads with the personal "been a while" framing, the trading-quant detour, and the wiki-from-corpus pitch. Demo links included: signaltrace.wiki/riello-ups/ + /Search, and jobabroad.co.za healthcare/teaching pages. The structured 3-options draft above is kept as reference for the follow-up call if Greg engages.
+
+### Actual sent metadata (read back from Gmail, 2026-05-11)
+
+- **Sent:** 2026-05-11 13:09 +0200
+- **From:** John Montgomery `<support@yourdesign.co.za>` (warm legacy alias chosen over `info@devai.co.za` — Greg knows this brand from the 2016-2022 engagement)
+- **To:** greg Bennett `<greg@standbysystems.co.za>`
+- **Subject:** `Support ( YourDesign.co.za )` (generic-support thread framing, not Standby-specific)
+- **Gmail thread ID:** `19e16b7960e6497b`
+- **Message-ID:** `<CAOnR3Fs9ebQAUi80pgtxFAXKhZDREgzMBWFny06PSyH1rE78Eg@mail.gmail.com>`
+
+Two changes vs `greg-initial-mail.md` source draft:
+
+1. Wording: "small demo of what I mean" → "small demo of what I'm trying to convey".
+2. Appended closing line before the signature: `** I will leave your Demo online for a couple of days then remove , that site is BOT blocked anyhow :::` — signals temporary access and explains why Greg can't share the link around freely. Adds urgency.
+
+Signature block used:
+```
+Thank You
+John
+- - - - - - - - -
+Web: <yourdesign.co.za>
+AI Dev: <devai.co.za>
+Twitter: yourdesigncoza
+Mobile: +27 79 177 1970
+```
 
 ## Reply log
 

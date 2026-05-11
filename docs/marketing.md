@@ -82,4 +82,4 @@ Discovery routes:
 
 | Target | Status | Last touch | Notes |
 |---|---|---|---|
-| Standby Systems | drafted | 2026-05-10 | See `marketing/standbysystems-co-za.md` |
+| Standby Systems | sent | 2026-05-11 | Casual variant (`greg-initial-mail.md`) sent to Greg. Awaiting reply. |
