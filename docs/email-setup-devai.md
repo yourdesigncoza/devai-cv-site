@@ -49,8 +49,14 @@ All on the apex `@` (i.e. `devai.co.za`).
 | MX  | @ | `mx1.improvmx.com.` | 10 | Inbound mail to ImprovMX (primary) |
 | MX  | @ | `mx2.improvmx.com.` | 20 | Inbound mail to ImprovMX (failover) |
 | TXT | @ | `v=spf1 include:spf.improvmx.com ~all` | — | SPF for forwarded mail |
+| TXT | @ | `brevo-code:bf7cacaec28290c849e6d7aaadf6daa5` | — | Brevo domain-ownership verification |
+| CNAME | `brevo1._domainkey` | `b1.devai-co-za.dkim.brevo.com.` | — | Brevo DKIM signing key 1 |
+| CNAME | `brevo2._domainkey` | `b2.devai-co-za.dkim.brevo.com.` | — | Brevo DKIM signing key 2 |
+| TXT | `_dmarc` | `v=DMARC1; p=none; rua=mailto:rua@dmarc.brevo.com` | — | DMARC monitoring policy (reports to Brevo) |
 
 **Nothing else was changed.** The existing A record for the website is untouched.
+
+> **Trailing-whitespace gotcha at Xneelo:** when pasting the `brevo-code:...` TXT value, Xneelo can preserve a trailing space copied from Brevo's clipboard button. Brevo's verifier does an exact string match and fails on mismatch. If a record shows `"brevo-code:... "` (note the space before the closing quote) in the Xneelo records list, edit it and delete the trailing space.
 
 If you ever need to re-create these, the values above are exact. ImprovMX shows the same values in their dashboard under **DNS Settings**.
 
@@ -130,14 +136,24 @@ After verification: when composing in Gmail, click the **From** dropdown and pic
 
 ---
 
-## (Optional, recommended) Brevo domain authentication
+## Brevo domain authentication (done 2026-05-11)
 
-Not done yet, but worth doing before any high-volume outreach:
+Done. The exact records are in the DNS table above. Summary of what was added at Xneelo:
 
-1. In Brevo: **Senders, Domains & Dedicated IPs** → **Domains** → **Add a Domain** → `devai.co.za`.
-2. Brevo will list a DKIM record (CNAME or TXT) and a Brevo verification record (TXT). **Do not let it replace the existing SPF record at the apex** — SPF stays as the ImprovMX-only one above (Brevo signs via DKIM, not SPF).
-3. Add the records at Xneelo, click **Verify** in Brevo.
-4. Outgoing mail no longer gets the `via brevo.com` tag in some inbox UIs and deliverability improves.
+| Record | Type | Host | Value |
+|---|---|---|---|
+| Brevo code | TXT | `@` | `brevo-code:bf7cacaec28290c849e6d7aaadf6daa5` |
+| DKIM 1 | CNAME | `brevo1._domainkey` | `b1.devai-co-za.dkim.brevo.com.` |
+| DKIM 2 | CNAME | `brevo2._domainkey` | `b2.devai-co-za.dkim.brevo.com.` |
+| DMARC | TXT | `_dmarc` | `v=DMARC1; p=none; rua=mailto:rua@dmarc.brevo.com` |
+
+Why this was needed: before authentication, sending from `info@devai.co.za` via the Brevo relay was silently dropped because Brevo only had the personal Gmail address as a verified sender. After domain authentication, any `*@devai.co.za` sender is implicitly trusted, DKIM signing aligns with the From domain, and the "via brevo.com" tag goes away.
+
+Notes:
+
+- SPF was **not** touched. The existing `v=spf1 include:spf.improvmx.com ~all` stays as the only SPF record at the apex. Brevo authentication relies on DKIM alignment, not SPF.
+- DMARC policy is `p=none` (monitoring only). Aggregate reports go to Brevo's address. Tighten to `p=quarantine` once a few weeks of clean DKIM-aligned mail confirm there's nothing to break.
+- All four records were verified green in Brevo's **Domains** panel.
 
 ---
 
@@ -158,9 +174,13 @@ Not done yet, but worth doing before any high-volume outreach:
 | ImprovMX dashboard goes red | Someone removed the MX or TXT records at Xneelo, or Xneelo migrated DNS | Re-add the records from the table above. |
 | Email to `info@devai.co.za` bounces | Same as above, OR ImprovMX free-tier limit hit | Check ImprovMX dashboard logs. |
 | Sending from Gmail fails with "Authentication failed" | Brevo SMTP key was rotated or revoked | Regenerate key in Brevo → update password in Gmail Send mail as. |
-| Outgoing mail lands in recipients' spam | No DKIM | Do the optional Brevo domain authentication step above. |
+| Outgoing mail lands in recipients' spam | No DKIM | Do the Brevo domain authentication step above. |
 | Outgoing mail shows "via brevo.com" | No DKIM (same root cause) | Same fix. |
 | New SPF record added by another sender breaks email | Two SPF TXT records present at apex | Delete the new one; merge its include into the existing single SPF record. |
+| Outbound mail vanishes silently, no bounce, recipient never receives | Sender address or domain not verified in Brevo, so the relay drops the message after a successful SMTP handoff from Gmail | Brevo → **Senders, Domains & Dedicated IPs**: confirm `devai.co.za` is authenticated (Domains tab), or add the sender address (Senders tab). |
+| Bounce email from Gmail says verification delivery failed to `aaab6e001@smtp-brevo.com` | Wrong value pasted into Gmail's **Email** field on the "Send mail as" form. The SMTP login username got put where the alias email should go. | Delete the broken "Send mail as" entry in Gmail and re-add it with `info@devai.co.za` as **Email** and the Brevo login as **SMTP Username** only. |
+| Brevo verification fails with "Brevo code values mismatch" even though the TXT record clearly exists at Xneelo | Trailing whitespace in the TXT value at the DNS provider. Xneelo can preserve a trailing space copied from Brevo's clipboard button. | Edit the TXT record at Xneelo, delete any trailing space inside the value, save, wait ~5 min, re-verify in Brevo. |
+| First test mail from `info@devai.co.za` lands in the recipient's spam folder even with DKIM/SPF/DMARC all green | New sending domain has zero outbound reputation. Filters treat the first few messages from a fresh authenticated domain as suspicious. | Mark "Not spam" in the recipient inbox and add `info@devai.co.za` to contacts. Send 2-3 more low-stakes test sends over a few days to known-good inboxes before real outreach. Reputation builds with each "delivered, not flagged" send. |
 
 ---
 
