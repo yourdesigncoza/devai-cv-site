@@ -1,7 +1,7 @@
 ---
 title: Marketing & outreach playbook
 status: live
-last_updated: 2026-05-10
+last_updated: 2026-05-11
 ---
 
 # Marketing & outreach
@@ -20,21 +20,33 @@ Not "I build AI websites." Not "I do AI development."
 - [signaltrace.wiki](https://www.signaltrace.wiki/) — multi-vault research site over OSINT and financial-research case studies
 - `wiki-builds/` portfolio of 12+ domain knowledge vaults (alfaromeo, tender-intelligence-research, sa-corruption, claude-tradingview, quant-trader-investor, tirzepatide, work-abroad-pathway-intelligence, XpressoCafe-Research, etc.)
 
-## Lead offer (what to scope first)
+## Lead offer (two tiers)
 
-**Vault-to-Web Starter.** Take a client's existing docs / notes / FAQs / specs and publish them as a clean searchable web portal with one or two AI-assisted self-service flows on top. Concrete deliverable, fastest to scope, easiest first sale. Phase 2 adds full AI Q&A, eligibility scoring, payment gating, etc.
+**Tier 1: 5-day Portal Demo Sprint.** Fixed price R5-8k. Live working portal on a subpath using their content. Concrete deliverable, fastest to close (yes/no decision, not budget approval). Foot-in-door.
+
+**Tier 2: Vault-to-Web Starter.** R30-60k+ engagement after the sprint validates. Adds full AI Q&A, eligibility scoring, payment gating, etc. Sold after Tier 1 proves value.
 
 ## Outreach approach
 
-Not a niche-then-template strategy. Each outreach is custom, anchored to:
+Two channels run in parallel: **warm reactivation** (high-yield, exhausted at 2 sends) and **cold outbound** (volume play, ongoing). Both anchored to:
 
 1. **A specific observation about their site** (proves the email isn't generic)
 2. **One specific knowledge-trap on their site** (the wall of FAQ-style copy nobody reads)
 3. **One concrete portal idea** mapped to their products
-4. **Soft proof link** to JobAbroad (or other relevant vault build)
-5. **Low-friction CTA** (15-min call, not "let's discuss your needs")
+4. **Live proof link** to a stock demo on `demo.devai.co.za` (no brand fragmentation, recipient lands on DevAi-branded surface)
+5. **CTA differs by channel:** warm = "15-min call"; cold = "live demo to try now + 48hr custom POC after qualifying chat"
 
-Then capture each one in `docs/marketing/<client-slug>.md` with the reasoning + email draft + send status + reply log.
+Then capture each one in `docs/marketing/<client-slug>.md` (warm) or `docs/marketing/cold-batch-NN-<vertical>.md` (cold batch) with reasoning, email draft, send status, reply log.
+
+### Cold-outbound playbook (added 2026-05-11)
+
+- **Stock demo first.** Before sending a batch, a vertical-specific stock demo lives at `demo.devai.co.za/<vertical>` built from public regulatory + distributor + industry-body content. Becomes the live-now proof link in every cold mail in that batch.
+- **Qualified POC, not unconditional build.** Custom POC on the recipient's content is offered only after a discovery call confirms fit. Filters tire-kickers; protects time.
+- **Volume floor: 30-50 per batch.** At 2-5% cold reply rates, 10-15 sends statistically yield 0-1 reply.
+- **Follow-up sequence:** day-3 short "just checking" + day-7 "one last try, is X a priority right now". Standardly 2-3x's reply rate.
+- **Persona expansion:** MD + Head of Sales + Senior Sales Engineer. Pre-sales pain is felt by sales heads, not always MDs.
+- **From alias:** cold = `info@devai.co.za` (DevAi positioning); warm reactivation of past WP client = `support@yourdesign.co.za` (legacy hook).
+- **Voice rules apply:** zero em-dashes, no intensifiers, bare URLs (markdown links render literally in email), plain "Thanks,", no asterisks.
 
 ## Voice rules (strict)
 
@@ -83,3 +95,4 @@ Discovery routes:
 | Target | Status | Last touch | Notes |
 |---|---|---|---|
 | Standby Systems | sent | 2026-05-11 | Casual variant (`greg-initial-mail.md`) sent to Greg. Awaiting reply. |
+| Cold batch 01: SA commercial solar installers | list-building | 2026-05-11 | See `marketing/cold-batch-01-commercial-solar.md`. Free-demo CTA, `info@devai.co.za` alias. |
