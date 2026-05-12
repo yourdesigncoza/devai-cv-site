@@ -1,0 +1,77 @@
+---
+import { getCollection } from 'astro:content';
+import ContentPage from '../../layouts/ContentPage.astro';
+
+const heroImages: Record<string, string> = {
+  'edenfintech-scanner-python': '/projects/edenfintech-scanner-hero.png',
+  'edenfintech-com': '/projects/edenfintech-hero.png',
+  'jobabroad-co-za': '/projects/jobabroad-hero.png',
+  'signaltrace-site': '/projects/signaltrace-hero.png',
+  'wecoza-development': '/projects/wecoza-hero.png',
+  'yourdesign-co-za': '/projects/yourdesign-hero.png',
+};
+
+const entries = (await getCollection('projects')).filter((p) => !p.data.draft);
+
+const STATUS_ORDER = ['active', 'maintained', 'archived'];
+const STATUS_LABEL: Record<string, string> = {
+  active: 'Currently building',
+  maintained: 'Maintained',
+  archived: 'Archived',
+};
+
+const grouped = STATUS_ORDER.map((status) => ({
+  status,
+  label: STATUS_LABEL[status],
+  items: entries
+    .filter((e) => (e.data.status ?? 'archived') === status)
+    .sort((a, b) => a.data.title.localeCompare(b.data.title)),
+})).filter((g) => g.items.length > 0);
+---
+
+<ContentPage
+  title="Projects"
+  description="Currently building, maintained, and archived projects from John Montgomery's portfolio."
+  breadcrumbLabel="devai.co.za"
+  breadcrumbHref="/"
+>
+  <h1>Projects</h1>
+  <p>What I've built and what I'm still building. The active ones are where the current week goes.</p>
+
+  {grouped.map((group, idx) => (
+    <section class="not-prose mt-12">
+      <div class="flex items-baseline gap-3">
+        <span class="inline-flex items-center px-2.5 py-1 rounded-md bg-gray-100 text-gray-700 text-xs font-mono font-semibold">
+          {String(idx + 1).padStart(2, '0')}
+        </span>
+        <h2 class="text-xl md:text-2xl font-medium tracking-tight [word-spacing:0.1em] text-[#242424]">{group.label}</h2>
+      </div>
+
+      <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {group.items.map((p) => {
+          const img = heroImages[p.id];
+          return (
+            <a href={`/projects/${p.id}`} class="group block rounded-lg border border-[#e1e2e3] bg-white overflow-hidden hover:shadow-card-cal transition-shadow">
+              {img ? (
+                <span class="block aspect-[16/9] overflow-hidden bg-[#fbfbfb]">
+                  <img src={img} alt="" loading="lazy" class="w-full h-full object-cover" />
+                </span>
+              ) : (
+                <span class="block aspect-[16/9] bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+                  <span class="text-xs font-mono uppercase tracking-widest text-gray-400">{group.status}</span>
+                </span>
+              )}
+              <span class="block p-4">
+                <span class="block text-sm font-semibold text-[#242424] group-hover:text-brand-600 transition-colors">{p.data.title}</span>
+                {p.data.description && (
+                  <span class="block mt-1 text-sm text-gray-600 leading-relaxed line-clamp-3">{p.data.description}</span>
+                )}
+                <span class="block mt-3 text-xs font-medium text-brand-600 group-hover:underline">Read more &rarr;</span>
+              </span>
+            </a>
+          );
+        })}
+      </div>
+    </section>
+  ))}
+</ContentPage>

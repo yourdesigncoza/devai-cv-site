@@ -1,0 +1,186 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const projects = [
+  {
+    href: '/projects/edenfintech-scanner-python',
+    img: '/projects/edenfintech-scanner-hero.png',
+    title: 'edenfintech-scanner-python',
+    desc: "A stdlib-only core plus a three-role LLM review stage behind a typed information barrier.",
+  },
+  {
+    href: '/projects/edenfintech-com',
+    img: '/projects/edenfintech-hero.png',
+    title: 'edenfintech.com',
+    desc: "The free weekly watchlist surfaced from the scanner's output.",
+  },
+  {
+    href: '/projects/jobabroad-co-za',
+    img: '/projects/jobabroad-hero.png',
+    title: 'jobabroad.co.za',
+    desc: 'Next.js 16 + Supabase. Manual WhatsApp sales, token-gated pathway guides, CV upload, semantic search.',
+  },
+  {
+    href: '/projects/signaltrace-site',
+    img: '/projects/signaltrace-hero.png',
+    title: 'SignalTrace',
+    desc: 'A multi-wiki research site over five OSINT and financial-research case studies. Active at signaltrace.wiki.',
+  },
+  {
+    href: '/projects/wecoza-development',
+    img: '/projects/wecoza-hero.png',
+    title: 'WeCoza 3.0',
+    desc: 'Long-running WordPress and Postgres client engagement for a South African adult-education training provider.',
+  },
+];
+
+const skills = [
+  ['/skills/quant-engineering', 'Quant Engineering', 'research platforms for screening, scoring, and backtesting; honest evaluation as a first-class output.'],
+  ['/skills/ai-agentic-systems', 'AI / Agentic Systems', 'LLM calls behind typed adapters, contract-governed review stages, logged and reproducible.'],
+  ['/skills/wordpress-php-craft', 'WordPress & PHP Craft', 'custom plugins and themes, WooCommerce, and the cases where the schema needs to move beyond $wpdb.'],
+  ['/skills/knowledge-graphs-wiki-systems', 'Knowledge Graphs & Wiki Systems', 'Obsidian + Quartz research wikis, entity taxonomies, graph navigation that does real work.'],
+  ['/skills/python-services-data-pipelines', 'Python Services & Data Pipelines', 'the connective tissue (ingestion, snapshot hashing, CLI ergonomics, structured logging).'],
+  ['/skills/design-brand', 'Design & Brand', '20+ years of custom front-end work; the visual layer on my own sites and on client brand builds.'],
+] as const;
+---
+
+<BaseLayout
+  title="John Montgomery, DevAi"
+  description="Quant research pipelines, LLM and agent systems, and custom WordPress, by John Montgomery. 22 years in. Remote-first, available for new projects."
+>
+  <div class="max-w-6xl mx-auto px-4 pt-4 pb-12">
+    <div class="relative max-w-3xl mx-auto bg-white rounded-xl shadow-card-cal p-8 md:p-12">
+      <span class="absolute top-2 left-4 text-gray-300 text-2xl font-mono select-none pointer-events-none" aria-hidden="true">+</span>
+      <span class="absolute top-2 right-4 text-gray-300 text-2xl font-mono select-none pointer-events-none" aria-hidden="true">+</span>
+      <span class="absolute bottom-2 left-4 text-gray-300 text-2xl font-mono select-none pointer-events-none" aria-hidden="true">+</span>
+      <span class="absolute bottom-2 right-4 text-gray-300 text-2xl font-mono select-none pointer-events-none" aria-hidden="true">+</span>
+
+      <div class="mt-2">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gray-100 text-xs text-gray-700">
+          <span class="inline-block w-1.5 h-1.5 rounded-full bg-brand-500"></span>
+          Available
+          <span class="text-gray-400">·</span>
+          <span>Quant + AI engineering</span>
+        </span>
+      </div>
+
+      <h1 class="mt-5 text-3xl md:text-[44px] font-medium tracking-tight [word-spacing:0.1em] text-[#242424] leading-[1.1]">
+        I'm John.
+      </h1>
+      <p class="mt-5 text-lg text-gray-600 leading-relaxed max-w-prose">
+        Quant research pipelines, LLM and agent systems, and custom WordPress. 22 years in. Remote from Mossel Bay, founder of <a href="https://edenfintech.com" target="_blank" rel="noopener noreferrer" class="text-brand-600 hover:underline">EdenFintech</a>.
+      </p>
+
+      <aside class="mt-8 flex flex-col md:flex-row md:items-center gap-5 md:gap-6 p-3 md:pl-3 md:pr-10 md:py-3 rounded-3xl md:rounded-full border border-[#e1e2e3] bg-[#fbfbfb]">
+        <img
+          src="/about/profile.jpg"
+          alt="John Montgomery"
+          class="w-32 h-32 rounded-full object-cover ring-2 ring-white shadow-sm flex-shrink-0 self-center md:self-auto"
+        />
+        <dl class="grid grid-cols-[auto_1fr] gap-x-5 gap-y-1 text-sm leading-snug md:py-1">
+          <dt class="text-gray-500">Based</dt>
+          <dd class="text-[#242424]">Mossel Bay, South Africa <span class="text-gray-500">(UTC+2)</span></dd>
+          <dt class="text-gray-500">Focus</dt>
+          <dd class="text-[#242424]">Adversarial AI for deep-value quant</dd>
+          <dt class="text-gray-500">Founder</dt>
+          <dd><a href="https://edenfintech.com/" target="_blank" rel="noopener noreferrer" class="text-brand-600 hover:underline">EdenFintech</a></dd>
+          <dt class="text-gray-500">Years</dt>
+          <dd class="text-[#242424]">22+ coding</dd>
+        </dl>
+      </aside>
+
+      <div class="mt-14">
+        <span class="inline-flex items-center px-2.5 py-1 rounded-md bg-gray-100 text-gray-700 text-xs font-mono font-semibold">01</span>
+        <h2 class="mt-4 text-2xl md:text-3xl font-medium tracking-tight [word-spacing:0.1em] text-[#242424]">How I got here</h2>
+        <p class="mt-5 text-gray-700 leading-relaxed max-w-prose">
+          I started in the early 2000s writing trading "bots" for a trading company. By 2004 I was building CRUD PHP / MySQL web applications before the open-source CMS world had meaningful share. That became <a href="https://yourdesign.co.za/" target="_blank" rel="noopener noreferrer" class="text-brand-600 hover:underline">yourdesign.co.za</a>, 20+ years of freelance WordPress work, custom themes over page builders, and agency sub-contracts on brand projects. The current work, <a href="https://edenfintech.com/" target="_blank" rel="noopener noreferrer" class="text-brand-600 hover:underline">EdenFintech</a> and the scanner behind it, is a loop back to where the career started, with 22 years of programming discipline now wrapped around it.
+        </p>
+      </div>
+
+      <div class="mt-14">
+        <span class="inline-flex items-center px-2.5 py-1 rounded-md bg-gray-100 text-gray-700 text-xs font-mono font-semibold">02</span>
+        <h2 class="mt-4 text-2xl md:text-3xl font-medium tracking-tight [word-spacing:0.1em] text-[#242424]">Current availability</h2>
+        <div class="mt-5 rounded-lg border border-[#e1e2e3] bg-[#fbfbfb] p-5">
+          <p class="text-gray-700 leading-relaxed">I'm actively looking for interesting quant and development opportunities. The shapes of work that fit best:</p>
+          <ul class="mt-3 space-y-2 text-gray-700 leading-relaxed list-disc pl-5 marker:text-gray-400">
+            <li>Building or rescuing a quant research platform: ingestion, backtesting discipline, honest evaluation.</li>
+            <li>Retrofitting LLM and agent pipelines with typed contracts, logging, and proper review stages.</li>
+            <li>Long-running WordPress engagements where the schema needs to move beyond <code class="font-mono text-sm bg-gray-100 px-1 rounded">$wpdb</code>.</li>
+            <li>Obsidian / Quartz knowledge-graph projects for research, OSINT, or case-study work.</li>
+          </ul>
+          <p class="mt-4 text-gray-700 leading-relaxed">
+            Remote, UTC+2. Open to contract, retainer, or lead-developer roles. The <a href="/about/cover-letter" class="text-brand-600 hover:underline">cover letter</a> has more, or reach me at <a href="mailto:info@devai.co.za" class="text-brand-600 hover:underline">info@devai.co.za</a>.
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-14">
+        <span class="inline-flex items-center px-2.5 py-1 rounded-md bg-gray-100 text-gray-700 text-xs font-mono font-semibold">03</span>
+        <h2 class="mt-4 text-2xl md:text-3xl font-medium tracking-tight [word-spacing:0.1em] text-[#242424]">What I do</h2>
+        <ul class="mt-6 space-y-3 text-gray-700 leading-relaxed max-w-prose">
+          {skills.map(([href, title, desc]) => (
+            <li>
+              <a href={href} class="text-brand-600 hover:underline font-medium">{title}</a>
+              <span class="text-gray-500">:</span> {desc}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="mt-14">
+        <span class="inline-flex items-center px-2.5 py-1 rounded-md bg-gray-100 text-gray-700 text-xs font-mono font-semibold">04</span>
+        <h2 class="mt-4 text-2xl md:text-3xl font-medium tracking-tight [word-spacing:0.1em] text-[#242424]">Currently building</h2>
+        <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {projects.map((p) => (
+            <a href={p.href} class="group block rounded-lg border border-[#e1e2e3] bg-white overflow-hidden hover:shadow-card-cal transition-shadow">
+              <span class="block aspect-[16/9] overflow-hidden bg-[#fbfbfb]">
+                <img src={p.img} alt="" loading="lazy" class="w-full h-full object-cover" />
+              </span>
+              <span class="block p-4">
+                <span class="block text-sm font-semibold text-[#242424]">{p.title}</span>
+                <span class="block mt-1 text-sm text-gray-600 leading-relaxed">{p.desc}</span>
+                <span class="block mt-3 text-xs font-medium text-brand-600 group-hover:underline">Read more &rarr;</span>
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <div class="mt-14">
+        <span class="inline-flex items-center px-2.5 py-1 rounded-md bg-gray-100 text-gray-700 text-xs font-mono font-semibold">05</span>
+        <h2 class="mt-4 text-2xl md:text-3xl font-medium tracking-tight [word-spacing:0.1em] text-[#242424]">Legacy work</h2>
+        <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <a href="/projects/yourdesign-co-za" class="group block rounded-lg border border-[#e1e2e3] bg-white overflow-hidden hover:shadow-card-cal transition-shadow">
+            <span class="block aspect-[16/9] overflow-hidden bg-[#fbfbfb]">
+              <img src="/projects/yourdesign-hero.png" alt="" loading="lazy" class="w-full h-full object-cover" />
+            </span>
+            <span class="block p-4">
+              <span class="block text-sm font-semibold text-[#242424]">yourdesign.co.za</span>
+              <span class="block mt-1 text-sm text-gray-600 leading-relaxed">20+ years of freelance WordPress and WooCommerce. The original brand site, kept as a portfolio surface.</span>
+              <span class="block mt-3 text-xs font-medium text-brand-600 group-hover:underline">Read more &rarr;</span>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-14">
+        <span class="inline-flex items-center px-2.5 py-1 rounded-md bg-gray-100 text-gray-700 text-xs font-mono font-semibold">06</span>
+        <h2 class="mt-4 text-2xl md:text-3xl font-medium tracking-tight [word-spacing:0.1em] text-[#242424]">Wiki sections</h2>
+        <p class="mt-5 text-gray-700 leading-relaxed max-w-prose">
+          This site is also a working record of how I practice. New pages land in these folders over time:
+        </p>
+        <ul class="mt-4 space-y-2 text-gray-700 leading-relaxed list-disc pl-5 marker:text-gray-400 max-w-prose">
+          <li><a href="/decisions" class="text-brand-600 hover:underline font-medium">Decisions</a><span class="text-gray-500">:</span> positions I hold, with the reasoning attached.</li>
+          <li><a href="/playbooks" class="text-brand-600 hover:underline font-medium">Playbooks</a><span class="text-gray-500">:</span> repeatable recipes I want to run the same way twice.</li>
+          <li><a href="/notes" class="text-brand-600 hover:underline font-medium">Notes</a><span class="text-gray-500">:</span> dated learning log, short-form thinking.</li>
+          <li><a href="/influences" class="text-brand-600 hover:underline font-medium">Influences</a><span class="text-gray-500">:</span> videos, podcasts, talks, and writing that have shaped the work.</li>
+          <li><a href="/open-questions" class="text-brand-600 hover:underline font-medium">Open questions</a><span class="text-gray-500">:</span> things I'm chewing on but haven't resolved.</li>
+        </ul>
+        <p class="mt-4 text-gray-700 leading-relaxed max-w-prose">
+          More on <a href="/about/how-this-site-works" class="text-brand-600 hover:underline">how the site is put together</a>.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</BaseLayout>

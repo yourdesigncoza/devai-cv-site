@@ -1,0 +1,130 @@
+---
+type PillId = 'email' | 'call' | 'about' | 'cover-letter' | 'trading' | 'clients';
+
+interface Props {
+  title?: string;
+  subtitle?: string | null;
+  number?: string;
+  exclude?: PillId[];
+  footnote?: string | null;
+  ctaHref?: string;
+  ctaLabel?: string;
+}
+
+const {
+  title = 'Talk to me',
+  subtitle = 'Pick a doorway.',
+  number = '07',
+  exclude = [],
+  footnote = 'Remote, UTC+2. Open to contract, retainer, or lead-developer roles.',
+  ctaHref = 'mailto:info@devai.co.za',
+  ctaLabel = 'Drop a note to info@devai.co.za',
+} = Astro.props;
+
+const show = (id: PillId) => !exclude.includes(id);
+---
+
+<div>
+  {number && (
+    <span class="inline-flex items-center px-2.5 py-1 rounded-md bg-gray-100 text-gray-700 text-xs font-mono font-semibold">{number}</span>
+  )}
+  <h2 class={`${number ? 'mt-4' : ''} text-2xl md:text-3xl font-medium tracking-tight [word-spacing:0.1em] text-[#242424]`}>{title}</h2>
+  {subtitle && <p class="mt-5 text-gray-600 leading-relaxed max-w-prose">{subtitle}</p>}
+
+  <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+    {show('email') && (
+      <a href="mailto:info@devai.co.za" class="group flex items-center gap-3 pl-1 pr-5 py-1 rounded-full bg-indigo-50 hover:bg-indigo-100 transition-colors min-w-0">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-100 group-hover:bg-indigo-200 transition-colors flex-shrink-0">
+          <svg class="w-5 h-5 text-indigo-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/>
+          </svg>
+        </span>
+        <span class="flex flex-col leading-tight min-w-0">
+          <span class="text-[10px] font-semibold uppercase tracking-widest text-indigo-700/80">Email</span>
+          <span class="text-sm font-medium text-indigo-900 truncate">info@devai.co.za</span>
+        </span>
+      </a>
+    )}
+
+    {show('call') && (
+      <a href="tel:+27791771970" class="group flex items-center gap-3 pl-1 pr-5 py-1 rounded-full bg-emerald-50 hover:bg-emerald-100 transition-colors min-w-0">
+        <img src="/about/profile.jpg" alt="John Montgomery" class="w-12 h-12 rounded-full object-cover ring-2 ring-emerald-100 group-hover:ring-emerald-200 transition-colors flex-shrink-0" />
+        <span class="flex flex-col leading-tight min-w-0">
+          <span class="text-[10px] font-semibold uppercase tracking-widest text-emerald-700/80">Call John</span>
+          <span class="text-sm font-medium text-emerald-900 truncate">+27 79 177 1970</span>
+        </span>
+      </a>
+    )}
+
+    {show('about') && (
+      <a href="/about" class="group flex items-center gap-3 pl-1 pr-5 py-1 rounded-full bg-slate-100 hover:bg-slate-200 transition-colors min-w-0">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-slate-200 group-hover:bg-slate-300 transition-colors flex-shrink-0">
+          <svg class="w-5 h-5 text-slate-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"/>
+          </svg>
+        </span>
+        <span class="flex flex-col leading-tight min-w-0">
+          <span class="text-[10px] font-semibold uppercase tracking-widest text-slate-600">About</span>
+          <span class="text-sm font-medium text-slate-900 truncate">Who I am</span>
+        </span>
+      </a>
+    )}
+
+    {show('cover-letter') && (
+      <a href="/about/cover-letter" class="group flex items-center gap-3 pl-1 pr-5 py-1 rounded-full bg-amber-50 hover:bg-amber-100 transition-colors min-w-0">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-100 group-hover:bg-amber-200 transition-colors flex-shrink-0">
+          <svg class="w-5 h-5 text-amber-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"/>
+          </svg>
+        </span>
+        <span class="flex flex-col leading-tight min-w-0">
+          <span class="text-[10px] font-semibold uppercase tracking-widest text-amber-700/80">Cover letter</span>
+          <span class="text-sm font-medium text-amber-900 truncate">Why I'd fit</span>
+        </span>
+      </a>
+    )}
+
+    {show('trading') && (
+      <a href="/about/trading" class="group flex items-center gap-3 pl-1 pr-5 py-1 rounded-full bg-rose-50 hover:bg-rose-100 transition-colors min-w-0">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-100 group-hover:bg-rose-200 transition-colors flex-shrink-0">
+          <svg class="w-5 h-5 text-rose-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941"/>
+          </svg>
+        </span>
+        <span class="flex flex-col leading-tight min-w-0">
+          <span class="text-[10px] font-semibold uppercase tracking-widest text-rose-700/80">Trading</span>
+          <span class="text-sm font-medium text-rose-900 truncate">Quant background</span>
+        </span>
+      </a>
+    )}
+
+    {show('clients') && (
+      <a href="/about/clients" class="group flex items-center gap-3 pl-1 pr-5 py-1 rounded-full bg-violet-50 hover:bg-violet-100 transition-colors min-w-0">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-violet-100 group-hover:bg-violet-200 transition-colors flex-shrink-0">
+          <svg class="w-5 h-5 text-violet-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z"/>
+          </svg>
+        </span>
+        <span class="flex flex-col leading-tight min-w-0">
+          <span class="text-[10px] font-semibold uppercase tracking-widest text-violet-700/80">Clients</span>
+          <span class="text-sm font-medium text-violet-900 truncate">Collaborators</span>
+        </span>
+      </a>
+    )}
+  </div>
+
+  {footnote && <p class="mt-6 text-xs text-gray-500">{footnote}</p>}
+
+  <a
+    href={ctaHref}
+    class="mt-6 inline-flex w-full items-center justify-center gap-3 px-6 py-3.5 rounded-full bg-[#242424] text-white text-sm font-semibold shadow-[inset_0_1px_0_rgba(255,255,255,0.15)] hover:bg-black transition-colors"
+  >
+    <svg class="w-4 h-4" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/>
+      <path fill="#FF3D00" d="M6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691z"/>
+      <path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.91 11.91 0 0 1 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/>
+      <path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 0 1-4.087 5.571l.003-.002 6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"/>
+    </svg>
+    {ctaLabel}
+  </a>
+</div>

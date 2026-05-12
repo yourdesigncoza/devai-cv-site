@@ -1,0 +1,437 @@
+---
+import '../styles/global.css';
+import ContactPills from '../components/ContactPills.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  showContactPills?: boolean;
+}
+
+const { title, description = 'AI-assisted knowledge portals for B2B', showContactPills = true } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <header>
+      <div class="max-w-3xl mx-auto px-8 md:px-12 py-6 flex items-center justify-between">
+        <a href="/" class="inline-flex items-center gap-2.5 -ml-[22px] text-[#242424]">
+          <span class="inline-block w-3 h-3 rounded-full bg-brand-500 flex-shrink-0"></span>
+          <span class="text-2xl font-semibold leading-none">DevAi</span>
+        </a>
+        <div class="flex items-center gap-2">
+          <button
+            id="graph-toggle"
+            type="button"
+            aria-label="Open knowledge graph"
+            aria-controls="graph-dialog"
+            class="inline-flex items-center justify-center w-10 h-10 rounded-full border border-[#e1e2e3] bg-white text-[#242424] hover:bg-gray-50 transition-colors"
+          >
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+              <circle cx="6" cy="6" r="2"/>
+              <circle cx="18" cy="6" r="2"/>
+              <circle cx="6" cy="18" r="2"/>
+              <circle cx="18" cy="18" r="2"/>
+              <circle cx="12" cy="12" r="2"/>
+              <path stroke-linecap="round" d="M7.4 7.4l3.2 3.2M16.6 7.4l-3.2 3.2M7.4 16.6l3.2-3.2M16.6 16.6l-3.2-3.2"/>
+            </svg>
+          </button>
+          <button
+            id="nav-toggle"
+            type="button"
+            aria-label="Open navigation"
+            aria-controls="nav-drawer"
+            aria-expanded="false"
+            class="inline-flex items-center justify-center w-10 h-10 rounded-full border border-[#e1e2e3] bg-white text-[#242424] hover:bg-gray-50 transition-colors"
+          >
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div
+      id="nav-backdrop"
+      class="fixed inset-0 z-40 bg-black/30 opacity-0 pointer-events-none transition-opacity duration-200"
+      aria-hidden="true"
+    ></div>
+
+    <aside
+      id="nav-drawer"
+      class="fixed inset-y-0 right-0 z-50 w-[88%] max-w-sm bg-white border-l border-[#e1e2e3] shadow-xl translate-x-full transition-transform duration-200 ease-out flex flex-col"
+      aria-hidden="true"
+      tabindex="-1"
+    >
+      <div class="flex items-center justify-between px-6 py-5 border-b border-[#e1e2e3]">
+        <a href="/" class="inline-flex items-center gap-2.5 text-[#242424]">
+          <span class="inline-block w-2.5 h-2.5 rounded-full bg-brand-500 flex-shrink-0"></span>
+          <span class="text-lg font-semibold leading-none">DevAi</span>
+        </a>
+        <button
+          id="nav-close"
+          type="button"
+          aria-label="Close navigation"
+          class="inline-flex items-center justify-center w-9 h-9 rounded-full text-gray-500 hover:bg-gray-100 hover:text-[#242424] transition-colors"
+        >
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+
+      <nav class="flex-1 overflow-y-auto px-3 py-5">
+        <div class="px-3 text-[10px] font-semibold uppercase tracking-widest text-gray-500">Browse</div>
+        <ul class="mt-2 space-y-1">
+          <li><a href="/" class="block px-3 py-2 rounded-md text-sm font-medium text-[#242424] hover:bg-gray-100 transition-colors">Home</a></li>
+          <li><a href="/skills" class="block px-3 py-2 rounded-md text-sm font-medium text-[#242424] hover:bg-gray-100 transition-colors">Skills</a></li>
+          <li><a href="/projects" class="block px-3 py-2 rounded-md text-sm font-medium text-[#242424] hover:bg-gray-100 transition-colors">Projects</a></li>
+          <li><a href="/decisions" class="block px-3 py-2 rounded-md text-sm font-medium text-[#242424] hover:bg-gray-100 transition-colors">Decisions</a></li>
+          <li><a href="/playbooks" class="block px-3 py-2 rounded-md text-sm font-medium text-[#242424] hover:bg-gray-100 transition-colors">Playbooks</a></li>
+        </ul>
+
+        <div class="mt-6 px-3 text-[10px] font-semibold uppercase tracking-widest text-gray-500">Wiki</div>
+        <ul class="mt-2 space-y-1">
+          <li><a href="/notes" class="block px-3 py-2 rounded-md text-sm font-medium text-[#242424] hover:bg-gray-100 transition-colors">Notes</a></li>
+          <li><a href="/influences" class="block px-3 py-2 rounded-md text-sm font-medium text-[#242424] hover:bg-gray-100 transition-colors">Influences</a></li>
+          <li><a href="/open-questions" class="block px-3 py-2 rounded-md text-sm font-medium text-[#242424] hover:bg-gray-100 transition-colors">Open questions</a></li>
+        </ul>
+
+        <div class="mt-6 px-3 text-[10px] font-semibold uppercase tracking-widest text-gray-500">About</div>
+        <ul class="mt-2 space-y-1">
+          <li><a href="/about" class="block px-3 py-2 rounded-md text-sm font-medium text-[#242424] hover:bg-gray-100 transition-colors">About</a></li>
+          <li><a href="/about/cover-letter" class="block px-3 py-2 rounded-md text-sm font-medium text-[#242424] hover:bg-gray-100 transition-colors">Cover letter</a></li>
+          <li><a href="/about/trading" class="block px-3 py-2 rounded-md text-sm font-medium text-[#242424] hover:bg-gray-100 transition-colors">Trading</a></li>
+          <li><a href="/about/clients" class="block px-3 py-2 rounded-md text-sm font-medium text-[#242424] hover:bg-gray-100 transition-colors">Clients &amp; collaborators</a></li>
+        </ul>
+      </nav>
+
+      <div class="border-t border-[#e1e2e3] px-6 py-5 space-y-1 text-sm">
+        <a href="mailto:info@devai.co.za" class="block text-gray-700 hover:text-brand-600 transition-colors">info@devai.co.za</a>
+        <a href="tel:+27791771970" class="block text-gray-700 hover:text-brand-600 transition-colors">+27 79 177 1970</a>
+      </div>
+    </aside>
+
+    <dialog
+      id="graph-dialog"
+      class="fixed inset-0 m-auto rounded-xl p-0 bg-white border border-[#e1e2e3] shadow-2xl w-[94vw] max-w-[1100px] h-[88vh] backdrop:bg-black/40"
+    >
+      <div class="flex items-center justify-between px-6 py-4 border-b border-[#e1e2e3]">
+        <div class="flex items-center gap-3">
+          <span class="inline-block w-2.5 h-2.5 rounded-full bg-brand-500"></span>
+          <h2 class="text-base font-semibold text-[#242424]">Knowledge graph</h2>
+          <span class="text-xs font-mono text-gray-500 hidden sm:inline">drag &middot; scroll to zoom &middot; click a node</span>
+        </div>
+        <button
+          id="graph-close"
+          type="button"
+          aria-label="Close graph"
+          class="inline-flex items-center justify-center w-9 h-9 rounded-full text-gray-500 hover:bg-gray-100 hover:text-[#242424] transition-colors"
+        >
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <div class="relative w-full" style="height: calc(100% - 65px);">
+        <svg id="graph-svg" class="w-full h-full block"></svg>
+        <div class="absolute bottom-3 left-3 right-3 flex flex-wrap gap-x-3 gap-y-1 text-[10px] font-mono uppercase tracking-widest text-gray-500 pointer-events-none">
+          <span class="inline-flex items-center gap-1.5"><span class="inline-block w-2 h-2 rounded-full" style="background:#2d5bff"></span>home</span>
+          <span class="inline-flex items-center gap-1.5"><span class="inline-block w-2 h-2 rounded-full" style="background:#4f46e5"></span>skills</span>
+          <span class="inline-flex items-center gap-1.5"><span class="inline-block w-2 h-2 rounded-full" style="background:#059669"></span>projects</span>
+          <span class="inline-flex items-center gap-1.5"><span class="inline-block w-2 h-2 rounded-full" style="background:#d97706"></span>decisions</span>
+          <span class="inline-flex items-center gap-1.5"><span class="inline-block w-2 h-2 rounded-full" style="background:#e11d48"></span>playbooks</span>
+          <span class="inline-flex items-center gap-1.5"><span class="inline-block w-2 h-2 rounded-full" style="background:#7c3aed"></span>notes</span>
+          <span class="inline-flex items-center gap-1.5"><span class="inline-block w-2 h-2 rounded-full" style="background:#475569"></span>influences</span>
+          <span class="inline-flex items-center gap-1.5"><span class="inline-block w-2 h-2 rounded-full" style="background:#ea580c"></span>open-questions</span>
+          <span class="inline-flex items-center gap-1.5"><span class="inline-block w-2 h-2 rounded-full" style="background:#0891b2"></span>about</span>
+        </div>
+      </div>
+    </dialog>
+
+    <script>
+      import { forceSimulation, forceLink, forceManyBody, forceCenter, forceCollide, forceX, forceY } from 'd3-force';
+      import { select } from 'd3-selection';
+      import { zoom, zoomIdentity, type ZoomBehavior } from 'd3-zoom';
+      import { drag } from 'd3-drag';
+
+      const COLORS: Record<string, string> = {
+        home: '#2d5bff',
+        skills: '#4f46e5',
+        projects: '#059669',
+        decisions: '#d97706',
+        playbooks: '#e11d48',
+        notes: '#7c3aed',
+        influences: '#475569',
+        'open-questions': '#ea580c',
+        about: '#0891b2',
+      };
+
+      type GraphNode = { id: string; title: string; collection: string; tags: string[]; x?: number; y?: number; fx?: number | null; fy?: number | null };
+      type GraphLink = { source: string | GraphNode; target: string | GraphNode };
+
+      const toggleBtn = document.getElementById('graph-toggle');
+      const closeBtn = document.getElementById('graph-close');
+      const dialog = document.getElementById('graph-dialog') as HTMLDialogElement | null;
+      const svgEl = document.getElementById('graph-svg') as SVGSVGElement | null;
+
+      let rendered = false;
+
+      async function renderGraph() {
+        if (rendered || !svgEl) return;
+        rendered = true;
+
+        const res = await fetch('/graph.json');
+        const data = (await res.json()) as { nodes: GraphNode[]; links: GraphLink[] };
+
+        const w = svgEl.clientWidth || 800;
+        const h = svgEl.clientHeight || 600;
+        const isMobile = w < 640;
+
+        const svg = select(svgEl);
+        svg.selectAll('*').remove();
+        const root = svg.append('g');
+
+        const sim = forceSimulation<GraphNode>(data.nodes)
+          .force(
+            'link',
+            forceLink<GraphNode, GraphLink>(data.links)
+              .id((d) => d.id)
+              .distance(isMobile ? 45 : 70)
+              .strength(0.4),
+          )
+          .force(
+            'charge',
+            forceManyBody()
+              .strength(isMobile ? -140 : -220)
+              .distanceMax(isMobile ? 250 : 350),
+          )
+          .force('center', forceCenter(w / 2, h / 2))
+          .force('x', forceX<GraphNode>(w / 2).strength(0.06))
+          .force('y', forceY<GraphNode>(h / 2).strength(0.06))
+          .force('collide', forceCollide<GraphNode>(isMobile ? 12 : 18));
+
+        const linkSel = root
+          .append('g')
+          .attr('stroke', '#e1e2e3')
+          .attr('stroke-opacity', 0.7)
+          .selectAll('line')
+          .data(data.links)
+          .join('line')
+          .attr('stroke-width', 1);
+
+        const nodeSel = root
+          .append('g')
+          .selectAll<SVGGElement, GraphNode>('g')
+          .data(data.nodes)
+          .join('g')
+          .style('cursor', 'pointer');
+
+        nodeSel
+          .append('circle')
+          .attr('r', (d) => (d.id === '/' ? (isMobile ? 7 : 9) : isMobile ? 5 : 6))
+          .attr('fill', (d) => COLORS[d.collection] ?? '#9ca3af')
+          .attr('stroke', '#fff')
+          .attr('stroke-width', 1.5);
+
+        nodeSel
+          .append('text')
+          .text((d) => d.title)
+          .attr('dx', isMobile ? 8 : 11)
+          .attr('dy', isMobile ? 3 : 4)
+          .attr('font-size', isMobile ? 9 : 11)
+          .attr('font-family', 'Inter, sans-serif')
+          .attr('fill', '#242424')
+          .attr('pointer-events', 'none');
+
+        nodeSel.on('click', (_e, d) => {
+          window.location.href = d.id;
+        });
+
+        nodeSel.on('mouseenter', function (_e, d) {
+          const linkedIds = new Set<string>();
+          for (const l of data.links) {
+            const s = typeof l.source === 'string' ? l.source : l.source.id;
+            const t = typeof l.target === 'string' ? l.target : l.target.id;
+            if (s === d.id) linkedIds.add(t);
+            if (t === d.id) linkedIds.add(s);
+          }
+          linkedIds.add(d.id);
+          nodeSel.style('opacity', (n) => (linkedIds.has(n.id) ? 1 : 0.2));
+          linkSel.style('opacity', (l) => {
+            const s = typeof l.source === 'string' ? l.source : (l.source as GraphNode).id;
+            const t = typeof l.target === 'string' ? l.target : (l.target as GraphNode).id;
+            return s === d.id || t === d.id ? 1 : 0.1;
+          });
+        });
+
+        nodeSel.on('mouseleave', () => {
+          nodeSel.style('opacity', 1);
+          linkSel.style('opacity', 0.7);
+        });
+
+        nodeSel.call(
+          drag<SVGGElement, GraphNode>()
+            .on('start', (event, d) => {
+              if (!event.active) sim.alphaTarget(0.3).restart();
+              d.fx = d.x;
+              d.fy = d.y;
+            })
+            .on('drag', (event, d) => {
+              d.fx = event.x;
+              d.fy = event.y;
+            })
+            .on('end', (event, d) => {
+              if (!event.active) sim.alphaTarget(0);
+              d.fx = null;
+              d.fy = null;
+            }),
+        );
+
+        const zoomBehavior: ZoomBehavior<SVGSVGElement, unknown> = zoom<SVGSVGElement, unknown>()
+          .scaleExtent([0.1, 4])
+          .on('zoom', (e) => root.attr('transform', e.transform.toString()));
+        svg.call(zoomBehavior);
+
+        const fitToView = () => {
+          if (!svgEl) return;
+          const cw = svgEl.clientWidth || w;
+          const ch = svgEl.clientHeight || h;
+          let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+          for (const n of data.nodes) {
+            if (n.x == null || n.y == null) continue;
+            if (n.x < minX) minX = n.x;
+            if (n.x > maxX) maxX = n.x;
+            if (n.y < minY) minY = n.y;
+            if (n.y > maxY) maxY = n.y;
+          }
+          if (!isFinite(minX)) return;
+          const pad = isMobile ? 80 : 140;
+          const bbW = maxX - minX + pad;
+          const bbH = maxY - minY + pad;
+          const scale = Math.min(cw / bbW, ch / bbH, 1.4);
+          const tx = (cw - (minX + maxX) * scale) / 2;
+          const ty = (ch - (minY + maxY) * scale) / 2;
+          svg.call(zoomBehavior.transform, zoomIdentity.translate(tx, ty).scale(scale));
+        };
+
+        sim.on('tick', () => {
+          linkSel
+            .attr('x1', (d) => (d.source as GraphNode).x ?? 0)
+            .attr('y1', (d) => (d.source as GraphNode).y ?? 0)
+            .attr('x2', (d) => (d.target as GraphNode).x ?? 0)
+            .attr('y2', (d) => (d.target as GraphNode).y ?? 0);
+          nodeSel.attr('transform', (d) => `translate(${d.x ?? 0},${d.y ?? 0})`);
+        });
+
+        sim.on('end', fitToView);
+        setTimeout(fitToView, 600);
+      }
+
+      toggleBtn?.addEventListener('click', () => {
+        dialog?.showModal();
+        setTimeout(() => {
+          renderGraph();
+        }, 60);
+      });
+      closeBtn?.addEventListener('click', () => dialog?.close());
+      dialog?.addEventListener('click', (e) => {
+        if (e.target === dialog) dialog.close();
+      });
+    </script>
+
+    <script is:inline>
+      (() => {
+        const toggle = document.getElementById('nav-toggle');
+        const close = document.getElementById('nav-close');
+        const drawer = document.getElementById('nav-drawer');
+        const backdrop = document.getElementById('nav-backdrop');
+        if (!toggle || !drawer || !backdrop) return;
+
+        const open = () => {
+          drawer.classList.remove('translate-x-full');
+          backdrop.classList.remove('opacity-0', 'pointer-events-none');
+          backdrop.classList.add('opacity-100');
+          drawer.setAttribute('aria-hidden', 'false');
+          toggle.setAttribute('aria-expanded', 'true');
+          document.body.style.overflow = 'hidden';
+        };
+        const dismiss = () => {
+          drawer.classList.add('translate-x-full');
+          backdrop.classList.add('opacity-0', 'pointer-events-none');
+          backdrop.classList.remove('opacity-100');
+          drawer.setAttribute('aria-hidden', 'true');
+          toggle.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+        };
+
+        toggle.addEventListener('click', open);
+        close?.addEventListener('click', dismiss);
+        backdrop.addEventListener('click', dismiss);
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && drawer.getAttribute('aria-hidden') === 'false') dismiss();
+        });
+      })();
+    </script>
+    <main class="flex-1">
+      <slot />
+    </main>
+    {showContactPills && (
+      <section class="max-w-6xl mx-auto px-4 pt-4 pb-12">
+        <div class="relative max-w-3xl mx-auto bg-white rounded-xl shadow-card-cal p-8 md:p-12">
+          <span class="absolute top-2 left-4 text-gray-300 text-2xl font-mono select-none pointer-events-none" aria-hidden="true">+</span>
+          <span class="absolute top-2 right-4 text-gray-300 text-2xl font-mono select-none pointer-events-none" aria-hidden="true">+</span>
+          <span class="absolute bottom-2 left-4 text-gray-300 text-2xl font-mono select-none pointer-events-none" aria-hidden="true">+</span>
+          <span class="absolute bottom-2 right-4 text-gray-300 text-2xl font-mono select-none pointer-events-none" aria-hidden="true">+</span>
+          <ContactPills number="" title="Talk to me" subtitle="Pick a doorway." />
+        </div>
+      </section>
+    )}
+
+    <footer class="mt-16 border-t border-[#e1e2e3] dark:border-gray-800">
+      <div class="max-w-3xl mx-auto px-8 md:px-12 pb-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 pt-10">
+          <div>
+            <a href="/" class="inline-flex items-center gap-2.5 text-[#242424] dark:text-gray-100">
+              <span class="inline-block w-2 h-2 rounded-full bg-brand-500 flex-shrink-0"></span>
+              <span class="text-base font-semibold leading-none">DevAi</span>
+            </a>
+            <p class="mt-4 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+              Built by <span class="text-[#242424] dark:text-gray-200 font-medium">John Montgomery</span>,<br />
+              founder of <a href="https://edenfintech.com" class="text-brand-600 hover:underline" target="_blank" rel="noopener noreferrer">EdenFintech</a>.
+            </p>
+          </div>
+
+          <div class="md:text-right">
+            <div class="space-y-1 text-sm">
+              <a href="mailto:info@devai.co.za" class="block text-gray-700 dark:text-gray-300 hover:text-brand-600 transition-colors">info@devai.co.za</a>
+              <a href="tel:+27791771970" class="block text-gray-700 dark:text-gray-300 hover:text-brand-600 transition-colors">+27 79 177 1970</a>
+            </div>
+            <div class="mt-4 space-y-1 text-sm">
+              <a href="https://devai.co.za" target="_blank" rel="noopener noreferrer" class="block text-gray-500 hover:text-brand-600 transition-colors">devai.co.za</a>
+              <a href="https://edenfintech.com" class="block text-gray-500 hover:text-brand-600 transition-colors" target="_blank" rel="noopener noreferrer">edenfintech.com</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-10 pt-4 border-t border-[#e1e2e3] dark:border-gray-800">
+          <p class="text-xs text-gray-400">&copy; 2026 DevAi &middot; AI-assisted knowledge portals for B2B</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

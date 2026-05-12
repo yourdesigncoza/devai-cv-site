@@ -1,0 +1,44 @@
+---
+import { getCollection } from 'astro:content';
+import ContentPage from '../../layouts/ContentPage.astro';
+
+const decisions = (await getCollection('decisions'))
+  .filter((d) => !d.data.draft)
+  .sort((a, b) => {
+    const ta = a.data.date?.getTime() ?? 0;
+    const tb = b.data.date?.getTime() ?? 0;
+    return tb - ta;
+  });
+
+const fmt = (d?: Date) =>
+  d ? d.toLocaleDateString('en-CA', { year: 'numeric', month: 'short', day: 'numeric' }) : '';
+---
+
+<ContentPage
+  title="Decisions"
+  description="Architectural positions and methodology choices. First-person stances with the reasoning attached."
+  breadcrumbLabel="devai.co.za"
+  breadcrumbHref="/"
+>
+  <h1>Decisions</h1>
+  <p>Positions I hold, with the reasoning attached. Each one is a stance I'd defend, not a casual note.</p>
+
+  <ol class="not-prose mt-8 space-y-3">
+    {decisions.map((d) => (
+      <li>
+        <a href={`/decisions/${d.id}`} class="group block rounded-lg border border-[#e1e2e3] bg-white hover:shadow-card-cal transition-shadow p-5">
+          <div class="flex items-baseline justify-between gap-4">
+            {d.data.date && (
+              <span class="text-xs font-mono text-gray-500">{fmt(d.data.date)}</span>
+            )}
+            <span class="text-xs text-brand-600 opacity-0 group-hover:opacity-100 transition-opacity">Read &rarr;</span>
+          </div>
+          <span class="mt-2 block text-base font-semibold text-[#242424] group-hover:text-brand-600 transition-colors">{d.data.title}</span>
+          {d.data.description && (
+            <p class="mt-2 text-sm text-gray-600 leading-relaxed">{d.data.description}</p>
+          )}
+        </a>
+      </li>
+    ))}
+  </ol>
+</ContentPage>

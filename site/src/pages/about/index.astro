@@ -1,0 +1,98 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="About"
+  description="About John Montgomery, founder of EdenFintech. 22 years of software, remote from South Africa. Quant research pipelines and AI / agent systems are the current focus; legacy WordPress work continues under the YourDesign name."
+>
+  <div class="max-w-6xl mx-auto px-4 pt-4 pb-12">
+    <div class="relative max-w-3xl mx-auto bg-white rounded-xl shadow-card-cal p-8 md:p-12">
+      <span class="absolute top-2 left-4 text-gray-300 text-2xl font-mono select-none pointer-events-none" aria-hidden="true">+</span>
+      <span class="absolute top-2 right-4 text-gray-300 text-2xl font-mono select-none pointer-events-none" aria-hidden="true">+</span>
+      <span class="absolute bottom-2 left-4 text-gray-300 text-2xl font-mono select-none pointer-events-none" aria-hidden="true">+</span>
+      <span class="absolute bottom-2 right-4 text-gray-300 text-2xl font-mono select-none pointer-events-none" aria-hidden="true">+</span>
+
+      <a href="/" class="text-sm text-gray-500 hover:text-brand-600">&larr; devai.co.za</a>
+
+      <div class="mt-4">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gray-100 text-xs text-gray-700">
+          <span class="inline-block w-1.5 h-1.5 rounded-full bg-brand-500"></span>
+          Founder, EdenFintech
+          <span class="text-gray-400">·</span>
+          <span>Mossel Bay, UTC+2</span>
+        </span>
+      </div>
+
+      <h1 class="mt-5 text-3xl md:text-[44px] font-medium tracking-tight [word-spacing:0.1em] text-[#242424] leading-[1.1]">
+        About.
+      </h1>
+      <p class="mt-5 text-lg text-gray-600 leading-relaxed max-w-prose">
+        I'm John Montgomery, founder of <a href="https://edenfintech.com" target="_blank" rel="noopener noreferrer" class="text-brand-600 hover:underline font-medium">EdenFintech</a>. 22 years of programming, 10+ of those in and around trading systems, and a long stretch of WordPress and WooCommerce work in the middle (much of it under the legacy YourDesign name).
+      </p>
+
+      <aside class="mt-8 flex flex-col md:flex-row md:items-center gap-5 md:gap-6 p-3 md:pl-3 md:pr-10 md:py-3 rounded-3xl md:rounded-full border border-[#e1e2e3] bg-[#fbfbfb]">
+        <img
+          src="/about/profile.jpg"
+          alt="John Montgomery"
+          class="w-32 h-32 rounded-full object-cover ring-2 ring-white shadow-sm flex-shrink-0 self-center md:self-auto"
+        />
+        <dl class="grid grid-cols-[auto_1fr] gap-x-5 gap-y-1 text-sm leading-snug md:py-1">
+          <dt class="text-gray-500">Based</dt>
+          <dd class="text-[#242424]">Mossel Bay, South Africa <span class="text-gray-500">(UTC+2)</span></dd>
+          <dt class="text-gray-500">Focus</dt>
+          <dd class="text-[#242424]">Adversarial AI for deep-value quant</dd>
+          <dt class="text-gray-500">Founder</dt>
+          <dd><a href="https://edenfintech.com/" target="_blank" rel="noopener noreferrer" class="text-brand-600 hover:underline">EdenFintech</a></dd>
+          <dt class="text-gray-500">Years</dt>
+          <dd class="text-[#242424]">22+ coding, 10+ in trading systems</dd>
+        </dl>
+      </aside>
+
+      <div class="mt-14">
+        <span class="inline-flex items-center px-2.5 py-1 rounded-md bg-gray-100 text-gray-700 text-xs font-mono font-semibold">01</span>
+        <h2 class="mt-4 text-2xl md:text-3xl font-medium tracking-tight [word-spacing:0.1em] text-[#242424]">The long arc</h2>
+        <div class="mt-5 space-y-5 text-gray-700 leading-relaxed max-w-prose">
+          <p>
+            I started coding "bots" for a trading company in the early 2000s, before the open-source PHP / MySQL world became the default. By 2004 I was building fully functional CRUD web applications in PHP and MySQL, before WordPress or Drupal had meaningful share. That became freelance work, and the freelance work became <a href="https://yourdesign.co.za/" target="_blank" rel="noopener noreferrer" class="text-brand-600 hover:underline">yourdesign.co.za</a>, which became 20+ years of custom WordPress and WooCommerce builds for small businesses, brand projects, and agency sub-contracts (Nimue Skin Technology, the Woolworths Mother's Day campaign via Flume).
+          </p>
+          <p>
+            The current work is a loop back to where I started. <a href="/projects/edenfintech-scanner-python" class="text-brand-600 hover:underline">edenfintech-scanner-python</a> is a screening and scoring pipeline for US-listed equities, productised through <a href="/projects/edenfintech-com" class="text-brand-600 hover:underline">edenfintech.com</a>. It grew out of the earlier AI playground at <a href="/projects/devai-co-za" class="text-brand-600 hover:underline">devai.co.za</a> (the InvestAI Analyst Platform, a Natural-Language-to-SQL app, a YouTube summariser) which is where I learned my way around agent toolchains (CrewAI, Fabric, PraisonAI) in 2024.
+          </p>
+          <p>
+            In parallel, I maintain <a href="/projects/wecoza-development" class="text-brand-600 hover:underline">WeCoza 3.0</a> for an education-sector client in South Africa: a WordPress plugin with most of the operational logic in a 43-table Postgres schema. And I run a knowledge-graph practice on the side. <a href="/projects/signaltrace-site" class="text-brand-600 hover:underline">signaltrace-site</a> hosts five OSINT / financial-research case studies, and this site uses the same pattern.
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-14">
+        <span class="inline-flex items-center px-2.5 py-1 rounded-md bg-gray-100 text-gray-700 text-xs font-mono font-semibold">02</span>
+        <h2 class="mt-4 text-2xl md:text-3xl font-medium tracking-tight [word-spacing:0.1em] text-[#242424]">How I work</h2>
+        <ul class="mt-5 space-y-3 text-gray-700 leading-relaxed list-disc pl-5 marker:text-gray-400 max-w-prose">
+          <li>Solo or as a lead developer on small teams.</li>
+          <li>Remote, UTC+2 (South African Standard Time).</li>
+          <li>Comfortable with long-running client relationships; current WeCoza engagement has a 14-month paper trail of meetings, PDFs, and PRDs.</li>
+          <li>Bias toward linear, reviewable code and fewer dependencies. Stdlib-only where it fits.</li>
+          <li>Research projects get honest postmortems when they don't pan out. See <a href="/decisions/publishing-negative-results" class="text-brand-600 hover:underline">Why I publish negative results</a>.</li>
+        </ul>
+      </div>
+
+      <div class="mt-14">
+        <span class="inline-flex items-center px-2.5 py-1 rounded-md bg-gray-100 text-gray-700 text-xs font-mono font-semibold">03</span>
+        <h2 class="mt-4 text-2xl md:text-3xl font-medium tracking-tight [word-spacing:0.1em] text-[#242424]">Trading</h2>
+        <p class="mt-5 text-gray-700 leading-relaxed max-w-prose">
+          I trade XAUUSD full-time; most of the quant and AI-review work here grows out of that practice. The fuller story is on the <a href="/about/trading" class="text-brand-600 hover:underline">Trading</a> page.
+        </p>
+      </div>
+
+      <div class="mt-14">
+        <span class="inline-flex items-center px-2.5 py-1 rounded-md bg-gray-100 text-gray-700 text-xs font-mono font-semibold">04</span>
+        <h2 class="mt-4 text-2xl md:text-3xl font-medium tracking-tight [word-spacing:0.1em] text-[#242424]">Who I've worked with</h2>
+        <p class="mt-5 text-gray-700 leading-relaxed max-w-prose">
+          The <a href="/about/clients" class="text-brand-600 hover:underline">Clients &amp; collaborators</a> page lists named relationships and carries three real client testimonials lifted from yourdesign.co.za. References available on request.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</BaseLayout>
