@@ -91,10 +91,15 @@ const articleSchema = type === 'article'
 
     <meta property="og:type" content={type} />
     <meta property="og:site_name" content="DevAi" />
+    <meta property="og:locale" content="en_GB" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:alt" content={`DevAi: ${title}`} />
     {type === 'article' && (
       <meta property="article:author" content="John Montgomery" />
     )}
