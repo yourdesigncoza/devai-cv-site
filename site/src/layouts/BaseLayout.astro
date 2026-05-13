@@ -97,6 +97,8 @@ const articleSchema = type === 'article'
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
 
+    <link rel="alternate" type="application/rss+xml" title="DevAi" href="/rss.xml" />
+
     <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
     {articleSchema && (
       <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
