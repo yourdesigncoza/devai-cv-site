@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import ContactPills from '../components/ContactPills.astro';
+import SpeedInsights from '@vercel/speed-insights/astro';
 
 interface Props {
   title: string;
@@ -519,5 +520,6 @@ const articleSchema = type === 'article'
         </div>
       </div>
     </footer>
+    <SpeedInsights />
   </body>
 </html>
