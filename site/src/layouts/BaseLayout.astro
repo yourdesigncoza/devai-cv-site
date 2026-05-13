@@ -22,6 +22,55 @@ const {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const ogImage = new URL(image, Astro.site);
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'John Montgomery',
+  url: Astro.site?.toString(),
+  image: new URL('/about/profile.jpg', Astro.site).toString(),
+  jobTitle: 'Founder, EdenFintech',
+  worksFor: {
+    '@type': 'Organization',
+    name: 'EdenFintech',
+    url: 'https://edenfintech.com/',
+  },
+  homeLocation: {
+    '@type': 'Place',
+    name: 'Mossel Bay, South Africa',
+  },
+  knowsAbout: [
+    'Quantitative research',
+    'AI agents',
+    'Large language models',
+    'WordPress development',
+    'Python',
+    'Knowledge graphs',
+  ],
+  sameAs: ['https://edenfintech.com/'],
+};
+
+const articleSchema = type === 'article'
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: title,
+      description,
+      image: ogImage.toString(),
+      url: canonicalURL.toString(),
+      ...(publishedTime && { datePublished: publishedTime.toISOString() }),
+      author: {
+        '@type': 'Person',
+        name: 'John Montgomery',
+        url: Astro.site?.toString(),
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'DevAi',
+        url: Astro.site?.toString(),
+      },
+    }
+  : null;
 ---
 
 <!doctype html>
@@ -47,6 +96,11 @@ const ogImage = new URL(image, Astro.site);
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
+    {articleSchema && (
+      <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+    )}
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
