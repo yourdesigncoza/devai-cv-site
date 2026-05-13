@@ -1,34 +1,42 @@
 ---
+import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import profilePhoto from '../content/about/profile.jpg';
+import edenfintechScannerHero from '../content/projects/edenfintech-scanner-hero.png';
+import edenfintechHero from '../content/projects/edenfintech-hero.png';
+import jobabroadHero from '../content/projects/jobabroad-hero.png';
+import signaltraceHero from '../content/projects/signaltrace-hero.png';
+import wecozaHero from '../content/projects/wecoza-hero.png';
+import yourdesignHero from '../content/projects/yourdesign-hero.png';
 
 const projects = [
   {
     href: '/projects/edenfintech-scanner-python',
-    img: '/projects/edenfintech-scanner-hero.png',
+    img: edenfintechScannerHero,
     title: 'edenfintech-scanner-python',
     desc: "A stdlib-only core plus a three-role LLM review stage behind a typed information barrier.",
   },
   {
     href: '/projects/edenfintech-com',
-    img: '/projects/edenfintech-hero.png',
+    img: edenfintechHero,
     title: 'edenfintech.com',
     desc: "The free weekly watchlist surfaced from the scanner's output.",
   },
   {
     href: '/projects/jobabroad-co-za',
-    img: '/projects/jobabroad-hero.png',
+    img: jobabroadHero,
     title: 'jobabroad.co.za',
     desc: 'Next.js 16 + Supabase. Manual WhatsApp sales, token-gated pathway guides, CV upload, semantic search.',
   },
   {
     href: '/projects/signaltrace-site',
-    img: '/projects/signaltrace-hero.png',
+    img: signaltraceHero,
     title: 'SignalTrace',
     desc: 'A multi-wiki research site over five OSINT and financial-research case studies. Active at signaltrace.wiki.',
   },
   {
     href: '/projects/wecoza-development',
-    img: '/projects/wecoza-hero.png',
+    img: wecozaHero,
     title: 'WeCoza 3.0',
     desc: 'Long-running WordPress and Postgres client engagement for a South African adult-education training provider.',
   },
@@ -72,9 +80,12 @@ const skills = [
       </p>
 
       <aside class="mt-8 flex flex-col md:flex-row md:items-center gap-5 md:gap-6 p-3 md:pl-3 md:pr-10 md:py-3 rounded-3xl md:rounded-full border border-[#e1e2e3] bg-[#fbfbfb]">
-        <img
-          src="/about/profile.jpg"
+        <Image
+          src={profilePhoto}
           alt="John Montgomery"
+          width={256}
+          height={256}
+          loading="eager"
           class="w-32 h-32 rounded-full object-cover ring-2 ring-white shadow-sm flex-shrink-0 self-center md:self-auto"
         />
         <dl class="grid grid-cols-[auto_1fr] gap-x-5 gap-y-1 text-sm leading-snug md:py-1">
@@ -134,7 +145,7 @@ const skills = [
           {projects.map((p) => (
             <a href={p.href} class="group block rounded-lg border border-[#e1e2e3] bg-white overflow-hidden hover:shadow-card-cal transition-shadow">
               <span class="block aspect-[16/9] overflow-hidden bg-[#fbfbfb]">
-                <img src={p.img} alt="" loading="lazy" class="w-full h-full object-cover" />
+                <Image src={p.img} alt="" loading="lazy" widths={[400, 800]} sizes="(min-width: 640px) 50vw, 100vw" class="w-full h-full object-cover" />
               </span>
               <span class="block p-4">
                 <span class="block text-sm font-semibold text-[#242424]">{p.title}</span>
@@ -152,7 +163,7 @@ const skills = [
         <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
           <a href="/projects/yourdesign-co-za" class="group block rounded-lg border border-[#e1e2e3] bg-white overflow-hidden hover:shadow-card-cal transition-shadow">
             <span class="block aspect-[16/9] overflow-hidden bg-[#fbfbfb]">
-              <img src="/projects/yourdesign-hero.png" alt="" loading="lazy" class="w-full h-full object-cover" />
+              <Image src={yourdesignHero} alt="" loading="lazy" widths={[400, 800]} sizes="(min-width: 640px) 50vw, 100vw" class="w-full h-full object-cover" />
             </span>
             <span class="block p-4">
               <span class="block text-sm font-semibold text-[#242424]">yourdesign.co.za</span>
