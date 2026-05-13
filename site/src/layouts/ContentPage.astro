@@ -4,14 +4,17 @@ import BaseLayout from './BaseLayout.astro';
 interface Props {
   title: string;
   description?: string;
+  image?: string;
+  type?: 'website' | 'article';
+  publishedTime?: Date;
   breadcrumbLabel?: string;
   breadcrumbHref?: string;
 }
 
-const { title, description, breadcrumbLabel, breadcrumbHref } = Astro.props;
+const { title, description, image, type, publishedTime, breadcrumbLabel, breadcrumbHref } = Astro.props;
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} image={image} type={type} publishedTime={publishedTime}>
   <div class="max-w-6xl mx-auto px-4 pt-4 pb-12">
     <div class="relative max-w-3xl mx-auto bg-white rounded-xl shadow-card-cal p-8 md:p-12">
       <span class="absolute top-2 left-4 text-gray-300 text-2xl font-mono select-none pointer-events-none" aria-hidden="true">+</span>

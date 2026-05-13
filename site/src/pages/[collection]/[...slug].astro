@@ -41,6 +41,8 @@ const breadcrumbHref = collection === 'about' ? '/' : `/${collection}`;
 <ContentPage
   title={entry.data.title}
   description={entry.data.description}
+  type="article"
+  publishedTime={entry.data.date}
   breadcrumbLabel={breadcrumbLabel}
   breadcrumbHref={breadcrumbHref}
 >
