@@ -3,6 +3,7 @@ title: edenfintech.com
 description: "Free weekly watchlist surfacing insider cluster buys from US SEC Form 4 filings. Rules-based, backtested, the product front end for the scanner."
 tags: [project, quant, product]
 draft: false
+date: 2026-05-06
 status: active
 ---
 

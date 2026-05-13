@@ -3,6 +3,7 @@ title: jobabroad.co.za
 description: "South African work-abroad lead-gen site. Next.js 16 landing page, manual WhatsApp sales loop, Supabase token-gated member area with category guides, CV upload, and semantic search."
 tags: [project, nextjs, supabase, product]
 draft: false
+date: 2026-05-06
 status: active
 ---
 

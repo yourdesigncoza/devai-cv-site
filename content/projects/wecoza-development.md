@@ -3,6 +3,7 @@ title: WeCoza 3.0
 description: "WordPress plugin with a 43-table Postgres schema and plpgsql triggers, built for a South African training provider. Long-running client engagement."
 tags: [project, wordpress, php, postgres]
 draft: false
+date: 2026-05-06
 status: maintained
 ---
 

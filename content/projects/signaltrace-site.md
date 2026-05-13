@@ -3,6 +3,7 @@ title: SignalTrace
 description: "Multi-wiki Quartz 4 site hosting five OSINT / financial-research case studies, with a shared entity taxonomy and custom build orchestration."
 tags: [project, knowledge-graph, quartz]
 draft: false
+date: 2026-05-06
 status: active
 ---
 

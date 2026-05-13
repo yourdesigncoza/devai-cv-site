@@ -3,6 +3,7 @@ title: yt-ts
 description: "Gradio tool converting trading transcripts to structured Google Sheets rows via regex pre-filter and provider-agnostic LLM. Archived personal tool."
 tags: [project, python, ai]
 draft: false
+date: 2026-04-27
 status: archived
 ---
 

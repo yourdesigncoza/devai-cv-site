@@ -3,6 +3,7 @@ title: Insider Signal Research
 description: "IS / OOS research programme over 4,143 SEC insider-buy signals. Shelved with a written postmortem; the research platform survives the conclusion."
 tags: [project, quant, python, research]
 draft: false
+date: 2026-04-27
 status: archived
 ---
 

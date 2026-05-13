@@ -3,6 +3,7 @@ title: devai.co.za
 description: "Archived AI playground showcasing earlier side projects, InvestAI analyst platform, NL-to-SQL Gradio app, YouTube summariser, and custom ChatGPT GPTs."
 tags: [project, ai, playground]
 draft: false
+date: 2026-04-27
 status: archived
 ---
 

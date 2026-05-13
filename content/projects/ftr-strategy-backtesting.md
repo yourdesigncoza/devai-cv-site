@@ -3,6 +3,7 @@ title: FTR Strategy Backtester
 description: "Three systematic trading strategies on a shared Python metrics spine. Confidence-adjusted expectancy, walk-forward validation, MD5 data snapshots."
 tags: [project, quant, python]
 draft: false
+date: 2026-04-27
 status: active
 ---
 

@@ -3,6 +3,7 @@ title: EdenFintech Scanner (Python)
 description: "Stdlib Python screener for US-listed equities with a typed three-role LLM review stage. John Montgomery's current primary quant project."
 tags: [project, quant, ai, python]
 draft: false
+date: 2026-05-06
 status: active
 ---
 
