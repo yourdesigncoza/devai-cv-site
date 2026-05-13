@@ -2,7 +2,7 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-Personal knowledge wiki for **John Montgomery**, founder of **EdenFintech** ([edenfintech.com](https://edenfintech.com)). The site at `devai.co.za` (title: **DevAi**) is the working surface where the thinking behind EdenFintech is captured: notes, decisions, playbooks, projects. Built on Quartz v4 (forked from `@jackyzha0/quartz`), deployed to Vercel. **YourDesign** is the legacy brand from 20+ years of WordPress freelance work, referenced only in past-engagement context. (`cv.yourdesign.co.za` is deprecated.)
+Personal knowledge wiki for **John Montgomery**, founder of **EdenFintech** ([edenfintech.com](https://edenfintech.com)). The site at `devai.co.za` (title: **DevAi**) is the working surface where the thinking behind EdenFintech is captured: notes, decisions, playbooks, projects. Built on Astro 6 with MDX and Tailwind, deployed to Vercel via `@astrojs/vercel`. **YourDesign** is the legacy brand from 20+ years of WordPress freelance work, referenced only in past-engagement context. (`cv.yourdesign.co.za` is deprecated.)
 
 ## Identity rule
 
@@ -21,12 +21,11 @@ The directory name `ydcoza`, the shell user `laudes`, and the email alias are NO
 ## Two-stage architecture
 
 - `raw/`: source material (defuddled web captures, per-project evidence dives, PDF extracts). Re-runnable. Do not edit by hand except to capture manual notes.
-- `content/`: the hand-written Quartz vault. Derived from `raw/` but written by hand. **Hard rule: never auto-stitch `content/` pages from `raw/`. Voice must stay authentic.**
+- `content/`: the hand-written wiki vault (Obsidian-edited, rendered by Astro through a symlink at `site/src/content`). Derived from `raw/` but written by hand. **Hard rule: never auto-stitch `content/` pages from `raw/`. Voice must stay authentic.**
 
 ## Content folders
 
 - `content/index.md`: homepage
-- `content/now.md`: current focus
 - `content/skills/`: one page per speciality (6 total)
 - `content/projects/`: one page per project
 - `content/decisions/`: cross-cutting architecture stories and positions held
@@ -39,45 +38,26 @@ The directory name `ydcoza`, the shell user `laudes`, and the email alias are NO
 
 ## Commands
 
+All site commands run from `site/`.
+
 ```bash
+cd site
 npm install
-npx quartz build --serve         # local preview with hot reload
-npx quartz build                  # production build into public/  (this is what Vercel runs)
-npm run check                     # tsc --noEmit + prettier --check
-npm run format                    # prettier --write
-npm test                          # tsx --test  (all Quartz framework tests)
-tsx --test quartz/util/path.test.ts   # run a single test file
+npm run dev        # local Astro dev server with HMR
+npm run build      # production build into site/dist/ and .vercel/output/
+npm run preview    # serve the production build locally
 ```
 
-Node 22+ / npm 10.9.2+. Vercel build command is `npx quartz build`, output `public/` (see `vercel.json`).
+Node 22+. Vercel project **Root Directory** is set to `site`; framework preset auto-detects as Astro and the `@astrojs/vercel` adapter handles output.
 
-## Quartz configuration
+## Astro configuration
 
-- `quartz.config.ts`: site config (theme, plugins, baseUrl). Theme uses Inter / JetBrains Mono with blue `#2d5bff` accents.
-- `quartz.layout.ts`: page layouts. Left sidebar is hidden (CSS); navigation lives in the HamburgerNav drawer. Right sidebar: ToC + Backlinks. Global graph is always in the DOM (modal, triggered by header icon).
-- `quartz/`: vendored Quartz framework source. Don't edit unless intentionally patching upstream.
+- `site/astro.config.mjs`: Astro config. MDX integration, Tailwind via Vite plugin, Shiki `github-light` theme for code, custom remark plugins for wikilinks and external links, `@astrojs/vercel` adapter.
+- `site/src/content.config.ts`: content collections (skills, projects, decisions, playbooks, influences, notes, open-questions, about). Each collection uses `glob('**/*.md', './src/content/<folder>')` with a shared `wikiSchema`.
+- `site/src/lib/remark-wikilinks.mjs`, `site/src/lib/remark-external-links.mjs`: markdown transforms.
+- `site/src/layouts/`, `site/src/components/`, `site/src/pages/`, `site/src/styles/`: Astro/Tailwind UI.
 
-### Baked-in design decisions
-
-- **Light-mode only**: `custom.scss` forces CSS vars for both `saved-theme="light"` and `saved-theme="dark"`. The dark-mode toggle is hidden via CSS.
-- **SPA disabled**: `enableSPA: false` in `quartz.config.ts`. Pages do full reloads; no client-side navigation.
-- **Left sidebar hidden**: `.sidebar.left { display: none }` in `custom.scss`. Explorer is surfaced via the HamburgerNav drawer instead.
-- **Fixed sticky header**: implemented entirely in `custom.scss` (not a Quartz upstream feature).
-
-### Custom Quartz patches (not in upstream)
-
-Files added or patched beyond the upstream fork:
-
-- `quartz/components/HamburgerNav.tsx` + `scripts/hamburgerNav.inline.ts`: mobile/desktop nav drawer wrapping Explorer.
-- `quartz/components/ViewGraphLink.tsx`: header icon that opens the global-graph modal.
-- `quartz/components/ConditionalRender.tsx`: utility wrapper to conditionally render a component (used for breadcrumbs on non-index pages).
-- `quartz/components/PageTitle.tsx`: patched to support an icon alongside the title.
-- `quartz/components/Head.tsx`: patched to inject the Vercel Web Analytics script (`/_vercel/insights/script.js`).
-- `quartz/components/scripts/graph.inline.ts`: patched `opacityScale` behavior so labels are visible at initial zoom.
-- `quartz/components/scripts/toc.inline.ts`: patched in-view tracking for the ToC active-item highlight.
-- `quartz/styles/custom.scss`: all site-specific visual overrides (layout, colors, sticky header, profile card, etc.).
-
-`quartz/static/theme-override.css` is a stale artifact from a separate project (SignalTrace). It is not imported by the active build. Do not edit or rely on it.
+`site/src/content` is a symlink to `../../content`. The root `content/` directory remains the canonical edit surface (Obsidian vault), and Astro reads through the symlink. Do not break the symlink by replacing it with a copy.
 
 ## Project page convention
 

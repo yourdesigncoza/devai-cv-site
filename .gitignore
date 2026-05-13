@@ -1,10 +1,10 @@
 # Dependencies
 node_modules/
 
-# Quartz build output + caches
-public/
-.quartz-cache/
-tsconfig.tsbuildinfo
+# Astro build output + caches
+site/dist/
+site/.astro/
+site/.vercel/
 
 # Obsidian per-vault config (keep per-machine)
 .obsidian/
