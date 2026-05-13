@@ -3,16 +3,24 @@ import { ImageResponse } from '@vercel/og';
 
 export const prerender = false;
 
-const FONT_REGULAR = 'https://rsms.me/inter/font-files/Inter-Regular.woff';
-const FONT_SEMIBOLD = 'https://rsms.me/inter/font-files/Inter-SemiBold.woff';
+const FONT_REGULAR =
+  'https://cdn.jsdelivr.net/npm/@fontsource/inter@5/files/inter-latin-400-normal.woff';
+const FONT_SEMIBOLD =
+  'https://cdn.jsdelivr.net/npm/@fontsource/inter@5/files/inter-latin-600-normal.woff';
 
 let fontCache: { regular: ArrayBuffer; semibold: ArrayBuffer } | null = null;
+
+async function fetchFont(url: string): Promise<ArrayBuffer> {
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`Font fetch failed: ${url} -> HTTP ${res.status}`);
+  return res.arrayBuffer();
+}
 
 async function loadFonts() {
   if (fontCache) return fontCache;
   const [regular, semibold] = await Promise.all([
-    fetch(FONT_REGULAR).then((r) => r.arrayBuffer()),
-    fetch(FONT_SEMIBOLD).then((r) => r.arrayBuffer()),
+    fetchFont(FONT_REGULAR),
+    fetchFont(FONT_SEMIBOLD),
   ]);
   fontCache = { regular, semibold };
   return fontCache;
@@ -40,7 +48,15 @@ export async function GET({ url }: APIContext): Promise<Response> {
   const title = rawTitle.slice(0, MAX_TITLE);
   const description = rawDescription.slice(0, MAX_DESCRIPTION);
 
-  const fonts = await loadFonts();
+  let fonts;
+  try {
+    fonts = await loadFonts();
+  } catch (err) {
+    return new Response(`og.png: font load failed: ${(err as Error).message}`, {
+      status: 502,
+      headers: { 'content-type': 'text/plain', 'cache-control': 'no-store' },
+    });
+  }
 
   return new ImageResponse(
     {
