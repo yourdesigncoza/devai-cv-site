@@ -1,0 +1,51 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const sections = [
+  { href: '/', label: 'Home' },
+  { href: '/skills', label: 'Skills' },
+  { href: '/projects', label: 'Projects' },
+  { href: '/decisions', label: 'Decisions' },
+  { href: '/playbooks', label: 'Playbooks' },
+  { href: '/about', label: 'About' },
+];
+---
+
+<BaseLayout
+  title="404 not found, DevAi"
+  description="That page does not exist. Browse the wiki from the home page or a section index."
+>
+  <div class="max-w-3xl mx-auto px-4 pt-4 pb-12">
+    <div class="relative bg-white rounded-xl shadow-card-cal p-8 md:p-12">
+      <span class="absolute top-2 left-4 text-gray-300 text-2xl font-mono select-none pointer-events-none" aria-hidden="true">+</span>
+      <span class="absolute top-2 right-4 text-gray-300 text-2xl font-mono select-none pointer-events-none" aria-hidden="true">+</span>
+      <span class="absolute bottom-2 left-4 text-gray-300 text-2xl font-mono select-none pointer-events-none" aria-hidden="true">+</span>
+      <span class="absolute bottom-2 right-4 text-gray-300 text-2xl font-mono select-none pointer-events-none" aria-hidden="true">+</span>
+
+      <span class="inline-flex items-center px-2.5 py-1 rounded-md bg-gray-100 text-gray-700 text-xs font-mono font-semibold">404</span>
+
+      <h1 class="mt-4 text-3xl md:text-4xl font-medium tracking-tight text-[#242424]">Page not found</h1>
+
+      <p class="mt-5 text-lg text-gray-600 leading-relaxed max-w-prose">
+        The link you followed does not resolve. Pages get renamed sometimes, especially in the notes and decisions sections.
+      </p>
+
+      <p class="mt-3 text-gray-600 leading-relaxed max-w-prose">
+        Start from the <a href="/" class="text-brand-600 hover:underline">home page</a>, or jump straight into a section:
+      </p>
+
+      <ul class="mt-6 flex flex-wrap gap-2">
+        {sections.map((s) => (
+          <li>
+            <a
+              href={s.href}
+              class="inline-flex items-center px-3 py-1.5 rounded-full border border-[#e1e2e3] bg-[#fbfbfb] text-sm text-[#242424] hover:bg-gray-100 transition-colors"
+            >
+              {s.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</BaseLayout>
