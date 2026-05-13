@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://devai.co.za/sitemap-index.xml

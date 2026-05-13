@@ -6,9 +6,12 @@ import vercel from '@astrojs/vercel';
 import remarkWikilinks from './src/lib/remark-wikilinks.mjs';
 import remarkExternalLinks from './src/lib/remark-external-links.mjs';
 
+import sitemap from '@astrojs/sitemap';
+
 // https://astro.build/config
 export default defineConfig({
-  integrations: [mdx()],
+  site: 'https://devai.co.za',
+  integrations: [mdx(), sitemap()],
   markdown: {
     remarkPlugins: [remarkWikilinks, remarkExternalLinks],
     shikiConfig: {
