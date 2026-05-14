@@ -1,0 +1,45 @@
+Hi Ethanne,
+
+It's late Thursday afternoon. One of your sales
+engineers is replying to email number nine for the
+day, all the same question phrased two different
+ways: which inverter and battery pairing is in
+stock and certified for the job an installer is
+quoting, and what the lead time looks like.
+
+The next prospect who emails won't hear back until
+Monday. IBC's team page lists five technical sales
+support engineers across the Cape Town and
+Johannesburg offices, so that load is real.
+
+Imagine the same prospect on the IBC Solar site
+at 8pm, typing that question into a search box,
+and reading a cited answer pulled straight from
+your own product and technical support pages in
+under five seconds.
+
+The Monday backlog shrinks. The prospects
+who still reach out are qualified for high-value
+conversations, like a system-design session for a
+large C&I EPC project.
+
+I build the second picture. Live SA commercial-solar
+example I built for this market:
+
+https://demo.devai.co.za/commercial-solar
+(Try a real question, e.g., "what NRS 097 compliance
+applies to a 50 kWp rooftop in Cape Town?" or "Victron
+MultiPlus II options for a 200 kVA factory backup?")
+
+If this looks useful, I can build you a private demo
+in 48 hours, using about twenty IBC Solar pages,
+so you can try it on your own content before any
+commitment.
+
+Worth 15 minutes?
+
+Thanks,
+John
+- - - - - - - - -
+Web: https://devai.co.za
+Mobile: +27 79 177 1970

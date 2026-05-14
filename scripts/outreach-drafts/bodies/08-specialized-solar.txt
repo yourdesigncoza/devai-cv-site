@@ -1,0 +1,46 @@
+Hi Peter,
+
+It's late Thursday afternoon. One of your sales
+engineers is replying to email number nine for the
+day, all the same question phrased two different
+ways: whether AC-coupled, DC-coupled or grid-tied is
+right for their site, and what each one means for
+backup when the grid drops.
+
+The next prospect who emails won't hear back until
+Monday. Specialized Solar Systems has been at this
+since 2008 and sets out AC, DC and grid-tied coupling
+as separate options on the site, which is exactly
+the detail prospects email to have explained.
+
+Imagine the same prospect on the Specialized Solar
+Systems site at 8pm, typing that question into a
+search box, and reading a cited answer pulled
+straight from your own Commercial Solutions page in
+under five seconds.
+
+The Monday backlog shrinks. The prospects
+who still reach out are qualified for high-value
+conversations, like a coupling-architecture design
+review for an agricultural or commercial site.
+
+I build the second picture. Live SA commercial-solar
+example I built for this market:
+
+https://demo.devai.co.za/commercial-solar
+(Try a real question, e.g., "what NRS 097 compliance
+applies to a 50 kWp rooftop in Cape Town?" or "Victron
+MultiPlus II options for a 200 kVA factory backup?")
+
+If this looks useful, I can build you a private demo
+in 48 hours, using about twenty Specialized Solar
+Systems pages, so you can try it on your own content
+before any commitment.
+
+Worth 15 minutes?
+
+Thanks,
+John
+- - - - - - - - -
+Web: https://devai.co.za
+Mobile: +27 79 177 1970

@@ -1,14 +1,14 @@
 ---
 batch: 01
 vertical: Commercial solar installers (SA)
-status: list-building
+status: drafting
 cta: live stock demo + qualified 48hr POC after discovery call
 from_alias: info@devai.co.za
 target_size: 30-50
 proof_url: https://demo.devai.co.za/commercial-solar (TBC, blocked on subdomain setup + vault-builder run)
 follow_up: day-3 + day-7 short replies
 persona: MD, Head of Sales, Senior Sales Engineer
-last_updated: 2026-05-11
+last_updated: 2026-05-14
 ---
 
 # Cold batch 01: SA commercial solar installers
@@ -58,7 +58,7 @@ Strong fit on every wedge criterion: B2B commercial/industrial focus, content-he
 | A1 | IBC Solar South Africa | ibc-solar.co.za | **Ethanne Soar (Head of Sales Gauteng)**, Bruno Lopes (BDM), Jason Campbell (Tech Sales & Product Mgr), Ross Dearham (Tech Sales Mgr, WC), Fredrik Hagelberg (MD) | ethanne.soar@ibc-solar.co.za, bruno.lopes@ibc-solar.co.za, jason.campbell@ibc-solar.co.za, ross.dearham@ibc-solar.co.za | CT HQ + JHB office, full named team page with direct emails/phones. **5 named Technical Sales Support Engineers** confirms the pre-sales-engineer-load wedge is real. Defuddled 2026-05-11. |
 | ~~A2~~ | ~~SOLA Group~~ | ~~solagroup.co.za~~ | DROP | DROP | Defuddled 2026-05-11: **wrong wedge**. SOLA is a PPA / wheeling business, not an installer. 3GW built, 535MW operational, R20B raised. Buyer is corporate procurement (Vodacom, Coca-Cola, Amazon, AB InBev, Sasol, etc.), no pre-sales-engineer pain to relieve. Moved to Drop list. |
 | ~~A3~~ | ~~SOLINK~~ | ~~solink.co.za~~ | DROP | DROP | Defuddled 2026-05-12: **wrong wedge**. Independent solar advisor / consultant, NOT an EPC installer. Buyer is a corporate energy manager evaluating multiple EPCs; SOLINK staff ARE the engineers. No inbound prospect pipeline. Moved to Drop list. |
-| A4 | Terra Firma | terrafirma.africa | Ben Snyman (CBO), Grant Berndsen (CEO) | TBC (suggested: ben@terrafirma.africa, or merlyn@terrafirma.africa for HR) | **Borderline.** Custom theme (NinePoint, NOT WP). 300+ staff, 350 MW installed, R1.3bn wheeling pivot. Buyer trending toward corporate procurement (Shoprite, MTN, SPAR scale). Defuddled 2026-05-12. If included, target Ben Snyman not the CEO. |
+| A4 | Terra Firma | terrafirma.africa | **Ben Snyman**, Grant Berndsen (CEO) | ben@terrafirma.africa **(UNCONFIRMED)** | **Included 2026-05-14** after Interceptor resolve+credibility test passed (homepage: "definitive experts in commercial solar and energy storage solutions for business", 550+ C&I projects, /our-team confirms Ben Snyman + Grant Berndsen). Custom theme (NinePoint, NOT WP). 300+ staff, R1.3bn wheeling pivot: scale stretch, target Ben Snyman not the CEO. Email pattern needs confirming via Google "email address for terrafirma.africa". |
 | A5 | BrightBlack Energy | brightblack.co.za | Wessel Surname (TBC role), Phillip Grobler, Riaan Wyk, Handre Burger | consult@brightblack.co.za, wessel@brightblack.co.za | WP + Elementor. 100+ projects, 30 MW+ total, 100-500 kWp typical bracket. Multi-brand (Huawei, Goodwe, ATESS, SolarEdge, Jinko, JA Solar, Longi). 3 financing structures (outright / PPA / buy-back). 51% black-owned, B-BBEE Level II. Defuddled 2026-05-12. |
 | ~~A6~~ | ~~Solar MD~~ | ~~solarmd.co.za~~ | DROP | DROP | Defuddled 2026-05-12: **wrong wedge**. Battery manufacturer (LiFePO4 in Cape Town), not an installer. Sells through installers like IBC Solar. Crunchbase + ENF Solar classify as "Solar Components" manufacturer. No pre-sales-engineer pain. Moved to Drop list. |
 | A7 | Solareff | solareff.co.za | **DeVilliers Botha (CCO / Co-founder)**, Jaco Botha (CEO) | info@solareff.co.za, d.botha@solareff.co.za | WP confirmed. 279 MWp + 47 MWh commissioned. Landmark: 7.216 MWp Eastgate (largest registered rooftop in SA), 6.8 MWp Boardwalk Inkwazi, Clearwater Mall (first commercial 1 MWp+). 3-division: Solutions / Assets / Finance (PPA via Stanlib). CCO is SAPVIA Board + Grid Access Subcommittee + SANS 10142-3 workgroup. CEO was Eskom Renewable Grid Code Committee advisor. SAPOA member. Defuddled 2026-05-12. |
@@ -67,11 +67,11 @@ Strong fit on every wedge criterion: B2B commercial/industrial focus, content-he
 | ~~A10~~ | ~~GreenHouse~~ | ~~greenhouse.co.za~~ | DROP | DROP | Defuddled 2026-05-12: **wrong scale**. Explicit "households and SMEs" targeting, max referenced system 11 kW (Tesla Powerwall), residential FAQ tone throughout. Buyer is homeowner / small office. "Solar Rescue Service" is residential remediation. Moved to Drop list. |
 | A11 | IMPOWER | impower.solar | **Jay Naidoo (CEO)**, Rezeen Daniels (marketing) | info@impower.solar, marketing@impower.solar | WP (SKT Mosque theme). Named C&I clients: Pick n Pay, Capitec (715 kWp + 500 kWh), Mooi Rivier Mall, Coral Beach. 3 service lines: Project Dev + EPCM + O&M. 100kW-1MW bracket, ~150MW dev pipeline. BBBEE L1. Defuddled 2026-05-12. |
 | A12 | Specialized Solar Systems | specializedsolarsystems.co.za | **Peter Bergs (MD)**, Ryan Oliver (COO) | info@specializedsolarsystems.co.za, peter@specializedsolarsystems.co.za | WP + Yoast + WooCommerce, founded 2008. Authorised Victron. Named C&I: 229.6 kWp George, 100 kWp Mungo Mills, 45 kVA Ganzevlei. Agri: Blomfontein Dairy, Safari Ostrich. AC/DC/grid-tied coupling explained on site. SAPVIA member, 38 emp. Defuddled 2026-05-12. |
-| A13 | AgriSolar Solutions | agrisolarsolutions.co.za | TBC | info@agrisolarsolutions.co.za | WP (Divi 4.27.4). KZN agri specialist (Pecana Farm, Muden). 6 distinct solution lines: Grid-Tied / Hybrid / Off-Grid / Pumping / Cold Rooms / Monitoring. Section 12B guidance offered. No named contact surfaced yet. Defuddled 2026-05-12. |
+| A13 | AgriSolar Solutions | agrisolarsolutions.co.za | **Cheyne (founder)** | info@agrisolarsolutions.co.za | WP (Divi 4.27.4). KZN agri specialist (Pecana Farm, Muden). 6 distinct solution lines: Grid-Tied / Hybrid / Off-Grid / Pumping / Cold Rooms / Monitoring. Section 12B guidance offered. Founder name "Cheyne" surfaced from /about-us via Interceptor 2026-05-14 (first name only; engineer, family-farm origin story). Defuddled 2026-05-12. |
 | A14 | AM Solar (Pty) | amsolar.co.za | TBC | info@amsolar.co.za | **NOT WordPress — Wix** (static.wixstatic.com CDN). Northcliff JHB, since 2009, BBBEE L2. 9 brand accreditations (Victron, ATESS, Sunsynk, Huawei, SolarEdge, FoxESS, SigenEnergy, Freedom Won, Megarevo) — multi-brand config complexity is the wedge. Tesla Powerwall 2/3 certified. Defuddled 2026-05-12. |
 | ~~A15~~ | ~~Sonop Solar~~ | ~~sonopsolar.co.za~~ | DROP | DROP | Defuddled 2026-05-12: **wrong scale**. Residential / small rural Western Cape. Example systems all 5 kVA / 6 kW household. SPAR Citrusdal backup + private estate Durbanville are the largest projects. Jaco Hunter (MD), info@sonopsolar.co.za. Moved to Drop list. |
-| A16 | Soventix South Africa | soventix.co.za | Carlos De Gouveia (MD, Soventix SA) | info@soventix.co.za | **Borderline.** Webflow parent + separate SA site (defuddle failed; CMS unclear). Stellenbosch / Centurion / Durban offices, 28.6 MWp+ incl VW SA project. SA arm has local MD so autonomy real, but strategic messaging explicitly foregrounds PPA / IPP expansion. Decision-maker likely sits in corporate procurement, not pre-sales. Defuddled 2026-05-12. |
-| A17 | Treetops Solar | treetopssolar.co.za | **Stefan Ortmann (co-founder)**, Helen Ortmann (co-founder), Martin Pollack | TBC (Google "email address for treetopssolar.co.za") | Cape Town, since 2010, family-run, 600+ projects. Content-heavy with explicit 6-step process page (listen → design → plan → install → commission → monitor) that's exactly the trapped-expert-knowledge pattern. Flagship: 800 kWp + 1.7 MWh for Pathcare N1, 744 kWp shopping centre, 212 kWp + 400 kWh for Rustenburg Girls' High (largest SolarEdge battery in WC). Defuddled 2026-05-11. |
+| ~~A16~~ | ~~Soventix South Africa~~ | ~~soventix.co.za~~ | DROP | DROP | **Domain down (2026-05-14).** soventix.co.za fails to resolve. No site to defuddle, no corpus to demo against. Was already borderline (Webflow parent, SA-site defuddle failed, PPA / IPP messaging). Moved to Drop list. |
+| A17 | Treetops Solar | treetopssolar.co.za | **Stefan Ortmann (co-founder)**, Helen Ortmann (co-founder), Martin Pollack | info@treetopssolar.co.za (confirmed via Interceptor 2026-05-14) | Cape Town, since 2010, family-run, 600+ projects. Content-heavy with explicit 6-step process page (listen → design → plan → install → commission → monitor) that's exactly the trapped-expert-knowledge pattern. Flagship: 800 kWp + 1.7 MWh for Pathcare N1, 744 kWp shopping centre, 212 kWp + 400 kWh for Rustenburg Girls' High (largest SolarEdge battery in WC). Defuddled 2026-05-11. |
 | A18 | Cape Solace | capesolace.co.za | **Henri Finnemore (CEO)** | info@capesolace.co.za | WP confirmed (wp-content in image URLs). 400+ clients, 6 service lines (commercial / agri / residential / O&M / financing / consultancy). Multi-brand: JA Solar, Sungrow, Deye. Projects: 65 kWp SPAR Eversdal, 200 kW hybrid Zambia, 50 kW Deye Tokai. Email source: Henri's own LinkedIn post (highest-confidence in batch). Defuddled 2026-05-12. |
 
 ### Tier B (defuddle if Tier A doesn't fill the 30-50 batch)
@@ -110,7 +110,7 @@ Plausible fit, but unclear on company size, B2B focus, or content depth without 
 
 Full observations + SA-specific question per candidate, used to populate the body template's L1 / L2 / specific-page-name slots.
 
-#### A4 Terra Firma (borderline — deprioritise unless room)
+#### A4 Terra Firma (included 2026-05-14 — target Ben Snyman, not the CEO)
 - **Pages observed:** Services (full-stack EPC + COPPER platform), Projects (Shoprite, MTN, Growthpoint, SPAR), Wheeling programme page.
 - **Platform note:** Custom theme by NinePoint agency (no WordPress).
 - **Obs 1:** COPPER proprietary electricity management platform built in-house — real-time visibility for existing clients, signals software investment but inward-facing.
@@ -176,7 +176,7 @@ Full observations + SA-specific question per candidate, used to populate the bod
 - **Obs 3:** Tesla Powerwall 2 & 3 certified installer, BBBEE Level 2, since 2009, Northcliff JHB.
 - **Q:** "For a 200 kVA Johannesburg factory operating 08:00-17:00, which is more cost-effective: a Huawei SUN2000-100KTL grid-tied array for pure self-consumption, or a SigenEnergy ESS hybrid system sized for 4-hour peak-shaving, and what CoC and municipal NRS 097-2-1 sign-off does each require?"
 
-#### A16 Soventix South Africa (borderline — flag for John)
+#### A16 Soventix South Africa (DROPPED 2026-05-14 — domain down)
 - **Pages observed:** parent site (Webflow) Africa-South business-unit page. SA-domain defuddle failed.
 - **Obs 1:** Parent page states scope across "rooftop, ground-mounted, or carport solar photovoltaic plants" for "Commercial and Industrial, as well as Utility-scale" Sub-Saharan Africa.
 - **Obs 2:** Completed VW South Africa solar project (confirmed via InSolar case study) — large OEM industrial buyer, corporate procurement relationship.
@@ -198,6 +198,7 @@ Full observations + SA-specific question per candidate, used to populate the bod
 - **Solar MD** — battery manufacturer (LiFePO4 in Cape Town), sells through installers. Crunchbase + ENF Solar classify as "Solar Components". Wrong business model. Confirmed via 2026-05-12 defuddle. _(Was originally Tier A6, moved here.)_
 - **Sonop Solar** — predominantly residential / small rural Western Cape (SPAR Citrusdal + Durbanville estate are the largest projects). Buyer is homeowner / small farm, not C&I. Confirmed via 2026-05-12 defuddle. _(Was originally Tier A15, moved here.)_
 - **GreenHouse** — "households and SMEs" explicit positioning. Max referenced system 11 kW (Tesla Powerwall). Residential FAQ tone. "Solar Rescue Service" is residential remediation. Wrong scale. Confirmed via 2026-05-12 defuddle. _(Was originally Tier A10, moved here.)_
+- **Soventix South Africa** — domain soventix.co.za is down (does not resolve, confirmed via Interceptor resolve test 2026-05-14). No site to defuddle, no corpus to demo against. Was already borderline: Webflow parent, SA-site defuddle failed, strategic messaging foregrounds PPA / IPP expansion (buyer drifts to corporate procurement). _(Was originally Tier A16, moved here.)_
 - **Solarise Africa, SolarAfrica Energy, Engie SA, AIIM, AMPYR Solar Europe** — utility-scale IPP / private-equity scale, wrong buyer profile (corporate procurement, not feeling pre-sales pain)
 - **Neosun Energy SA** — international parent (Russian-origin), unclear local autonomy
 - **SAP Africa, Vivo Energy, Pernod Ricard** — false hits, not solar businesses

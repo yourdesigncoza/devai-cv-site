@@ -30,10 +30,26 @@ set -euo pipefail
 
 FROM='info@devai.co.za'
 
+# Cold batch 01: SA commercial solar installers. 12 recipients.
+# Drafted 2026-05-14 from docs/marketing/cold-batch-01-commercial-solar.md.
+#
+# FLAGS to resolve before the real (non-dry-run) pass:
+#   #2  Terra Firma  — ben@terrafirma.africa is UNCONFIRMED. Verify via Google
+#       "email address for terrafirma.africa", then correct the To: here if wrong.
+#   #10 AM Solar     — no named contact found on site; body opens "Hi there,".
 RECIPIENTS=(
-  # Example (delete this and add your real recipients):
-  # "1|info@example.com||Mentioning example on YourSite: courtesy heads-up|01-example.txt"
-  # "2|hello@another.com|cc@another.com|Listing another on YourSite: courtesy note|02-another.txt"
+  "1|ethanne.soar@ibc-solar.co.za||A quieter inbox for the IBC Solar sales team|01-ibc-solar.txt"
+  "2|ben@terrafirma.africa||A quieter inbox for the Terra Firma sales team|02-terra-firma.txt"
+  "3|wessel@brightblack.co.za||A quieter inbox for the BrightBlack sales team|03-brightblack.txt"
+  "4|d.botha@solareff.co.za||A quieter inbox for the Solareff sales team|04-solareff.txt"
+  "5|info@awpower.co.za||A quieter inbox for the AWPower sales team|05-awpower.txt"
+  "6|info@genergy.co.za||A quieter inbox for the Genergy sales team|06-genergy.txt"
+  "7|info@impower.solar||A quieter inbox for the IMPOWER sales team|07-impower.txt"
+  "8|peter@specializedsolarsystems.co.za||A quieter inbox for the Specialized Solar Systems sales team|08-specialized-solar.txt"
+  "9|info@agrisolarsolutions.co.za||A quieter inbox for the AgriSolar sales team|09-agrisolar.txt"
+  "10|info@amsolar.co.za||A quieter inbox for the AM Solar sales team|10-am-solar.txt"
+  "11|info@treetopssolar.co.za||A quieter inbox for the Treetops sales team|11-treetops.txt"
+  "12|info@capesolace.co.za||A quieter inbox for the Cape Solace sales team|12-cape-solace.txt"
 )
 
 # === No edits below this line for normal use ===
