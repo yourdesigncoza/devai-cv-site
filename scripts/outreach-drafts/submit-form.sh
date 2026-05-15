@@ -31,9 +31,10 @@ set -euo pipefail
 NAME='John Montgomery'
 EMAIL='info@devai.co.za'
 
+# Cold batch 01: SA commercial solar installers, form-only recipients.
+# #2 Terra Firma has no public email; the contact form is the only channel.
 RECIPIENTS=(
-  # Example (delete this and add your real recipients):
-  # "1|https://example.com/contact|Mentioning example on YourSite: courtesy heads-up|01-example.txt"
+  "2|https://www.terrafirma.africa/contact/|A quieter inbox for the Terra Firma sales team|02-terra-firma.txt"
 )
 
 # === No edits below this line for normal use ===

@@ -30,16 +30,18 @@ set -euo pipefail
 
 FROM='info@devai.co.za'
 
-# Cold batch 01: SA commercial solar installers. 12 recipients.
+# Cold batch 01: SA commercial solar installers. 11 recipients via Gmail draft.
 # Drafted 2026-05-14 from docs/marketing/cold-batch-01-commercial-solar.md.
 #
-# FLAGS to resolve before the real (non-dry-run) pass:
-#   #2  Terra Firma  — ben@terrafirma.africa is UNCONFIRMED. Verify via Google
-#       "email address for terrafirma.africa", then correct the To: here if wrong.
-#   #10 AM Solar     — no named contact found on site; body opens "Hi there,".
+# #2 Terra Firma is not in this list: it has no public email, so it goes
+# through submit-form.sh (contact form at terrafirma.africa/contact). N=2 is
+# skipped on purpose so the numbers stay aligned with the 02-terra-firma.txt
+# body file.
+#
+# FLAG before the real (non-dry-run) pass:
+#   #10 AM Solar has no named contact on its site, so its body opens "Hi there,".
 RECIPIENTS=(
   "1|ethanne.soar@ibc-solar.co.za||A quieter inbox for the IBC Solar sales team|01-ibc-solar.txt"
-  "2|ben@terrafirma.africa||A quieter inbox for the Terra Firma sales team|02-terra-firma.txt"
   "3|wessel@brightblack.co.za||A quieter inbox for the BrightBlack sales team|03-brightblack.txt"
   "4|d.botha@solareff.co.za||A quieter inbox for the Solareff sales team|04-solareff.txt"
   "5|info@awpower.co.za||A quieter inbox for the AWPower sales team|05-awpower.txt"
