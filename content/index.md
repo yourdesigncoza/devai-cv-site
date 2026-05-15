@@ -1,6 +1,6 @@
 ---
 title: John Montgomery, DevAi
-description: "Quant research pipelines, LLM and agent systems, and custom WordPress, by John Montgomery. 22 years in. Remote-first, available for new projects."
+description: "AI-assisted research tools, quant workflows, and custom WordPress, by John Montgomery. 22 years in. Remote from Mossel Bay, founder of EdenFintech."
 tags: [home]
 draft: false
 ---
@@ -24,11 +24,17 @@ draft: false
   </dl>
 </aside>
 
-I work from Mossel Bay on the south coast of South Africa, founder of [EdenFintech](https://edenfintech.com/). Most of my week goes into the EdenFintech screening and AI-review pipeline for US-listed equities, plus a long-running WordPress engagement for a training provider here at home (continuing client work under the legacy YourDesign name).
+I've been building software for 22 years, starting with trading systems and PHP/MySQL platforms in the early 2000s. These days I focus on AI-assisted research tools, quant workflows, and systems that turn messy information into something useful.
+
+Based in Mossel Bay. Founder of [EdenFintech](https://edenfintech.com/).
 
 ## How I got here
 
-I started in the early 2000s writing trading "bots" for a trading company. By 2004 I was building CRUD PHP / MySQL web applications before the open-source CMS world had meaningful share. That became [yourdesign.co.za](https://yourdesign.co.za/), 20+ years of freelance WordPress work, custom themes over page builders, and agency sub-contracts on brand projects. The current work, [EdenFintech](https://edenfintech.com/) and the scanner behind it, is a loop back to where the career started, with 22 years of programming discipline now wrapped around it.
+I started in the early 2000s building trading tools for a trading company. From there I moved into PHP and MySQL web applications, back when most things still had to be built by hand.
+
+That became [yourdesign.co.za](https://yourdesign.co.za/), and more than 20 years of custom websites, WordPress systems, themes, and agency work.
+
+In many ways [EdenFintech](https://edenfintech.com/) is a return to the beginning: markets, data, research, and code. Only now, the tools are better, the thinking is sharper, and there are 22 years of hard-earned development experience behind it.
 
 ## Current availability
 
