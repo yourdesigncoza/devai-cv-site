@@ -39,14 +39,17 @@ In many ways [EdenFintech](https://edenfintech.com/) is a return to the beginnin
 ## Current availability
 
 > [!tip]
-> I'm actively looking for interesting Quant and Development opportunities. The shapes of work that fit best:
+> I'm open to interesting quant, AI, and development work where the problem is messy enough to need real engineering judgement.
 >
-> - Building or rescuing a quant research platform: ingestion, backtesting discipline, honest evaluation.
-> - Retrofitting LLM and agent pipelines with typed contracts, logging, and proper review stages.
-> - Long-running WordPress engagements where the schema needs to move beyond `$wpdb`.
-> - Obsidian / Quartz knowledge-graph projects for research, OSINT, or case-study work.
+> The work that fits best:
 >
-> Remote, UTC+2. Open to contract, retainer, or lead-developer roles. The [[about/cover-letter|cover letter]] has more, or reach me at support@edenfintech.com.
+> - Building or improving quant research platforms: data ingestion, backtesting, validation, and honest performance review.
+> - Turning LLM and agent experiments into proper systems with structure, logging, review stages, and fewer black boxes.
+> - Complex web platforms where the data model matters and the project has outgrown simple CMS thinking.
+> - Obsidian / Astro knowledge-base projects for research, OSINT, internal documentation, or public case-study sites.
+> - Research-heavy AI tools that need to turn scattered information into something structured, searchable, and useful.
+>
+> Remote, UTC+2. Open to contract, retainer, or lead-developer roles. The [[about/cover-letter|cover letter]] has more, or reach me at info@devai.co.za.
 
 ## What I do
 
