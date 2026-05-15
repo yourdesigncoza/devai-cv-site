@@ -1,46 +1,14 @@
 Hi Jay,
 
-It's late Thursday afternoon. One of your sales
-engineers is replying to email number nine for the
-day, all the same question phrased two different
-ways: whether a client needs full project
-development, an EPCM build, or just ongoing
-operations and maintenance, and where their project
-sits across those.
+IMPOWER's site shows 125 MW across 100+ projects spanning full development, EPCM, and O&M, so prospects email to work out where their project actually sits across those. A search box on the IMPOWER site that answers from your Projects and Services pages would lift a chunk of that load.
 
-The next prospect who emails won't hear back until
-Monday. IMPOWER's site shows 125 MW delivered across
-more than a hundred projects, organised by industry,
-so prospects have plenty to read and little time to.
-
-Imagine the same prospect on the IMPOWER site
-at 8pm, typing that question into a search box,
-and reading a cited answer pulled straight from
-your own Projects and Services pages in under five
-seconds.
-
-The Monday backlog shrinks. The prospects
-who still reach out are qualified for high-value
-conversations, like an EPCM scoping call for a large
-retail or commercial rollout.
-
-I build the second picture. Live SA commercial-solar
-example I built for this market:
-
+Live SA example I built:
 https://demo.devai.co.za/commercial-solar
-(Try a real question, e.g., "what NRS 097 compliance
-applies to a 50 kWp rooftop in Cape Town?" or "Victron
-MultiPlus II options for a 200 kVA factory backup?")
 
-If this looks useful, I can build you a private demo
-in 48 hours, using about twenty IMPOWER pages,
-so you can try it on your own content before any
-commitment.
-
-Worth 15 minutes?
+Happy to wire one for IMPOWER in 48 hours using about 20 of your pages, so you can try it on your own content before committing.
 
 Thanks,
 John
 - - - - - - - - -
-Web: https://devai.co.za
-Mobile: +27 79 177 1970
+https://devai.co.za
++27 79 177 1970
