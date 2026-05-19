@@ -23,22 +23,96 @@ const fmt = (d?: Date) =>
   <h1>Decisions</h1>
   <p>Positions I hold, with the reasoning attached. Each one is a stance I'd defend, not a casual note.</p>
 
-  <ol class="not-prose mt-8 space-y-3">
-    {decisions.map((d) => (
+  <ol class="decisions-list">
+    {decisions.map((d, i) => (
       <li>
-        <a href={`/decisions/${d.id}`} class="group block rounded-lg border border-[#e1e2e3] bg-white hover:shadow-card-cal transition-shadow p-5">
-          <div class="flex items-baseline justify-between gap-4">
-            {d.data.date && (
-              <span class="text-xs font-mono text-gray-500">{fmt(d.data.date)}</span>
-            )}
-            <span class="text-xs text-brand-600 opacity-0 group-hover:opacity-100 transition-opacity">Read &rarr;</span>
-          </div>
-          <span class="mt-2 block text-base font-semibold text-[#242424] group-hover:text-brand-600 transition-colors">{d.data.title}</span>
-          {d.data.description && (
-            <p class="mt-2 text-sm text-gray-600 leading-relaxed">{d.data.description}</p>
-          )}
+        <div class="row-head">
+          <span class="num-pill">{String(i + 1).padStart(2, '0')}</span>
+          {d.data.date && <span class="row-date">{fmt(d.data.date)}</span>}
+        </div>
+        <h2 class="row-title">{d.data.title}</h2>
+        {d.data.description && <p class="row-desc">{d.data.description}</p>}
+        <a href={`/decisions/${d.id}`} class="read-button">
+          Read full position <span aria-hidden="true">&rarr;</span>
         </a>
       </li>
     ))}
   </ol>
 </ContentPage>
+
+<style>
+  .decisions-list {
+    list-style: none !important;
+    padding-left: 0 !important;
+    margin-top: 2.5rem;
+  }
+  .decisions-list > li {
+    margin-top: 3.5rem;
+    padding-left: 0;
+  }
+  .decisions-list > li:first-child {
+    margin-top: 2rem;
+  }
+  .decisions-list > li::marker {
+    content: none;
+  }
+  .row-head {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+  .num-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.625rem;
+    border-radius: 0.375rem;
+    background: #f3f4f6;
+    color: #374151;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  .row-date {
+    color: #6b7280;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+  }
+  .decisions-list h2.row-title {
+    margin-top: 1rem !important;
+    font-size: 1.5rem;
+    line-height: 1.25;
+    font-weight: 500;
+    word-spacing: 0.1em;
+    color: #242424;
+  }
+  @media (min-width: 768px) {
+    .decisions-list h2.row-title { font-size: 1.875rem; }
+  }
+  .decisions-list p.row-desc {
+    margin-top: 1rem !important;
+    font-size: 1rem !important;
+    color: #4b5563;
+    line-height: 1.7;
+    max-width: 65ch;
+  }
+  .read-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.25rem;
+    padding: 0.4rem 0.85rem;
+    border-radius: 0.375rem;
+    background: #f3f4f6;
+    color: #374151 !important;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-decoration: none !important;
+    transition: background-color 150ms ease, color 150ms ease;
+  }
+  .read-button:hover {
+    background: #e5e7eb;
+    color: #1f2937 !important;
+  }
+</style>
