@@ -57,6 +57,9 @@ const lastmodByPath = buildLastmodMap();
 // https://astro.build/config
 export default defineConfig({
   site: 'https://devai.co.za',
+  redirects: {
+    '/sitemap.xml': { status: 301, destination: '/sitemap-index.xml' },
+  },
   integrations: [
     mdx(),
     sitemap({
