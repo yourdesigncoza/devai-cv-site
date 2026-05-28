@@ -34,7 +34,9 @@ The directory name `ydcoza`, the shell user `laudes`, and the email alias are NO
 - `content/notes/`, `content/open-questions/`: evolving capture
 - `content/about/`: bio, contact, cover letter
 - `docs/plans/`: design docs and implementation plans
+- `docs/marketing/`: cold outreach batches, demo/wiki assets, research-prompt drafts (e.g. `cold-batch-01-commercial-solar.md`). See also `docs/marketing.md`.
 - `docs/linkedin*`: LinkedIn engagement workflow (see below)
+- `scripts/outreach-drafts/`: the reference implementation of the global outreach-drafts template (`create-drafts.sh`, `submit-form.sh`, per-recipient `bodies/*.txt`). Used to bulk-create Gmail drafts via `gog`. Drafts only, never sends (see global email rules).
 
 ## Commands
 
@@ -52,10 +54,20 @@ Node 22+. Vercel project **Root Directory** is set to `site`; framework preset a
 
 ## Astro configuration
 
-- `site/astro.config.mjs`: Astro config. MDX integration, Tailwind via Vite plugin, Shiki `github-light` theme for code, custom remark plugins for wikilinks and external links, `@astrojs/vercel` adapter.
-- `site/src/content.config.ts`: content collections (skills, projects, decisions, playbooks, influences, notes, open-questions, about). Each collection uses `glob('**/*.md', './src/content/<folder>')` with a shared `wikiSchema`.
+- `site/astro.config.mjs`: Astro config. MDX integration, Tailwind via Vite plugin, Shiki `github-light` theme for code, custom remark plugins for wikilinks and external links, `@astrojs/vercel` adapter. Also wires `@astrojs/sitemap` with a custom `serialize` that sets per-URL `lastmod` from a `buildLastmodMap()` helper (reads each page's frontmatter `date`, falls back to file mtime, and rolls the newest child date up to its section index).
+- `site/src/content.config.ts`: content collections (skills, projects, decisions, playbooks, influences, notes, open-questions, about). Each collection uses `glob('**/*.md', './src/content/<folder>')` with a shared `wikiSchema` (`title` required; `description`, `tags`, `draft`, `status`, `date` optional).
 - `site/src/lib/remark-wikilinks.mjs`, `site/src/lib/remark-external-links.mjs`: markdown transforms.
-- `site/src/layouts/`, `site/src/components/`, `site/src/pages/`, `site/src/styles/`: Astro/Tailwind UI.
+- `site/src/layouts/` (`BaseLayout.astro`, `ContentPage.astro`), `site/src/components/` (`ContactPills.astro`), `site/src/styles/`: Astro/Tailwind UI.
+
+## Site rendering layer
+
+`site/src/pages/` mixes static routes, collection indexes, and generated endpoints:
+
+- `[collection]/[...slug].astro`: dynamic renderer for every collection entry; `getStaticPaths` enumerates all eight collections and renders through `ContentPage.astro`.
+- `{skills,projects,decisions,about}/index.astro` + root `index.astro`, `404.astro`: hand-built section landing pages.
+- `og.png.ts`: per-page Open Graph image generation via `@vercel/og` (`prerender = false`, runs on Vercel; loads Inter fonts from jsDelivr).
+- `rss.xml.ts`: feed via `@astrojs/rss`. `graph.json.ts`: emits the wiki link graph (parses `[[wikilinks]]` across all collections) consumed by the D3 force-graph in the UI (`d3-force`/`d3-drag`/`d3-zoom`/`d3-selection`).
+- `@vercel/speed-insights` is enabled for RUM.
 
 `site/src/content` is a symlink to `../../content`. The root `content/` directory remains the canonical edit surface (Obsidian vault), and Astro reads through the symlink. Do not break the symlink by replacing it with a copy.
 
