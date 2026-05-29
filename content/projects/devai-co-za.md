@@ -1,6 +1,6 @@
 ---
-title: devai.co.za
-description: "Archived AI playground showcasing earlier side projects, InvestAI analyst platform, NL-to-SQL Gradio app, YouTube summariser, and custom ChatGPT GPTs."
+title: DevAi App Playground (2024)
+description: "Archived 2024 AI playground that once occupied devai.co.za: InvestAI analyst platform, NL-to-SQL Gradio app, YouTube summariser, and custom ChatGPT GPTs. The domain now hosts this wiki."
 tags: [project, ai, playground]
 draft: false
 date: 2026-04-27
@@ -11,7 +11,7 @@ status: archived
 
 **Stack:** Varies per project. Python / Gradio / OpenAI on the NL-to-SQL app; custom GPTs for the ChatGPT ones.
 **Status:** Archived playground. The current work has moved to [[projects/edenfintech-scanner-python|edenfintech-scanner-python]] and [[projects/edenfintech-com|edenfintech.com]].
-**Live:** [devai.co.za](https://devai.co.za/)
+**Live:** No longer published. The devai.co.za domain now hosts this wiki.
 
 ## The story
 

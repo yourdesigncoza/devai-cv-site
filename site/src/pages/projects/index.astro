@@ -1,14 +1,29 @@
 ---
 import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
 import ContentPage from '../../layouts/ContentPage.astro';
+import edenfintechScannerHero from '../../content/projects/edenfintech-scanner-hero.png';
+import edenfintechHero from '../../content/projects/edenfintech-hero.png';
+import jobabroadHero from '../../content/projects/jobabroad-hero.png';
+import signaltraceHero from '../../content/projects/signaltrace-hero.png';
+import wecozaHero from '../../content/projects/wecoza-hero.png';
+import yourdesignHero from '../../content/projects/yourdesign-hero.png';
 
-const heroImages: Record<string, string> = {
-  'edenfintech-scanner-python': '/projects/edenfintech-scanner-hero.png',
-  'edenfintech-com': '/projects/edenfintech-hero.png',
-  'jobabroad-co-za': '/projects/jobabroad-hero.png',
-  'signaltrace-site': '/projects/signaltrace-hero.png',
-  'wecoza-development': '/projects/wecoza-hero.png',
-  'yourdesign-co-za': '/projects/yourdesign-hero.png',
+const heroImages: Record<string, ImageMetadata> = {
+  'edenfintech-scanner-python': edenfintechScannerHero,
+  'edenfintech-com': edenfintechHero,
+  'jobabroad-co-za': jobabroadHero,
+  'signaltrace-site': signaltraceHero,
+  'wecoza-development': wecozaHero,
+  'yourdesign-co-za': yourdesignHero,
+};
+
+// Projects without a hero image fall back to their own generated OG card,
+// so every tile shows on-brand artwork instead of a flat placeholder.
+const ogCardUrl = (title: string, description?: string) => {
+  const params = new URLSearchParams({ title });
+  if (description) params.set('description', description);
+  return `/og.png?${params.toString()}`;
 };
 
 const entries = (await getCollection('projects')).filter((p) => !p.data.draft);
@@ -51,16 +66,14 @@ const grouped = STATUS_ORDER.map((status) => ({
         {group.items.map((p) => {
           const img = heroImages[p.id];
           return (
-            <a href={`/projects/${p.id}`} class="group block rounded-lg border border-[#e1e2e3] bg-white overflow-hidden hover:shadow-card-cal transition-shadow">
-              {img ? (
-                <span class="block aspect-[16/9] overflow-hidden bg-[#fbfbfb]">
-                  <img src={img} alt="" loading="lazy" class="w-full h-full object-cover" />
-                </span>
-              ) : (
-                <span class="block aspect-[16/9] bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
-                  <span class="text-xs font-mono uppercase tracking-widest text-gray-400">{group.status}</span>
-                </span>
-              )}
+            <a href={`/projects/${p.id}`} class="group block rounded-lg border border-[#e1e2e3] bg-white overflow-hidden hover:shadow-card-cal transition-shadow no-underline!">
+              <span class="block aspect-[16/9] overflow-hidden bg-[#fbfbfb]">
+                {img ? (
+                  <Image src={img} alt="" loading="lazy" widths={[400, 800]} sizes="(min-width: 640px) 50vw, 100vw" class="w-full h-full object-cover" />
+                ) : (
+                  <img src={ogCardUrl(p.data.title, p.data.description)} alt="" loading="lazy" class="w-full h-full object-cover" />
+                )}
+              </span>
               <span class="block p-4">
                 <span class="block text-sm font-semibold text-[#242424] group-hover:text-brand-600 transition-colors">{p.data.title}</span>
                 {p.data.description && (

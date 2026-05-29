@@ -19,7 +19,7 @@ const skills = (await getCollection('skills'))
   <ul class="not-prose mt-8 space-y-4">
     {skills.map((s) => (
       <li class="group">
-        <a href={`/skills/${s.id}`} class="block rounded-lg border border-[#e1e2e3] bg-white hover:shadow-card-cal transition-shadow p-5">
+        <a href={`/skills/${s.id}`} class="block rounded-lg border border-[#e1e2e3] bg-white hover:shadow-card-cal transition-shadow p-5 no-underline!">
           <div class="flex items-baseline justify-between gap-4">
             <span class="text-base font-semibold text-[#242424] group-hover:text-brand-600 transition-colors">{s.data.title}</span>
             <span class="text-xs text-brand-600 opacity-0 group-hover:opacity-100 transition-opacity">Read &rarr;</span>
