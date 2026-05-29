@@ -69,7 +69,7 @@ In many ways [EdenFintech](https://edenfintech.com/) is a return to the beginnin
 <span class="project-card-thumb"><img src="projects/edenfintech-scanner-hero.png" alt="" loading="lazy" /></span>
 <span class="project-card-body">
 <span class="project-card-title">edenfintech-scanner-python</span>
-<span class="project-card-desc">A stdlib-only core plus a three-role LLM review stage behind a typed information barrier.</span>
+<span class="project-card-desc">A stdlib-only core plus a multi-role LLM review stage behind a typed information barrier.</span>
 <span class="project-card-cta">Read more →</span>
 </span>
 </a>
@@ -91,7 +91,7 @@ In many ways [EdenFintech](https://edenfintech.com/) is a return to the beginnin
 <span class="project-card-thumb"><img src="projects/jobabroad-hero.png" alt="" loading="lazy" /></span>
 <span class="project-card-body">
 <span class="project-card-title">jobabroad.co.za</span>
-<span class="project-card-desc">Next.js 16 + Supabase. Manual WhatsApp sales, token-gated pathway guides, CV upload, semantic search.</span>
+<span class="project-card-desc">Next.js 16 + Supabase. Members-only pathway guides, semantic search with cited answers, and a paid AI coach.</span>
 <span class="project-card-cta">Read more →</span>
 </span>
 </a>
@@ -102,7 +102,7 @@ In many ways [EdenFintech](https://edenfintech.com/) is a return to the beginnin
 <span class="project-card-thumb"><img src="projects/signaltrace-hero.png" alt="" loading="lazy" /></span>
 <span class="project-card-body">
 <span class="project-card-title">SignalTrace</span>
-<span class="project-card-desc">A multi-wiki research site over five OSINT and financial-research case studies. Active at signaltrace.wiki.</span>
+<span class="project-card-desc">A multi-wiki research site over thirteen OSINT and financial-research wikis. Active at signaltrace.wiki.</span>
 <span class="project-card-cta">Read more →</span>
 </span>
 </a>

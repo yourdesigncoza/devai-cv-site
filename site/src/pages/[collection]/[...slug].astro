@@ -4,6 +4,10 @@ import ContentPage from '../../layouts/ContentPage.astro';
 
 export async function getStaticPaths() {
   const collections = [
+    'method',
+    'services',
+    'case-studies',
+    'audiences',
     'skills',
     'projects',
     'decisions',
@@ -13,12 +17,20 @@ export async function getStaticPaths() {
     'open-questions',
     'about',
   ] as const;
+  // Collections whose index is rendered by a bespoke .astro landing page,
+  // so their markdown index (if any) must not also claim the route.
+  const customIndexCollections = new Set([
+    'about',
+    'services',
+    'case-studies',
+    'audiences',
+  ]);
   const all = await Promise.all(
     collections.map(async (name) => {
       const entries = await getCollection(name);
       return entries
         .filter((e) => !e.data.draft)
-        .filter((e) => !(name === 'about' && e.id === 'index'))
+        .filter((e) => !(customIndexCollections.has(name) && e.id === 'index'))
         .map((entry) => ({
           params: {
             collection: name,
@@ -34,8 +46,9 @@ export async function getStaticPaths() {
 const { entry, collection } = Astro.props;
 const { Content } = await render(entry);
 
-const breadcrumbLabel = collection === 'about' ? 'devai.co.za' : collection.replace('-', ' ');
-const breadcrumbHref = collection === 'about' ? '/' : `/${collection}`;
+const isIndex = entry.id === 'index';
+const breadcrumbLabel = collection === 'about' || isIndex ? 'devai.co.za' : collection.replace('-', ' ');
+const breadcrumbHref = collection === 'about' || isIndex ? '/' : `/${collection}`;
 ---
 
 <ContentPage

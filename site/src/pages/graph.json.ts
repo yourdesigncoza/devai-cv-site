@@ -2,6 +2,10 @@ import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 
 const COLLECTIONS = [
+  'method',
+  'services',
+  'case-studies',
+  'audiences',
   'skills',
   'projects',
   'decisions',
@@ -49,13 +53,16 @@ export const GET: APIRoute = async () => {
     }
   }
 
-  for (const c of ['skills', 'projects', 'decisions'] as const) {
-    addNode({
-      id: `/${c}`,
-      title: c.charAt(0).toUpperCase() + c.slice(1),
-      collection: c,
-      tags: [c, 'index'],
-    });
+  const sectionIndexes: Array<readonly [string, string]> = [
+    ['skills', 'Skills'],
+    ['projects', 'Projects'],
+    ['decisions', 'Decisions'],
+    ['services', 'Services'],
+    ['case-studies', 'Case studies'],
+    ['audiences', 'Audiences'],
+  ];
+  for (const [c, title] of sectionIndexes) {
+    addNode({ id: `/${c}`, title, collection: c, tags: [c, 'index'] });
   }
 
   const links: Array<{ source: string; target: string }> = [];

@@ -1,0 +1,75 @@
+---
+import { getCollection } from 'astro:content';
+import ContentPage from '../../layouts/ContentPage.astro';
+
+const studies = (await getCollection('case-studies'))
+  .filter((s) => !s.data.draft && s.id !== 'index')
+  .sort((a, b) => (a.data.order ?? 99) - (b.data.order ?? 99));
+---
+
+<ContentPage
+  title="Case studies"
+  description="Evidence packs, not testimonials. Real systems I built: the problem, the architecture, the result, and what each one proves. Every study traces back to the method."
+  breadcrumbLabel="devai.co.za"
+  breadcrumbHref="/"
+>
+  <h1>Case studies</h1>
+  <p>Each of these is one system I built, written as an evidence pack: the problem, the architecture, the result, and what it proves. They are the proof behind <a href="/method">the method</a>. Numbers come from the code, not a brochure.</p>
+
+  <ol class="card-list">
+    {studies.map((s) => (
+      <li>
+        <h2 class="row-title">{s.data.title}</h2>
+        {s.data.description && <p class="row-desc">{s.data.description}</p>}
+        <a href={`/case-studies/${s.id}`} class="read-button">
+          Read the case study <span aria-hidden="true">&rarr;</span>
+        </a>
+      </li>
+    ))}
+  </ol>
+</ContentPage>
+
+<style>
+  .card-list {
+    list-style: none !important;
+    padding-left: 0 !important;
+    margin-top: 2.5rem;
+  }
+  .card-list > li { margin-top: 3rem; padding-left: 0; }
+  .card-list > li:first-child { margin-top: 2rem; }
+  .card-list > li::marker { content: none; }
+  .card-list h2.row-title {
+    margin-top: 0 !important;
+    font-size: 1.5rem;
+    line-height: 1.25;
+    font-weight: 500;
+    word-spacing: 0.1em;
+    color: #242424;
+  }
+  @media (min-width: 768px) {
+    .card-list h2.row-title { font-size: 1.875rem; }
+  }
+  .card-list p.row-desc {
+    margin-top: 1rem !important;
+    font-size: 1rem !important;
+    color: #4b5563;
+    line-height: 1.7;
+    max-width: 65ch;
+  }
+  .read-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.25rem;
+    padding: 0.4rem 0.85rem;
+    border-radius: 0.375rem;
+    background: #f3f4f6;
+    color: #374151 !important;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-decoration: none !important;
+    transition: background-color 150ms ease, color 150ms ease;
+  }
+  .read-button:hover { background: #e5e7eb; color: #1f2937 !important; }
+</style>

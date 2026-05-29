@@ -8,6 +8,7 @@ const wikiSchema = z.object({
   draft: z.boolean().default(false),
   status: z.string().optional(),
   date: z.coerce.date().optional(),
+  order: z.number().optional(),
 });
 
 const makeCollection = (folder: string) =>
@@ -17,6 +18,10 @@ const makeCollection = (folder: string) =>
   });
 
 export const collections = {
+  method: makeCollection('method'),
+  services: makeCollection('services'),
+  'case-studies': makeCollection('case-studies'),
+  audiences: makeCollection('audiences'),
   skills: makeCollection('skills'),
   projects: makeCollection('projects'),
   decisions: makeCollection('decisions'),

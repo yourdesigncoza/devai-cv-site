@@ -196,28 +196,36 @@ const articleSchema = type === 'article'
       </div>
 
       <nav class="flex-1 overflow-y-auto px-3 py-5">
-        <div class="px-3 text-[10px] font-semibold uppercase tracking-widest text-gray-500">Browse</div>
-        <ul class="mt-2 space-y-1">
+        <ul class="mt-1 space-y-1">
           <li><a href="/" class="block px-3 py-2 rounded-md text-sm font-medium text-[#242424] hover:bg-gray-100 transition-colors">Home</a></li>
-          <li><a href="/skills" class="block px-3 py-2 rounded-md text-sm font-medium text-[#242424] hover:bg-gray-100 transition-colors">Skills</a></li>
-          <li><a href="/projects" class="block px-3 py-2 rounded-md text-sm font-medium text-[#242424] hover:bg-gray-100 transition-colors">Projects</a></li>
-          <li><a href="/decisions" class="block px-3 py-2 rounded-md text-sm font-medium text-[#242424] hover:bg-gray-100 transition-colors">Decisions</a></li>
-          <li><a href="/playbooks" class="block px-3 py-2 rounded-md text-sm font-medium text-[#242424] hover:bg-gray-100 transition-colors">Playbooks</a></li>
+          <li><a href="/method" class="block px-3 py-2 rounded-md text-sm font-medium text-[#242424] hover:bg-gray-100 transition-colors">The Method</a></li>
+          <li><a href="/services" class="block px-3 py-2 rounded-md text-sm font-medium text-[#242424] hover:bg-gray-100 transition-colors">Services</a></li>
+          <li><a href="/case-studies" class="block px-3 py-2 rounded-md text-sm font-medium text-[#242424] hover:bg-gray-100 transition-colors">Case studies</a></li>
         </ul>
 
-        <div class="mt-6 px-3 text-[10px] font-semibold uppercase tracking-widest text-gray-500">Wiki</div>
+        <div class="mt-6 px-3 text-[10px] font-semibold uppercase tracking-widest text-gray-500">Who I help</div>
         <ul class="mt-2 space-y-1">
+          <li><a href="/audiences/business-owners" class="block px-3 py-2 rounded-md text-sm font-medium text-[#242424] hover:bg-gray-100 transition-colors">For business owners</a></li>
+          <li><a href="/audiences/agencies" class="block px-3 py-2 rounded-md text-sm font-medium text-[#242424] hover:bg-gray-100 transition-colors">For agencies</a></li>
+          <li><a href="/audiences/investors" class="block px-3 py-2 rounded-md text-sm font-medium text-[#242424] hover:bg-gray-100 transition-colors">For investors</a></li>
+        </ul>
+
+        <div class="mt-6 px-3 text-[10px] font-semibold uppercase tracking-widest text-gray-500">Writing</div>
+        <ul class="mt-2 space-y-1">
+          <li><a href="/decisions" class="block px-3 py-2 rounded-md text-sm font-medium text-[#242424] hover:bg-gray-100 transition-colors">Decisions</a></li>
+          <li><a href="/playbooks" class="block px-3 py-2 rounded-md text-sm font-medium text-[#242424] hover:bg-gray-100 transition-colors">Playbooks</a></li>
           <li><a href="/notes" class="block px-3 py-2 rounded-md text-sm font-medium text-[#242424] hover:bg-gray-100 transition-colors">Notes</a></li>
           <li><a href="/influences" class="block px-3 py-2 rounded-md text-sm font-medium text-[#242424] hover:bg-gray-100 transition-colors">Influences</a></li>
           <li><a href="/open-questions" class="block px-3 py-2 rounded-md text-sm font-medium text-[#242424] hover:bg-gray-100 transition-colors">Open questions</a></li>
         </ul>
 
-        <div class="mt-6 px-3 text-[10px] font-semibold uppercase tracking-widest text-gray-500">About</div>
+        <div class="mt-6 px-3 text-[10px] font-semibold uppercase tracking-widest text-gray-500">More</div>
         <ul class="mt-2 space-y-1">
+          <li><a href="/skills" class="block px-3 py-2 rounded-md text-sm font-medium text-[#242424] hover:bg-gray-100 transition-colors">Skills</a></li>
+          <li><a href="/projects" class="block px-3 py-2 rounded-md text-sm font-medium text-[#242424] hover:bg-gray-100 transition-colors">Projects</a></li>
           <li><a href="/about" class="block px-3 py-2 rounded-md text-sm font-medium text-[#242424] hover:bg-gray-100 transition-colors">About</a></li>
           <li><a href="/about/cover-letter" class="block px-3 py-2 rounded-md text-sm font-medium text-[#242424] hover:bg-gray-100 transition-colors">Cover letter</a></li>
-          <li><a href="/about/trading" class="block px-3 py-2 rounded-md text-sm font-medium text-[#242424] hover:bg-gray-100 transition-colors">Trading</a></li>
-          <li><a href="/about/clients" class="block px-3 py-2 rounded-md text-sm font-medium text-[#242424] hover:bg-gray-100 transition-colors">Clients &amp; collaborators</a></li>
+          <li><a href="mailto:info@devai.co.za" class="block px-3 py-2 rounded-md text-sm font-medium text-[#242424] hover:bg-gray-100 transition-colors">Contact</a></li>
         </ul>
       </nav>
 
@@ -252,6 +260,10 @@ const articleSchema = type === 'article'
         <svg id="graph-svg" class="w-full h-full block"></svg>
         <div class="absolute bottom-3 left-3 right-3 flex flex-wrap gap-x-3 gap-y-1 text-[10px] font-mono uppercase tracking-widest text-gray-500 pointer-events-none">
           <span class="inline-flex items-center gap-1.5"><span class="inline-block w-2 h-2 rounded-full" style="background:#2d5bff"></span>home</span>
+          <span class="inline-flex items-center gap-1.5"><span class="inline-block w-2 h-2 rounded-full" style="background:#0d9488"></span>method</span>
+          <span class="inline-flex items-center gap-1.5"><span class="inline-block w-2 h-2 rounded-full" style="background:#0284c7"></span>services</span>
+          <span class="inline-flex items-center gap-1.5"><span class="inline-block w-2 h-2 rounded-full" style="background:#16a34a"></span>case-studies</span>
+          <span class="inline-flex items-center gap-1.5"><span class="inline-block w-2 h-2 rounded-full" style="background:#db2777"></span>audiences</span>
           <span class="inline-flex items-center gap-1.5"><span class="inline-block w-2 h-2 rounded-full" style="background:#4f46e5"></span>skills</span>
           <span class="inline-flex items-center gap-1.5"><span class="inline-block w-2 h-2 rounded-full" style="background:#059669"></span>projects</span>
           <span class="inline-flex items-center gap-1.5"><span class="inline-block w-2 h-2 rounded-full" style="background:#d97706"></span>decisions</span>
@@ -272,6 +284,10 @@ const articleSchema = type === 'article'
 
       const COLORS: Record<string, string> = {
         home: '#2d5bff',
+        method: '#0d9488',
+        services: '#0284c7',
+        'case-studies': '#16a34a',
+        audiences: '#db2777',
         skills: '#4f46e5',
         projects: '#059669',
         decisions: '#d97706',
