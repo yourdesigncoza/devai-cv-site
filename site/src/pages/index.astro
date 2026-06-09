@@ -2,6 +2,8 @@
 import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import profilePhoto from '../content/about/profile.jpg';
+import spendsiloHero from '../content/projects/spendsilo-hero.png';
+import magicCameraHero from '../content/projects/magic-camera-hero.png';
 import edenfintechScannerHero from '../content/projects/edenfintech-scanner-hero.png';
 import edenfintechHero from '../content/projects/edenfintech-hero.png';
 import jobabroadHero from '../content/projects/jobabroad-hero.png';
@@ -10,6 +12,18 @@ import wecozaHero from '../content/projects/wecoza-hero.png';
 import yourdesignHero from '../content/projects/yourdesign-hero.png';
 
 const projects = [
+  {
+    href: '/projects/spendsilo',
+    img: spendsiloHero,
+    title: 'SpendSilo',
+    desc: 'A PWA invoice scanner. Snap a receipt, a vision model returns it as validated JSON, and nothing auto-approves before review.',
+  },
+  {
+    href: '/projects/magic-camera',
+    img: magicCameraHero,
+    title: 'Magic Camera',
+    desc: 'A child-safe PWA that turns a phone photo into AI art. Installs from the browser, no app store, no account.',
+  },
   {
     href: '/projects/edenfintech-scanner-python',
     img: edenfintechScannerHero,

@@ -65,6 +65,28 @@ In many ways [EdenFintech](https://edenfintech.com/) is a return to the beginnin
 <div class="project-cards">
 
 <div class="project-card">
+<a class="project-card-link" href="projects/spendsilo">
+<span class="project-card-thumb"><img src="projects/spendsilo-hero.png" alt="" loading="lazy" /></span>
+<span class="project-card-body">
+<span class="project-card-title">SpendSilo</span>
+<span class="project-card-desc">A PWA invoice scanner. Snap a receipt, a vision model returns it as validated JSON, and nothing auto-approves before review.</span>
+<span class="project-card-cta">Read more →</span>
+</span>
+</a>
+</div>
+
+<div class="project-card">
+<a class="project-card-link" href="projects/magic-camera">
+<span class="project-card-thumb"><img src="projects/magic-camera-hero.png" alt="" loading="lazy" /></span>
+<span class="project-card-body">
+<span class="project-card-title">Magic Camera</span>
+<span class="project-card-desc">A child-safe PWA that turns a phone photo into AI art. Installs from the browser, no app store, no account.</span>
+<span class="project-card-cta">Read more →</span>
+</span>
+</a>
+</div>
+
+<div class="project-card">
 <a class="project-card-link" href="projects/edenfintech-scanner-python">
 <span class="project-card-thumb"><img src="projects/edenfintech-scanner-hero.png" alt="" loading="lazy" /></span>
 <span class="project-card-body">
