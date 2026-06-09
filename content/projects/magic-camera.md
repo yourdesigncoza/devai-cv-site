@@ -26,6 +26,8 @@ There is no typing anywhere. You cannot hand a small child a free-text prompt bo
 
 It is a real installable app from the browser. It goes on the home screen, opens full-screen in portrait, and the gallery still works with no signal. The kind of thing that used to need a store listing and a download, running off a URL instead.
 
+![The Magic Camera home screen: one big Take Photo button, a gallery, and Add to Home Screen](magic-camera-home.png)
+
 ## How the snap-to-art loop works
 
 1. The child taps the camera button. The app asks for the camera, or falls back to picking a photo if permission is refused.
@@ -34,6 +36,8 @@ It is a real installable app from the browser. It goes on the home screen, opens
 4. On the server, the chosen style is wrapped inside a fixed child-safety instruction (no horror, weapons, or adult themes) and sent to OpenAI's image-edit model with the original photo as the source.
 5. "Surprise Me" adds a step: a vision model looks at the actual photo and invents one silly, safe idea, then that idea runs through the same image-edit call. The child never sees the prompt.
 6. The new image comes back, gets saved to a private gallery and cached on the device, and appears on screen. The child can share it, save it, or turn it into a phone wallpaper.
+
+![A finished Magic Camera result with Share, Download, and Delete buttons](magic-camera-result.png)
 
 ## The safety and control layer
 
