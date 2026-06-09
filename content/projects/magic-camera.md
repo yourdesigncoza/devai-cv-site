@@ -20,6 +20,8 @@ status: active
 
 Magic Camera is the fun half of the same experiment behind [[projects/spendsilo|SpendSilo]]: take an app that would normally be a Play Store download and see whether it can just be a website. This one is built for a four-year-old. You hand over an old phone, the child taps a big camera button, photographs the dog or a toy or their own face, picks a style, and a few seconds later the photo comes back as a superhero, a dinosaur scene, a robot, or a storybook drawing.
 
+![A Magic Camera result: a photo turned into a cartoon superhero on a swing](magic-camera-example.jpg)
+
 There is no typing anywhere. You cannot hand a small child a free-text prompt box, so the whole interface is big preset buttons plus one "Surprise Me" button. The child picks, the phone does the rest. That single constraint, no user-written prompts, drove a lot of the design.
 
 It is a real installable app from the browser. It goes on the home screen, opens full-screen in portrait, and the gallery still works with no signal. The kind of thing that used to need a store listing and a download, running off a URL instead.

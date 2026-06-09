@@ -34,6 +34,8 @@ The part I spent the most time on is not the model call. It is everything that d
 6. A confidence score decides where it lands. Nothing is auto-approved, even at high confidence. Everything waits in a review queue for a person to confirm or correct.
 7. Your phone polls for progress and tells you when each document is done, then links straight to the review screen.
 
+![The SpendSilo dashboard: approved spend, VAT, top supplier, and what is still waiting in the review queue](spendsilo-dashboard.png)
+
 ## Architecture in one breath
 
 Browser shrinks the image → one upload endpoint stores the original and queues the work, then responds → background task straightens and downscales, calls the vision model behind a `json_schema` contract → Zod validates shape, business rules validate the numbers → confidence scoring sets status → row written to Postgres with a full extraction log → the phone polls Supabase for progress, not the original request.
