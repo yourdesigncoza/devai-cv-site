@@ -65,28 +65,6 @@ In many ways [EdenFintech](https://edenfintech.com/) is a return to the beginnin
 <div class="project-cards">
 
 <div class="project-card">
-<a class="project-card-link" href="projects/spendsilo">
-<span class="project-card-thumb"><img src="projects/spendsilo-hero.png" alt="" loading="lazy" /></span>
-<span class="project-card-body">
-<span class="project-card-title">SpendSilo</span>
-<span class="project-card-desc">A PWA invoice scanner. Snap a receipt, a vision model returns it as validated JSON, and nothing auto-approves before review.</span>
-<span class="project-card-cta">Read more →</span>
-</span>
-</a>
-</div>
-
-<div class="project-card">
-<a class="project-card-link" href="projects/magic-camera">
-<span class="project-card-thumb"><img src="projects/magic-camera-hero.png" alt="" loading="lazy" /></span>
-<span class="project-card-body">
-<span class="project-card-title">Magic Camera</span>
-<span class="project-card-desc">A child-safe PWA that turns a phone photo into AI art. Installs from the browser, no app store, no account.</span>
-<span class="project-card-cta">Read more →</span>
-</span>
-</a>
-</div>
-
-<div class="project-card">
 <a class="project-card-link" href="projects/edenfintech-scanner-python">
 <span class="project-card-thumb"><img src="projects/edenfintech-scanner-hero.png" alt="" loading="lazy" /></span>
 <span class="project-card-body">
@@ -109,6 +87,47 @@ In many ways [EdenFintech](https://edenfintech.com/) is a return to the beginnin
 </div>
 
 <div class="project-card">
+<a class="project-card-link" href="projects/wecoza-development">
+<span class="project-card-thumb"><img src="projects/wecoza-hero.png" alt="" loading="lazy" /></span>
+<span class="project-card-body">
+<span class="project-card-title">WeCoza 3.0</span>
+<span class="project-card-desc">Long-running WordPress and Postgres client engagement for a South African adult-education training provider.</span>
+<span class="project-card-cta">Read more →</span>
+</span>
+</a>
+</div>
+
+</div>
+
+## Proof of work
+
+Shipped projects I point to as evidence. Each one is live and built end to end.
+
+<div class="project-cards">
+
+<div class="project-card">
+<a class="project-card-link" href="projects/spendsilo">
+<span class="project-card-thumb"><img src="projects/spendsilo-hero.png" alt="" loading="lazy" /></span>
+<span class="project-card-body">
+<span class="project-card-title">SpendSilo</span>
+<span class="project-card-desc">A PWA invoice scanner. Snap a receipt, a vision model returns it as validated JSON, and nothing auto-approves before review.</span>
+<span class="project-card-cta">Read more →</span>
+</span>
+</a>
+</div>
+
+<div class="project-card">
+<a class="project-card-link" href="projects/magic-camera">
+<span class="project-card-thumb"><img src="projects/magic-camera-hero.png" alt="" loading="lazy" /></span>
+<span class="project-card-body">
+<span class="project-card-title">Magic Camera</span>
+<span class="project-card-desc">A child-safe PWA that turns a phone photo into AI art. Installs from the browser, no app store, no account.</span>
+<span class="project-card-cta">Read more →</span>
+</span>
+</a>
+</div>
+
+<div class="project-card">
 <a class="project-card-link" href="projects/jobabroad-co-za">
 <span class="project-card-thumb"><img src="projects/jobabroad-hero.png" alt="" loading="lazy" /></span>
 <span class="project-card-body">
@@ -125,17 +144,6 @@ In many ways [EdenFintech](https://edenfintech.com/) is a return to the beginnin
 <span class="project-card-body">
 <span class="project-card-title">SignalTrace</span>
 <span class="project-card-desc">A multi-wiki research site over thirteen OSINT and financial-research wikis. Active at signaltrace.wiki.</span>
-<span class="project-card-cta">Read more →</span>
-</span>
-</a>
-</div>
-
-<div class="project-card">
-<a class="project-card-link" href="projects/wecoza-development">
-<span class="project-card-thumb"><img src="projects/wecoza-hero.png" alt="" loading="lazy" /></span>
-<span class="project-card-body">
-<span class="project-card-title">WeCoza 3.0</span>
-<span class="project-card-desc">Long-running WordPress and Postgres client engagement for a South African adult-education training provider.</span>
 <span class="project-card-cta">Read more →</span>
 </span>
 </a>
