@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import profilePhoto from '../content/about/profile.jpg';
+import saWillsHero from '../content/projects/sa-wills-database-hero.png';
 import spendsiloHero from '../content/projects/spendsilo-hero.png';
 import magicCameraHero from '../content/projects/magic-camera-hero.png';
 import edenfintechScannerHero from '../content/projects/edenfintech-scanner-hero.png';
@@ -12,6 +13,12 @@ import wecozaHero from '../content/projects/wecoza-hero.png';
 import yourdesignHero from '../content/projects/yourdesign-hero.png';
 
 const building = [
+  {
+    href: '/projects/sa-wills-database',
+    img: saWillsHero,
+    title: 'SA Wills Database',
+    desc: 'A POPIA-resident estate-planning platform for South Africa. Deterministic legal engine, with the LLM kept behind an in-country de-identification boundary.',
+  },
   {
     href: '/projects/edenfintech-scanner-python',
     img: edenfintechScannerHero,
