@@ -2,11 +2,38 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-Personal knowledge wiki for **John Montgomery**, founder of **EdenFintech** ([edenfintech.com](https://edenfintech.com)). The site at `devai.co.za` (title: **DevAi**) is the working surface where the thinking behind EdenFintech is captured: notes, decisions, playbooks, projects. Built on Astro 6 with MDX and Tailwind, deployed to Vercel via `@astrojs/vercel`. **YourDesign** is the legacy brand from 20+ years of WordPress freelance work, referenced only in past-engagement context. (`cv.yourdesign.co.za` is deprecated.)
+Personal knowledge wiki for **John Montgomery**, founder of **EdenFintech** ([edenfintech.com](https://edenfintech.com)). The site at `devai.co.za` (title: **DevAi**) is being narrowed to EdenFintech and the quant work; see the Identity rule below, which changed on 2026-09-20. Built on Astro 6 with MDX and Tailwind, deployed to Vercel via `@astrojs/vercel`. (`cv.yourdesign.co.za` is deprecated and no longer resolves: it has no DNS record as of 2026-09-20.)
 
 ## Identity rule
 
-**John Montgomery** is the person. **EdenFintech** (edenfintech.com) is the business and current focus; lead positioning material foregrounds it. **DevAi** (devai.co.za) is the working knowledge wiki where the thinking behind EdenFintech is captured. **YourDesign** is the legacy brand from 20+ years of WordPress freelance work; reference it only when describing past engagements, never as current positioning.
+**Changed 2026-09-20. The previous version of this rule said the opposite and is no longer
+true.** It read: "YourDesign is the legacy brand from 20+ years of WordPress freelance work;
+reference it only when describing past engagements, never as current positioning."
+
+**John Montgomery** is the person, and he has two current identities, not one current and
+one legacy.
+
+- **YourDesign** (yourdesign.co.za) is the **current commercial positioning**: custom
+  business systems, API and systems integration, and custom web applications, sold direct to
+  South African businesses. It is the inbound acquisition asset and it is where the client
+  work is marketed. It is not legacy and it is not WordPress-only.
+- **EdenFintech** (edenfintech.com) is the quant business, and **DevAi** (devai.co.za) is its
+  working surface. Both stay.
+
+**devai.co.za is being narrowed to the quant and EdenFintech material.** Of 67 content pages,
+about 57 move to yourdesign.co.za and roughly 10 stay. The development, client, method,
+decisions and playbook material is going; the trading, scanner, backtesting, investor and
+quant-engineering material is staying. The full page-by-page mapping, the duplicates that
+301 rather than move, and the reasoning are in
+`../yourdesigncoza-marketing/seo-content/03-devai-split.md`.
+
+**Do not write new development, client-work or general-method content into this repo.** It
+belongs on yourdesign.co.za now. Quant and EdenFintech material still belongs here.
+
+Why it changed: two weeks of outbound produced no traction, an old client's return bought
+about two months of runway, and the work moved to inbound content and SEO on
+yourdesign.co.za. `../yourdesigncoza-marketing/AGENCY-GOAL.md` records the decision and
+`seo-content/01-audit.md` records the evidence.
 
 Brand spelling (canonical): domain form `edenfintech.com`, prose form `EdenFintech` (capital E only; not "EdenFinTech" or "Eden Fintech").
 
