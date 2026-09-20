@@ -7,7 +7,7 @@ date: 2026-05-29
 order: 2
 ---
 
-JobAbroad is a paid, members-only portal for South Africans planning to work overseas. It takes the same research method behind [[method/index|my living research graphs]] and wires it into a self-service product: a member can search the vault and get an answer with citations, run a readiness assessment, pay R495 for a generated PDF report, and talk to an AI coach that works through a personal journey with them. The research is the asset. The portal is how a reader pays for access to it and acts on it without me in the loop.
+JobAbroad is a paid, members-only portal for South Africans planning to work overseas. It takes the same research method behind [my living research graphs](https://yourdesign.co.za/notes/living-research-graphs/) and wires it into a self-service product: a member can search the vault and get an answer with citations, run a readiness assessment, pay R495 for a generated PDF report, and talk to an AI coach that works through a personal journey with them. The research is the asset. The portal is how a reader pays for access to it and acts on it without me in the loop.
 
 ## The problem
 
@@ -29,10 +29,10 @@ Two pieces of concurrency control deserve a mention because they are the kind of
 
 ## What it proves
 
-This is [[method/index|the method]] productised. SignalTrace publishes a research vault as a set of wikis; JobAbroad takes the same kind of vault and turns it into a paid, members-only product with retrieval, scoring, and a coach on top. The two are the same wedge from different angles, so it is worth reading [[case-studies/signaltrace|SignalTrace]] alongside this.
+This is [the method](https://yourdesign.co.za/notes/living-research-graphs/) productised. SignalTrace publishes a research vault as a set of wikis; JobAbroad takes the same kind of vault and turns it into a paid, members-only product with retrieval, scoring, and a coach on top. The two are the same wedge from different angles, so it is worth reading [[case-studies/signaltrace|SignalTrace]] alongside this.
 
 The build is proof of two skills. The retrieval, the cited-answer contract, the coach's structured outputs and monotonic milestone rule, and the prompt-injection handling are [[skills/ai-agentic-systems|AI / agentic systems]] work: language models kept on rails by code, not by hope. The async webhook, the idempotent tier flip, the Postgres rate limiter, and the `SKIP LOCKED` cron are [[skills/python-services-data-pipelines|Python services and data pipelines]] work in a TypeScript surface: the same discipline about concurrency, idempotency, and doing slow work off the response path.
 
 ## Work with me
 
-If you have research worth charging for and need it wired into a portal people can use on their own, [email me at info@devai.co.za](mailto:info@devai.co.za) and tell me what you are building. If you want the thinking behind it first, read [[method/index|the method]].
+If you have research worth charging for and need it wired into a portal people can use on their own, [email me at info@devai.co.za](mailto:info@devai.co.za) and tell me what you are building. If you want the thinking behind it first, read [the method](https://yourdesign.co.za/notes/living-research-graphs/).

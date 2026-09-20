@@ -23,7 +23,7 @@ In parallel, I maintain [[projects/wecoza-development|WeCoza 3.0]] for an educat
 - Remote, UTC+2 (South African Standard Time).
 - Comfortable with long-running client relationships; current WeCoza engagement has a 14-month paper trail of meetings, PDFs, and PRDs.
 - Bias toward linear, reviewable code and fewer dependencies. Stdlib-only where it fits.
-- Research projects get honest postmortems when they don't pan out. See [[decisions/publishing-negative-results|Why I publish negative results]].
+- Research projects get honest postmortems when they don't pan out. See [Why I publish negative results](https://yourdesign.co.za/notes/publishing-negative-results/).
 
 ## Trading
 

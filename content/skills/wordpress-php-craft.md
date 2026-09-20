@@ -24,12 +24,12 @@ A lot of the value in this kind of work isn't the framework. It's the domain mod
 
 ## Decisions that shaped how I do it
 
-- [[decisions/postgres-alongside-wordpress|Why Postgres alongside WordPress, not instead of it]]: invariants in plpgsql; operational data that should survive the CMS.
+- [Why Postgres alongside WordPress, not instead of it](https://yourdesign.co.za/notes/postgres-alongside-wordpress/): invariants in plpgsql; operational data that should survive the CMS.
 
 ## Playbooks I use here
 
-- [[playbooks/playwright-wordpress|Playwright E2E tests for a WordPress plugin]]: session caching, destructive-action defence at two layers, shortcode-map as the URL registry; the shape I run against WeCoza.
-- [[playbooks/client-friendly-translations|Translating technical fixes for non-technical clients]]: two paragraphs, zero jargon, a commit SHA, a Trello tag; the template behind 14 months of WeCoza updates.
+- [Playwright E2E tests for a WordPress plugin](https://yourdesign.co.za/notes/playwright-wordpress/): session caching, destructive-action defence at two layers, shortcode-map as the URL registry; the shape I run against WeCoza.
+- [Translating technical fixes for non-technical clients](https://yourdesign.co.za/notes/client-friendly-translations/): two paragraphs, zero jargon, a commit SHA, a Trello tag; the template behind 14 months of WeCoza updates.
 
 ## What I'm usually asked to do
 

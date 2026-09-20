@@ -16,9 +16,9 @@ Prompt techniques are getting cheaper, stronger base models need less prompting.
 
 Harness over prompt. The decisions and playbooks already on this site embody that lean:
 
-- [[decisions/llms-behind-typed-adapters|Why I keep LLMs behind typed adapters]], structural, outlives prompt drift.
-- [[playbooks/file-driven-planning|A file-driven planning framework for AI-assisted coding]], each phase reads and writes a file, crash-resumable.
-- [[playbooks/adversarial-ai-review|Adversarial review via a second AI model]], a second model with different blindspots, priced in as a step.
+- [Why I keep LLMs behind typed adapters](https://yourdesign.co.za/notes/llms-behind-typed-adapters/), structural, outlives prompt drift.
+- [A file-driven planning framework for AI-assisted coding](https://yourdesign.co.za/notes/file-driven-planning/), each phase reads and writes a file, crash-resumable.
+- [Adversarial review via a second AI model](https://yourdesign.co.za/notes/adversarial-ai-review/), a second model with different blindspots, priced in as a step.
 
 The bet is that harness pays off more on maintenance than prompt-craft does, because maintenance is when the model, the codebase, and the team have all changed.
 

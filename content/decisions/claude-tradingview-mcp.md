@@ -58,5 +58,5 @@ Paper trading is the only safe deployment posture for any strategy generated thr
 
 - [[skills/ai-agentic-systems|AI / Agentic Systems]]: the broader question of what LLM tools can and cannot do in production pipelines.
 - [[projects/edenfintech-scanner-python|edenfintech-scanner-python]]: adversarial AI review stages as a first-class component, specifically to avoid conflating "output was generated" with "output is valid."
-- [[playbooks/adversarial-ai-review|Adversarial AI review playbook]]: the process for putting pressure on AI-generated analysis before treating it as correct.
-- [[decisions/llms-behind-typed-adapters|LLMs behind typed adapters]]: the same instinct applied to architecture, not trading.
+- [Adversarial AI review playbook](https://yourdesign.co.za/notes/adversarial-ai-review/): the process for putting pressure on AI-generated analysis before treating it as correct.
+- [LLMs behind typed adapters](https://yourdesign.co.za/notes/llms-behind-typed-adapters/): the same instinct applied to architecture, not trading.

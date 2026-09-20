@@ -34,7 +34,7 @@ The search and answer layer is the same pattern running in [[case-studies/jobabr
 - A paid AI coach runs on the same graph, with daily rate limits, rolling access, and a constraint that lets it move a milestone forward but never quietly mark it done.
 - Reports generate asynchronously. The payment webhook acknowledges fast, then scoring, the LLM narrative, and the PDF render happen off the response path while the dashboard polls for status.
 
-The research vault behind a portal like this is built with [[method/index|the method]]: an evidence-graded knowledge graph where every claim carries a confirmed, alleged, or rumoured grade. That grading is what makes the cited answers worth trusting, rather than confident text with nothing behind it.
+The research vault behind a portal like this is built with [the method](https://yourdesign.co.za/notes/living-research-graphs/): an evidence-graded knowledge graph where every claim carries a confirmed, alleged, or rumoured grade. That grading is what makes the cited answers worth trusting, rather than confident text with nothing behind it.
 
 ## Proof
 
@@ -42,7 +42,7 @@ The research vault behind a portal like this is built with [[method/index|the me
 
 **[[case-studies/signaltrace|SignalTrace]]** is the method published. Thirteen independent research wikis, 912 markdown files, more than 780 entity pages each carrying an evidence grade, assembled by a custom multi-wiki build. It is the same research discipline, shown in the open.
 
-**[[method/index|The method]]** is the engine behind both: how the research graph grades every claim, surfaces its own blind spots, and stops instead of inventing more. A portal is that graph, made into a product people can use.
+**[The method](https://yourdesign.co.za/notes/living-research-graphs/)** is the engine behind both: how the research graph grades every claim, surfaces its own blind spots, and stops instead of inventing more. A portal is that graph, made into a product people can use.
 
 This work draws on [[skills/ai-agentic-systems|AI / agentic systems]]: RAG search, typed LLM outputs, prompt-injection defence, and the Postgres plumbing that holds it together.
 

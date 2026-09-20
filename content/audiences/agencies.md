@@ -27,7 +27,7 @@ In all three modes the work can be white-label. The client sees your agency. And
 
 The phrase on the brief is usually vague. "Add AI." "A chatbot for our docs." "Make it intelligent." My job is to turn that into an architecture that survives contact with real users:
 
-- **Research graphs.** A navigable, evidence-graded knowledge graph built from a topic and a set of sources, where every claim is marked confirmed, alleged, or rumoured. This is [[method/index|the method]] behind SignalTrace and JobAbroad. When a client wants "research" or "intelligence," this is what that should actually mean.
+- **Research graphs.** A navigable, evidence-graded knowledge graph built from a topic and a set of sources, where every claim is marked confirmed, alleged, or rumoured. This is [the method](https://yourdesign.co.za/notes/living-research-graphs/) behind SignalTrace and JobAbroad. When a client wants "research" or "intelligence," this is what that should actually mean.
 - **RAG knowledge portals.** Semantic search over a client's content that returns cited answers, not made-up ones. The same embedding model for indexing and query so the results match, pgvector search in Postgres, and a two-step search-then-answer so the model only speaks from retrieved evidence.
 - **Typed agent pipelines.** Multi-step LLM systems where the model runs behind type-enforced contracts, not hopeful prompts. Structured JSON outputs validated against a schema, prompt-injection guards on anything user-facing, and constraints in code that the model cannot talk its way around.
 - **Postgres-backed platforms.** The database as the spine: real prepared statements, business rules enforced with constraints and triggers, atomic concurrency so two requests cannot corrupt the same row, and audit trails as a first-class feature rather than an afterthought.
@@ -38,7 +38,7 @@ A "chatbot idea" becomes a system with boundaries you can point to and explain. 
 
 - [[case-studies/jobabroad|JobAbroad]]: a research vault wired into a paid, members-only portal. RAG search with cited answers, readiness scoring, an AI coach, Paystack billing with idempotent webhooks. A working business, not a demo.
 - [[case-studies/edenfintech-scanner|the scanner]]: an LLM analysis pipeline behind a genuinely type-enforced information barrier, with a full audit trail of every model call and hardening gates that catch the model's bad habits. This is what "typed agent pipeline" looks like in production.
-- [[method/index|the method]]: how I build research graphs that grade their own evidence, find their own blind spots, and stop instead of inventing more. The thinking behind the work, with the real algorithms shown.
+- [the method](https://yourdesign.co.za/notes/living-research-graphs/): how I build research graphs that grade their own evidence, find their own blind spots, and stop instead of inventing more. The thinking behind the work, with the real algorithms shown.
 - [[services/ai-for-agencies|AI for agencies]]: the service page, with the three modes and what each one delivers.
 
 ## [JOHN: short stance paragraph in your voice]

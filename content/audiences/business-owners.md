@@ -28,7 +28,7 @@ A tool you cannot trust is a tool nobody uses. So the build is designed for trus
 - **Typed outputs, so it cannot silently make things up.** The model's output is forced through a defined structure before anything acts on it. If it returns something that does not fit, the build rejects it rather than passing a confident-sounding error downstream. The guardrails live in the code, not in a hopeful instruction.
 - **Logging and audit trails.** Every meaningful action the tool takes is recorded: what was asked, what it answered, what it changed. When you need to know why it did something, the answer is in the log, not a guess.
 
-This is the method I use on every build. You can read how it works in detail on [[method/index|the method]].
+This is the method I use on every build. You can read how it works in detail on [the method](https://yourdesign.co.za/notes/living-research-graphs/).
 
 ## Proof
 

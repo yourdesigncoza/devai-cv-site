@@ -45,4 +45,4 @@ Gradio textbox → 21-pattern regex pre-filter (±1 line context) → OpenAI-SDK
 
 ## Decisions worth a deeper read
 
-- [[decisions/llms-behind-typed-adapters|Why I keep LLMs behind typed adapters]]
+- [Why I keep LLMs behind typed adapters](https://yourdesign.co.za/notes/llms-behind-typed-adapters/)

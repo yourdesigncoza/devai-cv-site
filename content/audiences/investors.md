@@ -32,9 +32,9 @@ The scanner produces per-ticker research and a weekly watchlist. It does not bac
 ## Proof
 
 - [[case-studies/edenfintech-scanner|The EdenFintech scanner]]: the full system, with the typed barrier, the multi-role review, the audit trail, and the post-mortems.
-- [[decisions/publishing-negative-results|Publishing negative results]]: why the failures stay in the record, and what that costs and buys.
+- [Publishing negative results](https://yourdesign.co.za/notes/publishing-negative-results/): why the failures stay in the record, and what that costs and buys.
 - [[skills/quant-engineering|Quant Engineering]]: the underlying skill, in detail.
-- [[method/index|The method]]: how the same epistemic discipline produces research graphs you can trust, with every claim graded and every gap visible.
+- [The method](https://yourdesign.co.za/notes/living-research-graphs/): how the same epistemic discipline produces research graphs you can trust, with every claim graded and every gap visible.
 
 The free weekly watchlist runs on [edenfintech.com](https://edenfintech.com), so you can read the output before you talk to me.
 

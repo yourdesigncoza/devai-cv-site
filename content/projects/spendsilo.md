@@ -56,6 +56,6 @@ Browser shrinks the image → one upload endpoint stores the original and queues
 
 ## Decisions worth a deeper read
 
-- [[decisions/llms-behind-typed-adapters|Why I keep LLMs behind typed adapters]]
+- [Why I keep LLMs behind typed adapters](https://yourdesign.co.za/notes/llms-behind-typed-adapters/)
 
 Sibling experiment from the same week: [[projects/magic-camera|Magic Camera]].

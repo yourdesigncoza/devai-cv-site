@@ -43,4 +43,4 @@ Pine source → bar-by-bar Python port (`pine_math.py`, `signal.pine`, `evaluate
 
 ## Decisions worth a deeper read
 
-- [[decisions/publishing-negative-results|Why I publish negative results]]
+- [Why I publish negative results](https://yourdesign.co.za/notes/publishing-negative-results/)

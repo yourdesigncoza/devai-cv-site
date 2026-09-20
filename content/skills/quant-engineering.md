@@ -26,7 +26,7 @@ I'm more comfortable building on fundamentals and structured data than on pure p
 
 ## Decisions that shaped how I do it
 
-- [[decisions/publishing-negative-results|Why I publish negative results]]: postmortems as deliverables, on apes-signal and InsiderSignalResearch.
+- [Why I publish negative results](https://yourdesign.co.za/notes/publishing-negative-results/): postmortems as deliverables, on apes-signal and InsiderSignalResearch.
 - [[decisions/stdlib-over-pandas-for-the-scanner|Why stdlib over pandas for the scanner core]]: deps as a drift surface; dict/list operations when the dataset is small enough.
 
 ## What I'm usually asked to do

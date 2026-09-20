@@ -52,4 +52,4 @@ The pipeline has been used in anger, not just built. There are 22 numbered `batc
 ## Decisions worth a deeper read
 
 - [[decisions/stdlib-over-pandas-for-the-scanner|Why stdlib over pandas for the scanner core]]
-- [[decisions/llms-behind-typed-adapters|Why I keep LLMs behind typed adapters]]
+- [Why I keep LLMs behind typed adapters](https://yourdesign.co.za/notes/llms-behind-typed-adapters/)

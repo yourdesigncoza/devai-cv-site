@@ -25,7 +25,7 @@ The plugin talks to Postgres through a PDO connection, not `$wpdb`. The rational
 
 The schema is maintained as a hand-written DBML file so the client can read it without SQL. The repo also carries a 14-month paper trail in `mario/` and `sheets/`, meeting notes, PDFs, ODS spreadsheets, hand-written markdown requirements, PRDs in ordinary business language. The pacing of the codebase matches the pacing of the business: not ticket-driven, but meeting-driven.
 
-See [[decisions/postgres-alongside-wordpress|Why Postgres alongside WordPress, not instead of it]] for the longer version.
+See [Why Postgres alongside WordPress, not instead of it](https://yourdesign.co.za/notes/postgres-alongside-wordpress/) for the longer version.
 
 ## What will break
 

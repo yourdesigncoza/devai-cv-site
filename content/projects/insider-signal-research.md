@@ -44,4 +44,4 @@ SEC EDGAR → Postgres `insider_data` → enrichment (LLM entity resolution, rol
 
 ## Decisions worth a deeper read
 
-- [[decisions/publishing-negative-results|Why I publish negative results]]
+- [Why I publish negative results](https://yourdesign.co.za/notes/publishing-negative-results/)

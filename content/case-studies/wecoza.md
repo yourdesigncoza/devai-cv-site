@@ -39,9 +39,9 @@ One honest caveat: the excessive-hours report that flags learners against their 
 
 ## What it proves
 
-WeCoza is the war-stories piece. It is a real production system carrying a regulated provider's operations, and it shows what I mean when I say I build the harness around the work, not just the surface. The same instinct that grades every claim in [[method/index|the method]] shows up here as constraints and triggers that refuse bad data at the source.
+WeCoza is the war-stories piece. It is a real production system carrying a regulated provider's operations, and it shows what I mean when I say I build the harness around the work, not just the surface. The same instinct that grades every claim in [the method](https://yourdesign.co.za/notes/living-research-graphs/) shows up here as constraints and triggers that refuse bad data at the source.
 
-- The reasoning behind reaching past `$wpdb` to a real database is in [[decisions/postgres-alongside-wordpress|Postgres alongside WordPress]].
+- The reasoning behind reaching past `$wpdb` to a real database is in [Postgres alongside WordPress](https://yourdesign.co.za/notes/postgres-alongside-wordpress/).
 - The WordPress and PHP work itself, a 305-file plugin with a layered architecture and a hand-rolled PDO layer, is [[skills/wordpress-php-craft|WordPress & PHP Craft]].
 - The pattern of putting a typed, validated barrier between a language model and anything it can damage runs through everything I build, here as the SQL sandbox and the PII obfuscation pass.
 

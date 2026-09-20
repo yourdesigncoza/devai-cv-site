@@ -36,7 +36,7 @@ Eight active skills (one deprecated) that automate my own work, under the `ydcoz
 
 Three authored skills do heavier lifting:
 
-- `vault-builder` (11 scripts, ~5,837 lines): the research-graph machine behind [[method/index|the method]]. It turns a topic into an evidence-graded, audited knowledge graph that finds its own blind spots and stops when it has run out of real findings.
+- `vault-builder` (11 scripts, ~5,837 lines): the research-graph machine behind [the method](https://yourdesign.co.za/notes/living-research-graphs/). It turns a topic into an evidence-graded, audited knowledge graph that finds its own blind spots and stops when it has run out of real findings.
 - `infranodus` (6 scripts, ~2,172 lines): text-network analysis (betweenness centrality, community detection, structural-gap detection). It is the engine vault-builder calls to decide what to research next.
 - `graphify` (~1,214 lines): turns any input into a clustered knowledge graph with HTML, JSON, and an audit report.
 
@@ -54,7 +54,7 @@ That is the distinction made concrete. The personal skills automate my workflow.
 
 The quality gates that make my work trustworthy live in code, not in prompts. A planning framework that survives a crash because each phase is a file. A browser wrapper that refuses to exceed a rate cap. A bug-queue worker that knows the project's conventions before it touches anything. When the model changes, or the team changes, or I forget a detail at 2am, the harness still holds.
 
-This is the artifact behind the argument I make in [[method/index|the method]] and in the spoke [[method/build-the-harness-not-just-prompts|build the harness, not just prompts]]: the difference between prompt engineering and AI engineering is whether the rules live in a throwaway message or in something checked in. I think out loud about where that leverage sits long-term in [[open-questions/harness-vs-prompt-engineering|harness vs prompt engineering]].
+This is the artifact behind the argument I make in [the method](https://yourdesign.co.za/notes/living-research-graphs/) and in the spoke [build the harness, not just prompts](https://yourdesign.co.za/notes/build-the-harness-not-just-prompts/): the difference between prompt engineering and AI engineering is whether the rules live in a throwaway message or in something checked in. I think out loud about where that leverage sits long-term in [[open-questions/harness-vs-prompt-engineering|harness vs prompt engineering]].
 
 ## Work with me
 

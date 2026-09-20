@@ -19,7 +19,7 @@ So the question I start from is not "what is the best prompt." It is: when the m
 
 I treat the model as a component behind a contract, the same way you would treat any third-party service you do not control.
 
-**A typed adapter layer so the core never imports an SDK.** The pipeline reaches the model through a typed transport passed in at the edge, not a hard-coded SDK call buried in the logic. In the [[case-studies/edenfintech-scanner|EdenFintech scanner]] the core is stdlib-only and providers are reached through a `Callable[[dict], dict]` transport. Swapping providers, or going offline for a test run, changes one wiring point. It does not ripple through the code. I wrote up the reasoning in [[decisions/llms-behind-typed-adapters|why I keep LLMs behind typed adapters]].
+**A typed adapter layer so the core never imports an SDK.** The pipeline reaches the model through a typed transport passed in at the edge, not a hard-coded SDK call buried in the logic. In the [[case-studies/edenfintech-scanner|EdenFintech scanner]] the core is stdlib-only and providers are reached through a `Callable[[dict], dict]` transport. Swapping providers, or going offline for a test run, changes one wiring point. It does not ripple through the code. I wrote up the reasoning in [why I keep LLMs behind typed adapters](https://yourdesign.co.za/notes/llms-behind-typed-adapters/).
 
 **Type-enforced information barriers.** Some stages must not see certain data, and a sentence in the system prompt is not a guarantee. In the scanner, the epistemic reviewer takes its input through `EpistemicReviewInput`, a frozen dataclass that excludes scores, probabilities, and valuations by construction. The reviewer cannot see the scorecard because the type system will not pass it. Prompts drift. A frozen dataclass does not.
 
@@ -40,8 +40,8 @@ These mechanisms are running in live work, not slideware.
 
 - [[case-studies/edenfintech-scanner|EdenFintech scanner]]: a multi-role analysis pipeline behind a type-enforced information barrier, with constrained decoding at every stage and a full audit log of every model call.
 - [[case-studies/jobabroad|JobAbroad]]: Zod-typed model outputs, prompt-injection guards on user content, and the in-code constraint that lets the coach advance a milestone but never close it.
-- [[decisions/llms-behind-typed-adapters|Why I keep LLMs behind typed adapters]]: the position this service comes from, with the adapter and barrier reasoning in full.
-- [[method/llms-behind-typed-contracts|LLMs behind typed contracts]]: the mechanism explained on its own, with the same proofs.
+- [Why I keep LLMs behind typed adapters](https://yourdesign.co.za/notes/llms-behind-typed-adapters/): the position this service comes from, with the adapter and barrier reasoning in full.
+- [LLMs behind typed contracts](https://yourdesign.co.za/notes/llms-behind-typed-contracts/): the mechanism explained on its own, with the same proofs.
 
 ## Work with me
 

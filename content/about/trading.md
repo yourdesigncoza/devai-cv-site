@@ -9,7 +9,7 @@ I trade **XAUUSD** (gold / US dollar) full-time. Most of the quant and AI work o
 
 ## Where the trading intersects the engineering
 
-[[projects/apes-signal|apes-signal]] is the clearest example. A TradingView Pine v5 momentum setup I'd been running, ported bar-by-bar to Python and hammered with an iterative ratchet optimiser against **125,000 hourly XAU/USD bars from 2004 to 2025**. The final report says what the data said: the strategy had a ceiling below trading costs. Archived as a negative result rather than quietly shelved. That's the kind of answer I build platforms to get. See [[decisions/publishing-negative-results|Why I publish negative results]].
+[[projects/apes-signal|apes-signal]] is the clearest example. A TradingView Pine v5 momentum setup I'd been running, ported bar-by-bar to Python and hammered with an iterative ratchet optimiser against **125,000 hourly XAU/USD bars from 2004 to 2025**. The final report says what the data said: the strategy had a ceiling below trading costs. Archived as a negative result rather than quietly shelved. That's the kind of answer I build platforms to get. See [Why I publish negative results](https://yourdesign.co.za/notes/publishing-negative-results/).
 
 [[projects/ftr-strategy-backtesting|FTR Strategy Backtester]] runs three systematic strategy families on a shared metrics spine: supply/demand FTR, order-block + trend filter, opening-range breakout. Confidence-adjusted expectancy, walk-forward validation, no-lookahead higher-timeframe bias, MD5-hashed data snapshots. The research platform is the product; the strategies themselves are commodities.
 

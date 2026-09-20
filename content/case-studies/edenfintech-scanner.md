@@ -7,7 +7,7 @@ date: 2026-05-29
 order: 3
 ---
 
-The EdenFintech scanner is a per-ticker equity-research pipeline written in Python. A deterministic core screens and scores each stock with plain arithmetic and no third-party libraries. An LLM analyst panel does the reading and reasoning, but it runs behind a type-enforced barrier that decides, in code, what each role is allowed to see. Every model call is logged in full. The output is the weekly watchlist on [edenfintech.com](https://edenfintech.com). It is the same epistemic discipline as my research-graph [[method/index|method]], pointed at quant research instead of entity research.
+The EdenFintech scanner is a per-ticker equity-research pipeline written in Python. A deterministic core screens and scores each stock with plain arithmetic and no third-party libraries. An LLM analyst panel does the reading and reasoning, but it runs behind a type-enforced barrier that decides, in code, what each role is allowed to see. Every model call is logged in full. The output is the weekly watchlist on [edenfintech.com](https://edenfintech.com). It is the same epistemic discipline as my research-graph [method](https://yourdesign.co.za/notes/living-research-graphs/), pointed at quant research instead of entity research.
 
 ## The problem
 
@@ -21,7 +21,7 @@ In equity research that self-assessment bias is the whole risk. The agent that w
 
 The epistemic reviewer is the role that judges whether the analysis reasoned well, separate from whether the numbers look good. For its judgment to mean anything, it has to be blind to the scores, probabilities, and valuations. I enforce that with the type system, not a prompt.
 
-`EpistemicReviewInput` is a `@dataclass(frozen=True)` with an explicit allowlist of fields. `extract_epistemic_input()` copies only those fields out of the full analysis. `review()` raises `TypeError` if it is handed anything other than that exact frozen type. So the reviewer is provably blind to the scoring: there is no code path that gets a score into its hands. The barrier is checked by the compiler and the runtime, not by the model choosing to behave. This is the same pattern I describe in [[decisions/llms-behind-typed-adapters|Why I keep LLMs behind typed adapters]].
+`EpistemicReviewInput` is a `@dataclass(frozen=True)` with an explicit allowlist of fields. `extract_epistemic_input()` copies only those fields out of the full analysis. `review()` raises `TypeError` if it is handed anything other than that exact frozen type. So the reviewer is provably blind to the scoring: there is no code path that gets a score into its hands. The barrier is checked by the compiler and the runtime, not by the model choosing to behave. This is the same pattern I describe in [Why I keep LLMs behind typed adapters](https://yourdesign.co.za/notes/llms-behind-typed-adapters/).
 
 ### Multi-role review
 
@@ -57,9 +57,9 @@ The repository is 29 modules, about 11,900 source lines, and 18 test files cover
 
 ## What it proves
 
-The scanner is the [[method/index|method]] applied to a different domain. Entity research and quant research have the same failure mode, an AI that is confident and wrong with no way to tell which parts are real, and the same fix: make trust structural. Grade the evidence, constrain the outputs, log everything, and decide in code what the model is allowed to see.
+The scanner is the [method](https://yourdesign.co.za/notes/living-research-graphs/) applied to a different domain. Entity research and quant research have the same failure mode, an AI that is confident and wrong with no way to tell which parts are real, and the same fix: make trust structural. Grade the evidence, constrain the outputs, log everything, and decide in code what the model is allowed to see.
 
-It is concrete proof for the positions in [[decisions/llms-behind-typed-adapters|Why I keep LLMs behind typed adapters]] and [[decisions/stdlib-over-pandas-for-the-scanner|stdlib over pandas]], and it backs the [[skills/quant-engineering|Quant Engineering]] and [[skills/ai-agentic-systems|AI / Agentic Systems]] skill pages with running code rather than claims.
+It is concrete proof for the positions in [Why I keep LLMs behind typed adapters](https://yourdesign.co.za/notes/llms-behind-typed-adapters/) and [[decisions/stdlib-over-pandas-for-the-scanner|stdlib over pandas]], and it backs the [[skills/quant-engineering|Quant Engineering]] and [[skills/ai-agentic-systems|AI / Agentic Systems]] skill pages with running code rather than claims.
 
 ## Work with me
 

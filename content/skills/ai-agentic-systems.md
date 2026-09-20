@@ -26,12 +26,12 @@ Other pieces of the same instinct show up in smaller projects. [[projects/yt-ts|
 
 ## Decisions that shaped how I do it
 
-- [[decisions/llms-behind-typed-adapters|Why I keep LLMs behind typed adapters]]: code-level contracts over prompt discipline; transport injection; external prompts.
+- [Why I keep LLMs behind typed adapters](https://yourdesign.co.za/notes/llms-behind-typed-adapters/): code-level contracts over prompt discipline; transport injection; external prompts.
 
 ## Playbooks I use here
 
-- [[playbooks/file-driven-planning|A file-driven planning framework for AI-assisted coding]]: each phase reads and writes a file; mixed-model workflow (Opus → Gemini → Sonnet); crash-resumable.
-- [[playbooks/adversarial-ai-review|Adversarial review via a second AI model]]: piping work to a different-vendor model for a critical pass; the findings I'd have missed come from a reader who isn't invested in the design choice.
+- [A file-driven planning framework for AI-assisted coding](https://yourdesign.co.za/notes/file-driven-planning/): each phase reads and writes a file; mixed-model workflow (Opus → Gemini → Sonnet); crash-resumable.
+- [Adversarial review via a second AI model](https://yourdesign.co.za/notes/adversarial-ai-review/): piping work to a different-vendor model for a critical pass; the findings I'd have missed come from a reader who isn't invested in the design choice.
 
 ## Open questions I'm holding
 

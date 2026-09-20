@@ -43,5 +43,5 @@ The repo is young. The git history is a compressed sprint over two days in April
 
 ## Decisions worth a deeper read
 
-- [[decisions/publishing-negative-results|Why I publish negative results]], walk-forward-as-gate is the same stance in a different register.
+- [Why I publish negative results](https://yourdesign.co.za/notes/publishing-negative-results/), walk-forward-as-gate is the same stance in a different register.
 - [[decisions/stdlib-over-pandas-for-the-scanner|Why stdlib over pandas for the scanner core]], the stdlib-only CSV ledger here is the same habit.

@@ -51,7 +51,7 @@ The case studies are written from the code, not from a pitch deck. The numbers i
 
 **[[case-studies/wecoza|WeCoza]]** is a 44-table Postgres platform running alongside WordPress, with natural-language-query to SQL behind a sandbox and a forensic audit pipeline. It is the proof I can build and hold together a large system that has to stay correct.
 
-**[[method/index|The method]]** is the worldview behind all three: research systems built so trust is structural, with the evidence grade on every claim, the gaps made visible, and the model stopping instead of inventing more.
+**[The method](https://yourdesign.co.za/notes/living-research-graphs/)** is the worldview behind all three: research systems built so trust is structural, with the evidence grade on every claim, the gaps made visible, and the model stopping instead of inventing more.
 
 If you want the agency-side picture of how I work with your team and your client, see [[audiences/agencies|the agencies page]].
 

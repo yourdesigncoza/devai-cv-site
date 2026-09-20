@@ -41,7 +41,7 @@ Return backtesting is a related capability, but it is a separate project, [[proj
 
 The [[case-studies/edenfintech-scanner|EdenFintech scanner]] is the worked example for everything above, with the real numbers and mechanisms. The weekly watchlist it produces runs on [edenfintech.com](https://edenfintech.com).
 
-Publishing negative results is part of the discipline, not an afterthought. When a screen rejects a company or a thesis breaks, that is a finding worth keeping. I write up why in [[decisions/publishing-negative-results|publishing negative results]].
+Publishing negative results is part of the discipline, not an afterthought. When a screen rejects a company or a thesis breaks, that is a finding worth keeping. I write up why in [publishing negative results](https://yourdesign.co.za/notes/publishing-negative-results/).
 
 The underlying engineering practice is on the [[skills/quant-engineering|quant engineering]] page.
 

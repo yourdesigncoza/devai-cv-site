@@ -33,7 +33,7 @@ There's also a standard framing worth pushing back on, the one that has the inve
 
 What this leaves you with on either side of the line is less a single number and more an audit trail of commitments. The discipline is the same in either case. Pre-register the hypothesis class before the backtest, report the size of the search space so the deflation correction can be applied honestly, make the conditioning explicit (what regime is being assumed, what correlation, what structural premium), and stress-test the assumption rather than the P&L. A pipeline that survives violations of its own assumptions is more defensible than one that doesn't, even if "defensible" can't be reduced to a single number.
 
-That stress-testing move is where this connects to the discipline of [[decisions/publishing-negative-results|publishing negative results]] and to research-platform [[skills/quant-engineering|quant engineering]] more broadly. A backtest that prints a strong number is cheap. The work that holds up is the instrumentation around it: what was searched, what was rejected, where the walk-forward broke.
+That stress-testing move is where this connects to the discipline of [publishing negative results](https://yourdesign.co.za/notes/publishing-negative-results/) and to research-platform [[skills/quant-engineering|quant engineering]] more broadly. A backtest that prints a strong number is cheap. The work that holds up is the instrumentation around it: what was searched, what was rejected, where the walk-forward broke.
 
 ## Sources
 

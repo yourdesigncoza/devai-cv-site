@@ -23,6 +23,6 @@ Give me a topic, three to five seed entities, and your sources. I run the machin
 
 ## Read the full method
 
-This is the short version. [[method/index|The full method]] shows exactly how it works: the evidence grades, the blind-spot detection, the convergence rule that decides when to stop, and the audit that closes a graph out. The same machine is already running in two live products, [[case-studies/signaltrace|SignalTrace]] and [[case-studies/jobabroad|JobAbroad]].
+This is the short version. [The full method](https://yourdesign.co.za/notes/living-research-graphs/) shows exactly how it works: the evidence grades, the blind-spot detection, the convergence rule that decides when to stop, and the audit that closes a graph out. The same machine is already running in two live products, [[case-studies/signaltrace|SignalTrace]] and [[case-studies/jobabroad|JobAbroad]].
 
 To start, email me at [info@devai.co.za](mailto:info@devai.co.za) and tell me what you are trying to understand.
