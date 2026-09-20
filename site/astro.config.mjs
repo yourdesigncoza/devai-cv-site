@@ -134,6 +134,16 @@ export default defineConfig({
       '/playbooks/file-driven-planning': 'https://yourdesign.co.za/notes/file-driven-planning/',
       '/playbooks/knowledge-graph-vault': 'https://yourdesign.co.za/notes/knowledge-graph-vault/',
       '/playbooks/playwright-wordpress': 'https://yourdesign.co.za/notes/playwright-wordpress/',
+
+      // Batch 2, 2026-09-20. These pitched the buyers yourdesign.co.za sells to,
+      // which is the muddle the identity rule exists to prevent. Their copy is kept
+      // in ../yourdesigncoza-marketing/seo-content/source/2026-09-20-devai-batch2/.
+      '/audiences/business-owners': 'https://yourdesign.co.za/services/',
+      '/audiences/agencies': 'https://yourdesign.co.za/services/',
+      '/services/ai-for-agencies': 'https://yourdesign.co.za/services/',
+      '/services/knowledge-portals': 'https://yourdesign.co.za/notes/knowledge-graph-vault/',
+      '/services/research-graphs': 'https://yourdesign.co.za/notes/living-research-graphs/',
+      '/services/agentic-pipelines': 'https://yourdesign.co.za/notes/llms-behind-typed-contracts/',
     }),
   ),
   integrations: [
