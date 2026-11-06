@@ -144,3 +144,5 @@ The skill is **draft only**. Posting is manual. Never use action verbs ("Post?",
 ## Git workflow
 
 Git operations are user-triggered only. Never run git commands unless explicitly asked. No AI attribution in commit messages or anywhere in the repo.
+
+`docs/` and `scripts/outreach-drafts/` are private working notes: git-ignored, untracked since 2026-11-06, and held only on this machine. Never `git add -f` them.

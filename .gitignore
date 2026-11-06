@@ -36,7 +36,9 @@ Thumbs.db
 .playwright-mcp/
 cards-*.png
 
+# Private working notes, kept on disk only
 docs/
+scripts/outreach-drafts/
 
 # Claude Code local dir (settings.local.json, worktrees)
 .claude/
