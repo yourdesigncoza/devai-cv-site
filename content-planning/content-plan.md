@@ -115,7 +115,7 @@ Still to do:
 - **Pricing:** private. No prices on public pages or in schema. Pricing stays in outreach/discovery only.
 - **Audience pages:** build all three now (Business Owners, Agencies, Investors). Build approach: spin up a team of agents, one per audience page, running independently.
 - **LinkedIn + GitHub:** NOTE: checked the footer, it currently shows only email, phone, devai.co.za, and edenfintech.com. No LinkedIn or GitHub profile link is on the site anywhere. If John wants these as GEO signals he needs to supply the two URLs; then add them to the footer AND to Person schema `sameAs`. (Schema already lists edenfintech.com, signaltrace.wiki, yourdesign.co.za.)
-- **Demo + projects:** OK to link `demo.devai.co.za` publicly, plus the projects already named on the site. Use these as the proof links in Services and audience pages.
+- **Demo + projects:** Use the projects already named on the site as the proof links in Services and audience pages. `demo.devai.co.za` was retired on 2026-11-06, so do not link it.
 - **Publish how-it-works detail publicly:** yes. Spokes may show the real algorithms and thresholds (hollow-hub detection, convergence rule, typed barriers, the SQL sandbox). Transparency is the moat, not a leak.
 - **Skills authorship is in scope:** add a "Build the harness, not just prompts" spoke + a skills-authorship section as proof of AI/LLM progress (personal `ydcoza-*` skills + WeCoza-embedded skills).
 

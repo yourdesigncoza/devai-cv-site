@@ -5,10 +5,10 @@ status: drafting
 cta: live stock demo + qualified 48hr POC after discovery call
 from_alias: info@devai.co.za
 target_size: 30-50
-proof_url: https://demo.devai.co.za/commercial-solar (TBC, blocked on subdomain setup + vault-builder run)
+proof_url: retired 2026-11-06, see docs/marketing.md (was https://demo.devai.co.za/commercial-solar)
 follow_up: day-3 + day-7 short replies
 persona: MD, Head of Sales, Senior Sales Engineer
-last_updated: 2026-05-14
+last_updated: 2026-11-06
 ---
 
 # Cold batch 01: SA commercial solar installers

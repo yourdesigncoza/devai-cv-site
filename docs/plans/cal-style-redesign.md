@@ -1,6 +1,6 @@
 ---
 title: Cal.com-style redesign for demo.devai.co.za/commercial-solar
-status: brief — awaiting approval before implementation
+status: historical, the demo site this targeted was retired 2026-11-06 (see docs/marketing.md)
 date: 2026-05-12
 target: src/pages/commercial-solar/index.astro + layouts in demo-devai-site
 reversibility: single feature branch, all changes scoped to 3 files + global.css theme block

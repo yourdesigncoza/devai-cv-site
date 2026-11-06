@@ -9,6 +9,8 @@ supersedes: v1 ("Saw <Company>'s site while looking at...")
 
 # Cold-mail body template (v2)
 
+**Demo link retired 2026-11-06.** The `demo.devai.co.za` link in the bodies below is dead (see `docs/marketing.md`). Replace it before reusing this template.
+
 Generic template. Per-recipient personalisation lives in the bracketed slots. Replace each slot with one short, specific sentence drawn from defuddle output. Do not introduce em-dashes, intensifiers, or AI-attribution language.
 
 ## Template

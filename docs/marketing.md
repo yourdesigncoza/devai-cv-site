@@ -1,7 +1,7 @@
 ---
 title: Marketing & outreach playbook
 status: live
-last_updated: 2026-05-11
+last_updated: 2026-11-06
 ---
 
 # Marketing & outreach
@@ -33,14 +33,14 @@ Two channels run in parallel: **warm reactivation** (high-yield, exhausted at 2 
 1. **A specific observation about their site** (proves the email isn't generic)
 2. **One specific knowledge-trap on their site** (the wall of FAQ-style copy nobody reads)
 3. **One concrete portal idea** mapped to their products
-4. **Live proof link** to a stock demo on `demo.devai.co.za` (no brand fragmentation, recipient lands on DevAi-branded surface)
-5. **CTA differs by channel:** warm = "15-min call"; cold = "live demo to try now + 48hr custom POC after qualifying chat"
+4. **Live proof link:** none at present. The stock demo was retired (see the cold-outbound playbook below).
+5. **CTA differs by channel:** warm = "15-min call"; cold = "48hr custom POC after qualifying chat"
 
 Then capture each one in `docs/marketing/<client-slug>.md` (warm) or `docs/marketing/cold-batch-NN-<vertical>.md` (cold batch) with reasoning, email draft, send status, reply log.
 
 ### Cold-outbound playbook (added 2026-05-11)
 
-- **Stock demo first.** Before sending a batch, a vertical-specific stock demo lives at `demo.devai.co.za/<vertical>` built from public regulatory + distributor + industry-body content. Becomes the live-now proof link in every cold mail in that batch.
+- **Stock demo (retired 2026-11-06).** Batch 01 linked to a stock demo at `demo.devai.co.za/commercial-solar`. Its Vercel project was deleted and the URL no longer serves. The code is in the private GitHub repo `yourdesigncoza/demo-devai-site`. Mail bodies, templates and plans in this repo that still show the URL are records of what was sent or planned. Do not reuse the link.
 - **Qualified POC, not unconditional build.** Custom POC on the recipient's content is offered only after a discovery call confirms fit. Filters tire-kickers; protects time.
 - **Volume floor: 30-50 per batch.** At 2-5% cold reply rates, 10-15 sends statistically yield 0-1 reply.
 - **Follow-up sequence:** day-3 short "just checking" + day-7 "one last try, is X a priority right now". Standardly 2-3x's reply rate.

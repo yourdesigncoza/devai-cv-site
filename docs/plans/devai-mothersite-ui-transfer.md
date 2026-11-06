@@ -2,7 +2,7 @@
 title: DevAi mother-site UI transfer notes (Quartz → Astro)
 status: design-system reference for the devai.co.za rebuild
 date: 2026-05-12
-source: demo-devai-site (https://demo.devai.co.za/commercial-solar)
+source: demo-devai-site (retired 2026-11-06, was https://demo.devai.co.za/commercial-solar)
 target: devai.co.za rebuild as Astro (replacing the current Quartz build)
 purpose: Everything the AI/human rebuilding devai.co.za needs to mirror the demo's design system without reverse-engineering the live site
 ---
@@ -563,7 +563,7 @@ If rebuilding `devai.co.za` from scratch on Astro:
 
 ## 9. Files in demo-devai-site to reference
 
-The reference implementation lives in `/home/laudes/zoot/projects/demo-devai-site`:
+The reference implementation lives in the private GitHub repo `yourdesigncoza/demo-devai-site`:
 
 - `src/styles/global.css` — design tokens, `.shadow-card-cal` utility
 - `src/layouts/BaseLayout.astro` — header, footer, font loading
