@@ -4,7 +4,7 @@ description: "A child-safe PWA that turns a phone photo into playful AI art. No 
 tags: [project, pwa, ai, nextjs]
 draft: false
 date: 2026-06-09
-status: active
+status: archived
 ---
 
 > A child-safe camera toy that turns a photo into AI art. You install it from the browser, there is no app store and no account, and every prompt is wrapped in a safety instruction before it reaches the model.
@@ -12,9 +12,8 @@ status: active
 ![Magic Camera hero: the app icon on a dark tile over the line "Point your phone. Watch it turn into something else."](magic-camera-hero.png)
 
 **Stack:** Next.js 15 (App Router), React 19, TypeScript, Supabase (Postgres and private Storage), OpenAI image-edit (gpt-image-1) with a vision model for the surprise feature, Tailwind. Deployed on Vercel.
-**Status:** Active. Built as a one-week experiment, loosely inspired by OpenAI's [imagegencam](https://github.com/openai/imagegencam).
+**Status:** Archived. Built as a one-week experiment, loosely inspired by OpenAI's [imagegencam](https://github.com/openai/imagegencam). The public deployment has been taken down.
 **Source:** private.
-**Live:** [magic-camera-nu.vercel.app](https://magic-camera-nu.vercel.app/)
 
 ## The story
 

@@ -106,22 +106,22 @@ Shipped projects I point to as evidence. Each one is live and built end to end.
 <div class="project-cards">
 
 <div class="project-card">
-<a class="project-card-link" href="projects/spendsilo">
-<span class="project-card-thumb"><img src="projects/spendsilo-hero.png" alt="" loading="lazy" /></span>
+<a class="project-card-link" href="projects/k53-coach">
+<span class="project-card-thumb"><img src="projects/k53-coach-hero.png" alt="" loading="lazy" /></span>
 <span class="project-card-body">
-<span class="project-card-title">SpendSilo</span>
-<span class="project-card-desc">A PWA invoice scanner. Snap a receipt, a vision model returns it as validated JSON, and nothing auto-approves before review.</span>
+<span class="project-card-title">K53 Coach</span>
+<span class="project-card-desc">A bilingual PWA for South African learner drivers. Timed mock papers, a coach that answers only from verified passages, and a human sign-off on every question.</span>
 <span class="project-card-cta">Read more →</span>
 </span>
 </a>
 </div>
 
 <div class="project-card">
-<a class="project-card-link" href="projects/magic-camera">
-<span class="project-card-thumb"><img src="projects/magic-camera-hero.png" alt="" loading="lazy" /></span>
+<a class="project-card-link" href="projects/bakery-ordering-system">
+<span class="project-card-thumb"><img src="projects/bakery-ordering-system-hero.png" alt="" loading="lazy" /></span>
 <span class="project-card-body">
-<span class="project-card-title">Magic Camera</span>
-<span class="project-card-desc">A child-safe PWA that turns a phone photo into AI art. Installs from the browser, no app store, no account.</span>
+<span class="project-card-title">Bloom &amp; Batter cake builder</span>
+<span class="project-card-desc">A cake configurator with live pricing, an AI preview of the design, and PayFast checkout feeding the bakery's order board. Live demo.</span>
 <span class="project-card-cta">Read more →</span>
 </span>
 </a>

@@ -4,7 +4,7 @@ description: "A PWA that scans invoices and receipts and hands them back as vali
 tags: [project, pwa, ai, nextjs]
 draft: false
 date: 2026-06-09
-status: active
+status: archived
 ---
 
 > A progressive web app that scans invoices and receipts, reads them with a vision model, and returns structured spend data that always lands in a review queue first.
@@ -12,9 +12,8 @@ status: active
 ![SpendSilo hero: the stacked SpendSilo logo over the line "Snap an invoice. Get structured spend back."](spendsilo-hero.png)
 
 **Stack:** Next.js 16 (App Router), React 19, TypeScript, Supabase (Postgres, Storage, Auth), OpenAI vision, Zod, sharp, Tailwind. Deployed on Vercel.
-**Status:** Active. Built as a one-week experiment.
+**Status:** Archived. Built as a one-week experiment; the public deployment has been taken down.
 **Source:** private.
-**Live:** [invoice-ocr-blond.vercel.app](https://invoice-ocr-blond.vercel.app/)
 
 ## The story
 
