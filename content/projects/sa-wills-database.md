@@ -38,10 +38,6 @@ Known and on a list, not hidden:
 - The whole thing is pre-production. An adversarial review of the spec produced DO-NOT-SHIP findings mapped to the phases they gate. It is not legally signed off, and the master vision (advisor portals, enterprise tenancy, estate-risk intelligence) is a much bigger thing than what exists today.
 - The one that actually matters is the deterministic/AI boundary itself. If model output ever leaked into legal text, or personal data crossed the egress line without being tokenized, the two rules the whole design rests on would be broken. Both are enforced in code, and both need tests that treat them as invariants rather than nice-to-haves.
 
-## What I learned
-
-<!-- TODO(John): your voice. The genuine reflection from building this. Possible threads: what it's like building to a strict legal spec vs a product you can iterate freely; the deterministic-vs-AI split as a forcing function; POPIA residency as an architecture constraint rather than a checkbox; pace of a greenfield rebuild. Leave as-is until John writes it. -->
-
 ## Proof points
 
 - Turborepo monorepo, around 57,000 lines of TypeScript and Python across the web app, NestJS core, FastAPI AI service, and a shared contracts package.

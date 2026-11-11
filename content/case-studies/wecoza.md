@@ -45,9 +45,6 @@ WeCoza is the war-stories piece. It is a real production system carrying a regul
 - The WordPress and PHP work itself, a 305-file plugin with a layered architecture and a hand-rolled PDO layer, is [[skills/wordpress-php-craft|WordPress & PHP Craft]].
 - The pattern of putting a typed, validated barrier between a language model and anything it can damage runs through everything I build, here as the SQL sandbox and the PII obfuscation pass.
 
-> [!note]
-> [JOHN: optional. One or two sentences in your own voice on what this build taught you about regulated data, or about how far WordPress will stretch when you stop treating it as a CMS. The existing project page has a good "what I learned" section you could draw the substance from. Leave blank if you would rather not.]
-
 ## Work with me
 
 If you run a business where the data has to be correct and provable, not just stored, [email me at info@devai.co.za](mailto:info@devai.co.za) and tell me what you are trying to keep straight.

@@ -45,8 +45,6 @@ Publishing negative results is part of the discipline, not an afterthought. When
 
 The underlying engineering practice is on the [[skills/quant-engineering|quant engineering]] page.
 
-[JOHN: optional one short paragraph of genuine conviction here, in your voice. Why you would rather show a model defaulting to a comfortable number and catch it than ship a confident wrong answer. The line that makes an investor or technical reader trust the discipline over a slicker pitch. Plain, no slogan.]
-
 ## Work with me
 
 If you are building research where the evidence and the downside have to hold up, and where a confident wrong answer is worse than an honest "we don't know yet", that is the kind of system I build. [Email me at info@devai.co.za](mailto:info@devai.co.za) and tell me what you are trying to evaluate.

@@ -35,6 +35,4 @@ It is one of two live proofs of the same machine. Where SignalTrace publishes th
 
 For the underlying capabilities, see [[skills/knowledge-graphs-wiki-systems|Knowledge Graphs & Wiki Systems]] for the research-graph and rendering work, and [[skills/design-brand|Design & Brand]] for the build that turns a vault into something readable.
 
-[JOHN: optional one-paragraph reflection in your voice. A good angle: what you learned building thirteen sites from one config, or the moment the split-index work paid off, or why publishing the evidence grades openly matters to you. Keep it plain, no slogan. Leave blank and the page ends on the CTA.]
-
 If you have a topic that needs this kind of research surface, [email me at info@devai.co.za](mailto:info@devai.co.za) and tell me what you are trying to understand. You can also read [the method](https://yourdesign.co.za/notes/living-research-graphs/) behind it, or browse the live wikis at [signaltrace.wiki](https://www.signaltrace.wiki/).

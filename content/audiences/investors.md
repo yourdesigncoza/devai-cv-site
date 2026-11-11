@@ -38,11 +38,6 @@ The scanner produces per-ticker research and a weekly watchlist. It does not bac
 
 The free weekly watchlist runs on [edenfintech.com](https://edenfintech.com), so you can read the output before you talk to me.
 
-## [JOHN: your stance, in your voice]
-
-> [!note]
-> [JOHN: one short paragraph of genuine conviction here, in your own words. This audience reads stance more closely than any other, so it has to sound like you. Some prompts to draw from, use what is true and cut the rest: what you actually believe about evidence over narrative; why you would rather show the downside first and lose the optimistic reader than bury it; where you think AI genuinely helps in research and where it has no business making the call; what "judgement stays human" means to you in practice. Plain sentences. No slogan, no rule of three. Leave this as a placeholder until you write it.]
-
 ## Get in touch
 
 If you want research you can audit rather than research you have to trust, [email me at info@devai.co.za](mailto:info@devai.co.za) and tell me what you are trying to understand. You can also read the weekly watchlist at [edenfintech.com](https://edenfintech.com) first.
